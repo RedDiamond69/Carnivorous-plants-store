@@ -1,0 +1,43 @@
+﻿html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+}
+
+#header.default {
+    position: fixed;
+    top: 0;
+    -webkit-box-shadow: 0 1px 10px #bdbdbd;
+    -moz-box-shadow: 0 1px 10px #bdbdbd;
+    box-shadow: 0 1px 10px #bdbdbd;
+}
+
+.vertical-divider {
+    font-size: 20px;
+    font-weight: 100;
+    color: #d0d0d0;
+}
+
+div.container{
+    padding-top: 100px;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE =edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="shortcut icon" href=@ViewBag.Favicon type="image/png" />
+    @Styles.Render("~/bundles/styles")
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <img src="@Url.Content("~/Content/Images/favicon.png")" width="48" height="48" class="d-inline-block align-top" alt="Logo">
+                </a>
+                <p class="navbar-brand mr-auto mb-0 h1">Venus Fly Trap</p>
+                <div class="d-lg-none d-flex flex-row align-items-center justify-content-center">
+                    @Html.ActionLink("Sign in", "", "", null, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Sign up", "", "", null, new { @class = "btn mr-3 ml-2 btn-warning" })
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse ml-3 text-center navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center flex-lg-wrap mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Catalog", "Home")">Catalog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Care and Maintaince
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="@Url.Action("DionaeaMuscipula", "CareAndMaintaince")">Dionaea muscipula</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Drosera</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Sarracenia</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Pinguicula</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Nepenthes</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Utricularia</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Darlingtonia californica</a>
+                                <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Cephalotus</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("PaymentAndDelivery", "Home")">Payment and Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Stock", "Home")">Stock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Gallery", "Home")">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Contacts", "Home")">Contacts</a>
+                        </li>
+                    </ul>
+                    <form class="form d-flex flex-row align-items-center ml-4 my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="ml-auto d-none d-lg-flex flex-row align-items-center justify-content-center">
+                    <span class="ml-2 pb-2 d-block vertical-divider">|</span>
+                    @Html.ActionLink("Sign in", "", "", null, new { @class = "btn ml-2 btn-success" })
+                    @Html.ActionLink("Sign up", "", "", null, new { @class = "btn ml-2 btn-warning" })
+                </div>
+            </nav>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="bg-light align-items-center text-center">
+        <p>@DateTime.Now.Year &copy; - Venusflytrap.com</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/js")
+</body>
+
+</html>
