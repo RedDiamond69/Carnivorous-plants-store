@@ -77,6 +77,7 @@
     <Compile Include="Entities\SeoAttribute.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\Storage.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
