@@ -35,12 +35,6 @@ namespace OnlineStore.DataProvider
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleImage> ArticleImages { get; set; }
 
-
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
