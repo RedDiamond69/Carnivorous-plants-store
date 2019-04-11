@@ -16,14 +16,17 @@ namespace OnlineStore.DataProvider.Entities
 
         public string ProductDescription { get; set; }
 
+        public string ProductImageFilename { get; set; }
+
+        public string PageDescription { get; set; }
+
+        public string PageKeywords { get; set; }
+
         public int ProviderID { get; set; }
         public Provider Provider { get; set; }
 
         public int CategoryID { get; set; }
         public Category Category{ get; set; }
-
-        public int SeoAttributeID { get; set; }
-        public virtual SeoAttribute SeoAttribute { get; set; }
 
         public int StockID { get; set; }
         public Stock Stock { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Infrastructure
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    internal class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly ApplicationDbContext _applicationDbContext;
         private readonly IDbSet<TEntity> _entity;
@@ -36,7 +36,7 @@ namespace OnlineStore.DataProvider.Infrastructure
 
         public virtual IEnumerable<TEntity> Get()
         {
-            return _entity.ToList();
+            return _entity.AsNoTracking().ToList();
         }
 
         public virtual TEntity Get(int id)
@@ -46,7 +46,7 @@ namespace OnlineStore.DataProvider.Infrastructure
 
         public virtual IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            return _entity.Where(predicate).ToList();
+            return _entity.AsNoTracking().Where(predicate).ToList();
         }
 
         public virtual void Update(TEntity item)

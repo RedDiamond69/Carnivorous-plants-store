@@ -10,6 +10,8 @@ namespace OnlineStore.DataProvider.Entities
     {
         public int DeliveryInformationID { get; set; }
 
+        public bool IsDefault { get; set; }
+
         public string Country { get; set; }
 
         public string Region { get; set; }

@@ -14,8 +14,9 @@ namespace OnlineStore.DataProvider.Entities
 
         public string CategoryDescription { get; set; }
 
-        public int SeoAttributeID { get; set; }
-        public virtual SeoAttribute SeoAttribute { get; set; }
+        public string PageDescription { get; set; }
+
+        public string PageKeywords { get; set; }
 
         public ICollection<Product> Products { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }

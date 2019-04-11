@@ -43,5 +43,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.DataProvider\OnlineStore.DataProvider.csproj">
+      <Project>{75128007-8575-4f76-a3d5-0b45a293d921}</Project>
+      <Name>OnlineStore.DataProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        public ICollection<ApplicationUserImage> ApplicationUserImages { get; set; }
+        public virtual ApplicationUserProfile ApplicationUserProfile { get; set; }
 
         public ICollection<Customer> Customers { get; set; }
 

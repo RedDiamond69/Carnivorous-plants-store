@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
-    <Compile Include="Entities\ApplicationUserImage.cs" />
+    <Compile Include="Entities\ApplicationUserProfile.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ArticleImage.cs" />
     <Compile Include="Entities\Category.cs" />
@@ -74,7 +74,6 @@
     <Compile Include="Entities\ProductImage.cs" />
     <Compile Include="Entities\ProductParameter.cs" />
     <Compile Include="Entities\Provider.cs" />
-    <Compile Include="Entities\SeoAttribute.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\Storage.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />

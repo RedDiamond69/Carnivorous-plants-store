@@ -9,9 +9,7 @@ namespace OnlineStore.DataProvider.Entities
     public class Manager
     {
         public int ManagerID { get; set; }
-
-        public int ApplicationUserID { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }

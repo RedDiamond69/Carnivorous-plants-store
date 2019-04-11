@@ -16,7 +16,6 @@ namespace OnlineStore.DataProvider
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Provider> Providers { get; set; }
-        public DbSet<SeoAttribute> SeoAttributes { get; set; }
         public DbSet<Dimension> Dimensions { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
@@ -24,7 +23,6 @@ namespace OnlineStore.DataProvider
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<Storage> Storages { get; set; }
         public DbSet<DeliveryInformation> DeliveryInformation { get; set; }
-        public DbSet<ApplicationUserImage> ApplicationUserImages { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Manager> Managers { get; set; }
         public DbSet<DeliveryType> DeliveryTypes { get; set; }
@@ -34,6 +32,7 @@ namespace OnlineStore.DataProvider
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleImage> ArticleImages { get; set; }
+        public DbSet<ApplicationUserProfile> ApplicationUserProfiles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
