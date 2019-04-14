@@ -14,13 +14,11 @@ namespace OnlineStore.DataProvider.Entities
 
         public string ArticleText { get; set; }
 
-        public string ArticleIconFilename { get; set; }
+        public string ImageFilename { get; set; }
 
         public DateTime DateTime { get; set; }
 
         public int CategoryID { get; set; }
         public Category Category { get; set; }
-
-        public ICollection<ArticleImage> ArticleImages { get; set; }
     }
 }

@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineStore.DataProvider
+namespace OnlineStore.DataProvider.Context
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext() : base("DefaultConnection") { }
 
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<AlbumImages> AlbumImages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Provider> Providers { get; set; }
@@ -31,7 +33,6 @@ namespace OnlineStore.DataProvider
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
         public DbSet<Article> Articles { get; set; }
-        public DbSet<ArticleImage> ArticleImages { get; set; }
         public DbSet<ApplicationUserProfile> ApplicationUserProfiles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
