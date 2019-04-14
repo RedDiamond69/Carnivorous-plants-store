@@ -8,9 +8,9 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Manager
     {
-        public int ManagerID { get; set; }
+        public Guid ApplicationUserID { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

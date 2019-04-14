@@ -8,30 +8,29 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Order
     {
-        public int OrderID { get; set; }
+        public Guid OrderID { get; set; }
 
-        public int PaymentID { get; set; }
         public virtual Payment Payment { get; set; }
 
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        public Guid CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public int ManagerID { get; set; }
-        public Manager Manager { get; set; }
+        public Guid ManagerID { get; set; }
+        public virtual Manager Manager { get; set; }
 
-        public int OrderStatusID { get; set; }
-        public OrderStatus OrderStatus { get; set; }
+        public Guid OrderStatusID { get; set; }
+        public virtual OrderStatus OrderStatus { get; set; }
 
-        public int DeliveryTypeID { get; set; }
-        public DeliveryType DeliveryType { get; set; }
+        public Guid DeliveryTypeID { get; set; }
+        public virtual DeliveryType DeliveryType { get; set; }
 
         public DateTime DateTime { get; set; }
 
-        public int DeliveryInformationID { get; set; }
-        public DeliveryInformation DeliveryInformation { get; set; }
+        public Guid DeliveryInformationID { get; set; }
+        public virtual DeliveryInformation DeliveryInformation { get; set; }
 
         public string Comment { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

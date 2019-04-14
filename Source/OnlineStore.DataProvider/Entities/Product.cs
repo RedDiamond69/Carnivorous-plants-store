@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Product
     {
-        public int ProductID { get; set; }
+        public Guid ProductID { get; set; }
 
         public string VendorCode { get; set; }
 
@@ -22,16 +22,16 @@ namespace OnlineStore.DataProvider.Entities
 
         public string PageKeywords { get; set; }
 
-        public int ProviderID { get; set; }
-        public Provider Provider { get; set; }
+        public Guid ProviderID { get; set; }
+        public virtual Provider Provider { get; set; }
 
-        public int CategoryID { get; set; }
-        public Category Category{ get; set; }
+        public Guid CategoryID { get; set; }
+        public virtual Category Category{ get; set; }
 
-        public int StockID { get; set; }
-        public Stock Stock { get; set; }
+        public Guid? StockID { get; set; }
+        public virtual Stock Stock { get; set; }
 
-        public ICollection<ProductImage> ProductImages { get; set; }
-        public ICollection<ProductParameter> ProductParameters { get; set; }
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
+        public virtual ICollection<ProductParameter> ProductParameters { get; set; }
     }
 }

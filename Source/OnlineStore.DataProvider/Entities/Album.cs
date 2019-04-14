@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Album
     {
-        public int AlbumID { get; set; }
+        public Guid AlbumID { get; set; }
 
         public string AlbumName { get; set; }
 
@@ -18,6 +18,11 @@ namespace OnlineStore.DataProvider.Entities
 
         public int ImageCount { get; set; }
 
-        public ICollection<AlbumImages> AlbumImages { get; set; }
+        public virtual ICollection<AlbumImage> AlbumImages { get; set; }
+
+        public Album()
+        {
+            AlbumImages = new List<AlbumImage>();
+        }
     }
 }

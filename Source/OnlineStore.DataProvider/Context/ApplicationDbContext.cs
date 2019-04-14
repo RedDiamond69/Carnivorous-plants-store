@@ -14,7 +14,7 @@ namespace OnlineStore.DataProvider.Context
         public ApplicationDbContext() : base("DefaultConnection") { }
 
         public DbSet<Album> Albums { get; set; }
-        public DbSet<AlbumImages> AlbumImages { get; set; }
+        public DbSet<AlbumImage> AlbumImages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Provider> Providers { get; set; }

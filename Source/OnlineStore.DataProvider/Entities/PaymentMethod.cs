@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class PaymentMethod
     {
-        public int MethodID { get; set; }
+        public Guid MethodID { get; set; }
 
         public string MethodName { get; set; }
 
@@ -16,6 +16,6 @@ namespace OnlineStore.DataProvider.Entities
 
         public bool Availability { get; set; }
 
-        public ICollection<Payment> Payments { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
     }
 }

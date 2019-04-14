@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Category
     {
-        public int CategoryID { get; set; }
+        public Guid CategoryID { get; set; }
 
         public string CategoryName { get; set; }
 
@@ -18,6 +18,14 @@ namespace OnlineStore.DataProvider.Entities
 
         public string PageKeywords { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+
+        public virtual ICollection<Article> Articles { get; set; }
+
+        public Category()
+        {
+            Products = new List<Product>();
+            Articles = new List<Article>();
+        }
     }
 }

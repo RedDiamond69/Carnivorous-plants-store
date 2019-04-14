@@ -8,21 +8,21 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class ProductParameter
     {
-        public int ProductParameterID { get; set; }
+        public Guid ProductParameterID { get; set; }
 
-        public int DimensionID { get; set; }
-        public Dimension Dimension { get; set; }
+        public Guid DimensionID { get; set; }
+        public virtual Dimension Dimension { get; set; }
 
         public decimal Price { get; set; }
 
         public bool Availability { get; set; }
 
-        public int ProductID { get; set; }
-        public Product Product { get; set; }
+        public Guid ProductID { get; set; }
+        public virtual Product Product { get; set; }
 
-        public int StorageItemID { get; set; }
-        public Storage Storage { get; set; }
+        public Guid StorageItemID { get; set; }
+        public virtual Storage Storage { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

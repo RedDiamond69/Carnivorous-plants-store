@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Article
     {
-        public int ArticleID { get; set; }
+        public Guid ArticleID { get; set; }
 
         public string ArticleTitle { get; set; }
 
@@ -18,7 +18,7 @@ namespace OnlineStore.DataProvider.Entities
 
         public DateTime DateTime { get; set; }
 
-        public int CategoryID { get; set; }
+        public Guid? CategoryID { get; set; }
         public Category Category { get; set; }
     }
 }

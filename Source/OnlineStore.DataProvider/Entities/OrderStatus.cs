@@ -8,10 +8,15 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class OrderStatus
     {
-        public int OrderStatusID { get; set; }
+        public Guid OrderStatusID { get; set; }
 
         public string StatusName { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+
+        public OrderStatus()
+        {
+            Orders = new List<Order>();
+        }
     }
 }

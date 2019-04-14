@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Provider
     {
-        public int ProviderID { get; set; }
+        public Guid ProviderID { get; set; }
 
         public string ProviderName { get; set; }
 
@@ -16,6 +16,6 @@ namespace OnlineStore.DataProvider.Entities
 
         public string ImageFilename { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

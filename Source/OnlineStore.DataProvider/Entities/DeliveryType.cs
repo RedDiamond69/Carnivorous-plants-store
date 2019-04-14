@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace OnlineStore.DataProvider.Entities
 {
     public class DeliveryType
     {
-        public int DeliveryTypeID { get; set; }
+        public Guid DeliveryTypeID { get; set; }
 
         public string Name { get; set; }
 
@@ -14,6 +15,6 @@ namespace OnlineStore.DataProvider.Entities
 
         public bool Availability { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -8,14 +8,14 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class OrderItem
     {
-        public int ProductParameterID { get; set; }
-        public ProductParameter ProductParameter { get; set; }
+        public Guid ProductParameterID { get; set; }
+        public virtual ProductParameter ProductParameter { get; set; }
 
         public int ItemQuantity { get; set; }
 
         public decimal Price { get; set; }
 
-        public int OrderID { get; set; }
-        public Order Order { get; set; }
+        public Guid OrderID { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

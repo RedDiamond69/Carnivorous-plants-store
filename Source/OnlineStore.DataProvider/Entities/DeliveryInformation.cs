@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class DeliveryInformation
     {
-        public int DeliveryInformationID { get; set; }
+        public Guid DeliveryInformationID { get; set; }
 
         public bool IsDefault { get; set; }
 
@@ -24,9 +24,9 @@ namespace OnlineStore.DataProvider.Entities
 
         public string Apartment { get; set; }
 
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        public Guid CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

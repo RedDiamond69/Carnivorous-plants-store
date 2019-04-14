@@ -8,12 +8,12 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Dimension
     {
-        public int DimensionID { get; set; }
+        public Guid DimensionID { get; set; }
 
         public string DimensionName{ get; set; }
 
         public string DimensionDescription { get; set; }
 
-        public ICollection<ProductParameter> ProductParameters { get; set; }
+        public virtual ICollection<ProductParameter> ProductParameters { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Stock
     {
-        public int StockID { get; set; }
+        public Guid StockID { get; set; }
 
         public string StockTitle { get; set; }
 
@@ -22,6 +22,6 @@ namespace OnlineStore.DataProvider.Entities
 
         public string PageKeywords { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

@@ -8,10 +8,10 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Storage
     {
-        public int StorageItemID { get; set; }
+        public Guid StorageItemID { get; set; }
 
         public int Quantity { get; set; }
 
-        public ICollection<ProductParameter> ProductParameters { get; set; }
+        public virtual ICollection<ProductParameter> ProductParameters { get; set; }
     }
 }

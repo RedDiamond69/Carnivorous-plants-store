@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Interfaces
 {
-    public interface IAlbumImageRepository : IRepository<AlbumImages>
+    public interface IAlbumImageRepository : IRepository<AlbumImage>
     {
     }
 }

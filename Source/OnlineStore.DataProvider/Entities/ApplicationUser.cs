@@ -13,9 +13,9 @@ namespace OnlineStore.DataProvider.Entities
     {
         public virtual ApplicationUserProfile ApplicationUserProfile { get; set; }
 
-        public ICollection<Customer> Customers { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public ICollection<Manager> Managers { get; set; }
+        public virtual Manager Manager { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

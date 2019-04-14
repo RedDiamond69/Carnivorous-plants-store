@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Repositories
 {
-    public class AlbumImageRepository : Repository<AlbumImages>, IAlbumImageRepository
+    public class AlbumImageRepository : Repository<AlbumImage>, IAlbumImageRepository
     {
         public AlbumImageRepository(ApplicationDbContext context) : base(context)
         {
