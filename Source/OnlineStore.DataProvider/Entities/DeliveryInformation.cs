@@ -11,7 +11,7 @@ namespace OnlineStore.DataProvider.Entities
     public class DeliveryInformation
     {
         [Key]
-        public Guid DeliveryInformationID { get; set; }
+        public string DeliveryInformationId { get; set; }
 
         [Required(ErrorMessage = "Default is required.")]
         public bool IsDefault { get; set; }
@@ -34,14 +34,16 @@ namespace OnlineStore.DataProvider.Entities
         [Required(ErrorMessage = "Apartment is required."), MaxLength(10, ErrorMessage = "Apartment length cannot be more than 10.")]
         public string Apartment { get; set; }
 
-        [Required, ForeignKey("CustomerID")]
-        public Guid CustomerID { get; set; }
+        [Required, ForeignKey("Customer")]
+        public string CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
 
         public DeliveryInformation()
         {
+            DeliveryInformationId = Guid.NewGuid().ToString();
+            CustomerId = Guid.NewGuid().ToString();
             Orders = new List<Order>();
         }
     }

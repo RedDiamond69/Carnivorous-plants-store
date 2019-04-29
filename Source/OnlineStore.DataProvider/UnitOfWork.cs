@@ -10,33 +10,61 @@ namespace OnlineStore.DataProvider
 {
     public class UnitOfWork : IUnitOfWork
     {
+        #region Fields
+
         private readonly ApplicationDbContext _context;
 
+        private AdministratorRepository _administrators;
         private AlbumRepository _albums;
+        private AlbumTranslateRepository _albumTranslates;
         private AlbumImageRepository _albumImages;
+        private AlbumImageTranslateRepository _albumImageTranslates;
         private ApplicationUserManager _users;
         private ApplicationUserRoleManager _userRoles;
         private ApplicationUserProfileRepository _applicationUserProfiles;
         private ArticleRepository _articles;
+        private ArticleTranslateRepository _articleTranslates;
         private CategoryRepository _categories;
+        private CategoryTranslateRepository _categoryTranslates;
         private CustomerRepository _customers;
         private DeliveryInformationRepository _deliveryInformation;
         private DeliveryTypeRepository _deliveryTypes;
+        private DeliveryTypeTranslateRepository _deliveryTypeTranslates;
         private DimensionRepository _dimensions;
+        private DimensionTranslateRepository _dimensionTranslates;
+        private ExchangeRateRepository _exchangeRates;
+        private LanguageRepository _languages;
         private ManagerRepository _managers;
         private OrderRepository _orders;
         private OrderItemRepository _orderItems;
         private OrderStatusRepository _orderStatuses;
+        private OrderStatusTranslateRepository _orderStatusTranslates;
+        private OwnerRepository _owners;
         private PaymentRepository _payments;
         private PaymentMethodRepository _paymentMethods;
+        private PaymentMethodTranslateRepository _paymentMethodTranslates;
         private ProductRepository _products;
+        private ProductTranslateRepository _productTranslates;
+        private ProductInformationRepository _productInformation;
+        private ProductInformationTranslateRepository _productInformationTranslates;
         private ProductImageRepository _productImages;
         private ProductParameterRepository _productParameters;
+        private ProductParameterTranslateRepository _productParameterTranslates;
         private ProviderRepository _providers;
+        private ProviderTranslateRepository _providerTranslates;
         private StockRepository _stocks;
+        private StockTranslateRepository _stockTranslates;
         private StorageRepository _storages;
 
+        #endregion
+
+        #region Constructors
+
         public UnitOfWork() => _context = new ApplicationDbContext();
+
+        #endregion
+
+        #region Properties
 
         public IArticleRepository Articles
         {
@@ -153,7 +181,105 @@ namespace OnlineStore.DataProvider
             get => _albumImages ?? (_albumImages = new AlbumImageRepository(_context));
         }
 
+        public IProductInformationRepository ProductInformation
+        {
+            get => _productInformation ?? (_productInformation = new ProductInformationRepository(_context));
+        }
+
+        public IAlbumTranslateRepository AlbumTranslates
+        {
+            get => _albumTranslates ?? (_albumTranslates = new AlbumTranslateRepository(_context));
+        }
+
+        public IAlbumImageTranslateRepository AlbumImageTranslates
+        {
+            get => _albumImageTranslates ?? (_albumImageTranslates = new AlbumImageTranslateRepository(_context));
+        }
+
+        public IAdministratorRepository Administrators
+        {
+            get => _administrators ?? (_administrators = new AdministratorRepository(_context));
+        }
+
+        public IArticleTranslateRepository ArticleTranslates
+        {
+            get => _articleTranslates ?? (_articleTranslates = new ArticleTranslateRepository(_context));
+        }
+
+        public ICategoryTranslateRepository CategoryTranslates
+        {
+            get => _categoryTranslates ?? (_categoryTranslates = new CategoryTranslateRepository(_context));
+        }
+
+        public IDeliveryTypeTranslateRepository DeliveryTypeTranslates
+        {
+            get => _deliveryTypeTranslates ?? (_deliveryTypeTranslates = new DeliveryTypeTranslateRepository(_context));
+        }
+
+        public IDimensionTranslateRepository DimensionTranslates
+        {
+            get => _dimensionTranslates ?? (_dimensionTranslates = new DimensionTranslateRepository(_context));
+        }
+
+        public IExchangeRateRepository ExchangeRates
+        {
+            get => _exchangeRates ?? (_exchangeRates = new ExchangeRateRepository(_context));
+        }
+
+        public ILanguageRepository Languages
+        {
+            get => _languages ?? (_languages = new LanguageRepository(_context));
+        }
+
+        public IOwnerRepository Owners
+        {
+            get => _owners ?? (_owners = new OwnerRepository(_context));
+        }
+
+        public IOrderStatusTranslateRepository OrderStatusTranslates
+        {
+            get => _orderStatusTranslates ?? (_orderStatusTranslates = new OrderStatusTranslateRepository(_context));
+        }
+
+        public IPaymentMethodTranslateRepository PaymentMethodTranslates
+        {
+            get => _paymentMethodTranslates ?? (_paymentMethodTranslates = new PaymentMethodTranslateRepository(_context));
+        }
+
+        public IProductTranslateRepository ProductTranslates
+        {
+            get => _productTranslates ?? (_productTranslates = new ProductTranslateRepository(_context));
+        }
+
+        public IProductInformationTranslateRepository ProductInformationTranslates
+        {
+            get => _productInformationTranslates ?? (_productInformationTranslates = new ProductInformationTranslateRepository(_context));
+        }
+
+        public IProductParameterTranslateRepository ProductParameterTranslates
+        {
+            get => _productParameterTranslates ?? (_productParameterTranslates = new ProductParameterTranslateRepository(_context));
+        }
+
+        public IProviderTranslateRepository ProviderTranslates
+        {
+            get => _providerTranslates ?? (_providerTranslates = new ProviderTranslateRepository(_context));
+        }
+
+        public IStockTranslateRepository StockTranslates
+        {
+            get => _stockTranslates ?? (_stockTranslates = new StockTranslateRepository(_context));
+        }
+
+        #endregion
+
+        #region Methods
+
         public int Complete() => _context.SaveChanges();
+
+        #endregion
+
+        #region IDisposable
 
         private bool disposed = false;
 
@@ -174,5 +300,7 @@ namespace OnlineStore.DataProvider
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        #endregion
     }
 }

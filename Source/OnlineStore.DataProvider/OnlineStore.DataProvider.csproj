@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OnlineStore.DataProvider</RootNamespace>
     <AssemblyName>OnlineStore.DataProvider</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,76 +55,131 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\DbInitializer.cs" />
     <Compile Include="Context\ApplicationDbContext.cs" />
+    <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\Album.cs" />
     <Compile Include="Entities\AlbumImage.cs" />
+    <Compile Include="Entities\AlbumImageTranslate.cs" />
+    <Compile Include="Entities\AlbumTranslate.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\ApplicationUserProfile.cs" />
     <Compile Include="Entities\ApplicationUserRole.cs" />
     <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\ArticleTranslate.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\CategoryTranslate.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\DeliveryInformation.cs" />
     <Compile Include="Entities\DeliveryType.cs" />
+    <Compile Include="Entities\DeliveryTypeTranslate.cs" />
     <Compile Include="Entities\Dimension.cs" />
+    <Compile Include="Entities\DimensionTranslate.cs" />
+    <Compile Include="Entities\ExchangeRate.cs" />
+    <Compile Include="Entities\Language.cs" />
     <Compile Include="Entities\Manager.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderItem.cs" />
     <Compile Include="Entities\OrderStatus.cs" />
+    <Compile Include="Entities\OrderStatusTranslate.cs" />
+    <Compile Include="Entities\Owner.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\PaymentMethod.cs" />
+    <Compile Include="Entities\PaymentMethodTranslate.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductImage.cs" />
+    <Compile Include="Entities\ProductInformation.cs" />
+    <Compile Include="Entities\ProductInformationTranslate.cs" />
     <Compile Include="Entities\ProductParameter.cs" />
+    <Compile Include="Entities\ProductParameterTranslate.cs" />
+    <Compile Include="Entities\ProductTranslate.cs" />
     <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\ProviderTranslate.cs" />
     <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\StockTranslate.cs" />
     <Compile Include="Entities\Storage.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Identity\ApplicationUserRoleManager.cs" />
+    <Compile Include="Interfaces\IAdministratorRepository.cs" />
     <Compile Include="Interfaces\IAlbumImageRepository.cs" />
+    <Compile Include="Interfaces\IAlbumImageTranslateRepository.cs" />
     <Compile Include="Interfaces\IAlbumRepository.cs" />
+    <Compile Include="Interfaces\IAlbumTranslateRepository.cs" />
     <Compile Include="Interfaces\IApplicationUserProfileRepository.cs" />
     <Compile Include="Interfaces\IArticleRepository.cs" />
+    <Compile Include="Interfaces\IArticleTranslateRepository.cs" />
     <Compile Include="Interfaces\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\ICategoryTranslateRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Interfaces\IDeliveryInformationRepository.cs" />
     <Compile Include="Interfaces\IDeliveryTypeRepository.cs" />
+    <Compile Include="Interfaces\IDeliveryTypeTranslateRepository.cs" />
     <Compile Include="Interfaces\IDimensionRepository.cs" />
+    <Compile Include="Interfaces\IDimensionTranslateRepository.cs" />
+    <Compile Include="Interfaces\IExchangeRateRepository.cs" />
+    <Compile Include="Interfaces\ILanguageRepository.cs" />
     <Compile Include="Interfaces\IManagerRepository.cs" />
     <Compile Include="Interfaces\IOrderItemRepository.cs" />
     <Compile Include="Interfaces\IOrderRepository.cs" />
     <Compile Include="Interfaces\IOrderStatusRepository.cs" />
+    <Compile Include="Interfaces\IOrderStatusTranslateRepository.cs" />
+    <Compile Include="Interfaces\IOwnerRepository.cs" />
     <Compile Include="Interfaces\IPaymentMethodRepository.cs" />
+    <Compile Include="Interfaces\IPaymentMethodTranslateRepository.cs" />
     <Compile Include="Interfaces\IPaymentRepository.cs" />
     <Compile Include="Interfaces\IProductImageRepository.cs" />
+    <Compile Include="Interfaces\IProductInformationRepository.cs" />
+    <Compile Include="Interfaces\IProductInformationTranslateRepository.cs" />
     <Compile Include="Interfaces\IProductParameterRepository.cs" />
+    <Compile Include="Interfaces\IProductParameterTranslateRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Interfaces\IProductTranslateRepository.cs" />
     <Compile Include="Interfaces\IProviderRepository.cs" />
+    <Compile Include="Interfaces\IProviderTranslateRepository.cs" />
     <Compile Include="Interfaces\IStockRepository.cs" />
+    <Compile Include="Interfaces\IStockTranslateRepository.cs" />
     <Compile Include="Interfaces\IStorageRepository.cs" />
+    <Compile Include="Repositories\AdministratorRepository.cs" />
     <Compile Include="Repositories\AlbumImageRepository.cs" />
+    <Compile Include="Repositories\AlbumImageTranslateRepository.cs" />
     <Compile Include="Repositories\AlbumRepository.cs" />
+    <Compile Include="Repositories\AlbumTranslateRepository.cs" />
     <Compile Include="Repositories\ApplicationUserProfileRepository.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Repositories\ArticleTranslateRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\CategoryTranslateRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\DeliveryInformationRepository.cs" />
     <Compile Include="Repositories\DeliveryTypeRepository.cs" />
+    <Compile Include="Repositories\DeliveryTypeTranslateRepository.cs" />
     <Compile Include="Repositories\DimensionRepository.cs" />
+    <Compile Include="Repositories\DimensionTranslateRepository.cs" />
+    <Compile Include="Repositories\ExchangeRateRepository.cs" />
+    <Compile Include="Repositories\LanguageRepository.cs" />
     <Compile Include="Repositories\ManagerRepository.cs" />
     <Compile Include="Repositories\OrderItemRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\OrderStatusRepository.cs" />
+    <Compile Include="Repositories\OrderStatusTranslateRepository.cs" />
+    <Compile Include="Repositories\OwnerRepository.cs" />
     <Compile Include="Repositories\PaymentMethodRepository.cs" />
+    <Compile Include="Repositories\PaymentMethodTranslateRepository.cs" />
     <Compile Include="Repositories\PaymentRepository.cs" />
     <Compile Include="Repositories\ProductImageRepository.cs" />
+    <Compile Include="Repositories\ProductInformationRepository.cs" />
+    <Compile Include="Repositories\ProductInformationTranslateRepository.cs" />
     <Compile Include="Repositories\ProductParameterRepository.cs" />
+    <Compile Include="Repositories\ProductParameterTranslateRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProductTranslateRepository.cs" />
     <Compile Include="Repositories\ProviderRepository.cs" />
+    <Compile Include="Repositories\ProviderTranslateRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\StockTranslateRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="Repositories\StockRepository.cs" />
     <Compile Include="Repositories\StorageRepository.cs" />
@@ -132,8 +188,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

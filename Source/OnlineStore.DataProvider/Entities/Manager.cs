@@ -10,14 +10,15 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Manager
     {
-        [Key, ForeignKey("ApplicationUserID")]
-        public Guid ApplicationUserID { get; set; }
+        [Key, ForeignKey("ApplicationUser")]
+        public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
 
         public Manager()
         {
+            Id = Guid.NewGuid().ToString();
             Orders = new List<Order>();
         }
     }

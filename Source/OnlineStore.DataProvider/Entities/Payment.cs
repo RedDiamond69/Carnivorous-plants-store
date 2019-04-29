@@ -11,10 +11,10 @@ namespace OnlineStore.DataProvider.Entities
     public class Payment
     {
         [Key]
-        public Guid PaymentID { get; set; }
+        public string PaymentId { get; set; }
 
-        [Required, ForeignKey("PaymentMethodID")]
-        public Guid PaymentMethodID { get; set; }
+        [Required, ForeignKey("PaymentMethod")]
+        public string PaymentMethodId { get; set; }
         public virtual PaymentMethod PaymentMethod { get; set; }
 
         [Required]
@@ -25,5 +25,11 @@ namespace OnlineStore.DataProvider.Entities
 
         [Required]
         public decimal Sum { get; set; }
+
+        public Payment()
+        {
+            PaymentId = Guid.NewGuid().ToString();
+            PaymentMethodId = Guid.NewGuid().ToString();
+        }
     }
 }

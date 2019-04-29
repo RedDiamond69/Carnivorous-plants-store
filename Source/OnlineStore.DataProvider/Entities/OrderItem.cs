@@ -10,8 +10,11 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class OrderItem
     {
-        [Required, ForeignKey("ProductParameterID")]
-        public Guid ProductParameterID { get; set; }
+        [Key]
+        public string OrderItemId { get; set; }
+
+        [Required, ForeignKey("ProductParameter")]
+        public string ProductParameterId { get; set; }
         public virtual ProductParameter ProductParameter { get; set; }
 
         [Required]
@@ -20,8 +23,15 @@ namespace OnlineStore.DataProvider.Entities
         [Required]
         public decimal Price { get; set; }
 
-        [Required, ForeignKey("OrderID")]
-        public Guid OrderID { get; set; }
+        [Required, ForeignKey("Order")]
+        public string OrderId { get; set; }
         public virtual Order Order { get; set; }
+
+        public OrderItem()
+        {
+            OrderItemId = Guid.NewGuid().ToString();
+            ProductParameterId = Guid.NewGuid().ToString();
+            OrderId = Guid.NewGuid().ToString();
+        }
     }
 }

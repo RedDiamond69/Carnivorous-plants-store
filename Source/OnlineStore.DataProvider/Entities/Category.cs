@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,28 +11,37 @@ namespace OnlineStore.DataProvider.Entities
     public class Category
     {
         [Key]
-        public Guid CategoryID { get; set; }
+        public string CategoryId { get; set; }
 
-        [Required(ErrorMessage = "Name is required."), MaxLength(100, ErrorMessage = "Name length cannot be more than 100.")]
-        public string CategoryName { get; set; }
+        [Required(ErrorMessage = "Image is required."), MaxLength(250, ErrorMessage = "Filename length cannot be more than 250.")]
+        public string CategoryImageFilename { get; set; }
 
-        [Required(ErrorMessage = "Description is required."), MaxLength(500, ErrorMessage = "Description length cannot be more than 500.")]
-        public string CategoryDescription { get; set; }
+        [Required(ErrorMessage = "Date is required.")]
+        public DateTime ModifiedDate { get; set; }
 
-        [Required(ErrorMessage = "Page Description is required."), MaxLength(100, ErrorMessage = "Page Description length cannot be more than 100.")]
-        public string PageDescription { get; set; }
+        [Required(ErrorMessage = "Products count is required.")]
+        public int ProductsCount { get; set; }
 
-        [Required(ErrorMessage = "Page Keywords is required."), MaxLength(100, ErrorMessage = "Page Keywords length cannot be more than 100.")]
-        public string PageKeywords { get; set; }
+        [Required(ErrorMessage = "Articles count is required.")]
+        public int ArticlesCount { get; set; }
+
+        [ForeignKey("Stock")]
+        public string StockId { get; set; }
+        public virtual Stock Stock { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }
 
+        public virtual ICollection<CategoryTranslate> CategoryTranslates { get; set; }
+
         public Category()
         {
+            CategoryId = Guid.NewGuid().ToString();
+            StockId = Guid.NewGuid().ToString();
             Products = new List<Product>();
             Articles = new List<Article>();
+            CategoryTranslates = new List<CategoryTranslate>();
         }
     }
 }

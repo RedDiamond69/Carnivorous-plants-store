@@ -10,31 +10,26 @@ namespace OnlineStore.DataProvider.Entities
     public class Stock
     {
         [Key]
-        public Guid StockID { get; set; }
-
-        [Required(ErrorMessage = "Title is required."), MaxLength(100, ErrorMessage = "Title length cannot be more than 100.")]
-        public string StockTitle { get; set; }
-
-        [Required(ErrorMessage = "Description is required."), MaxLength(200, ErrorMessage = "Description length cannot be more than 200.")]
-        public string StockDescription { get; set; }
+        public string StockId { get; set; }
 
         [Required]
         public int Discount { get; set; }
 
-        [Required(ErrorMessage = "Image filename is required."), MaxLength(256, ErrorMessage = "Image filename length cannot be more than 256.")]
-        public string ImageFilename { get; set; }
+        [Required(ErrorMessage = "Start date is required.")]
+        public DateTime StartDate { get; set; }
 
-        [Required(ErrorMessage = "Page Description is required."), MaxLength(100, ErrorMessage = "Page Description length cannot be more than 100.")]
-        public string PageDescription { get; set; }
-
-        [Required(ErrorMessage = "Page Keywords is required."), MaxLength(100, ErrorMessage = "Page Keywords length cannot be more than 100.")]
-        public string PageKeywords { get; set; }
+        [Required(ErrorMessage = "Finish date is required.")]
+        public DateTime FinishDate { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<StockTranslate> StockTranslates { get; set; } 
 
         public Stock()
         {
+            StockId = Guid.NewGuid().ToString();
             Products = new List<Product>();
+            StockTranslates = new List<StockTranslate>();
         }
     }
 }

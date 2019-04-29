@@ -10,22 +10,19 @@ namespace OnlineStore.DataProvider.Entities
     public class PaymentMethod
     {
         [Key]
-        public Guid MethodID { get; set; }
+        public string MethodId { get; set; }
 
-        [Required(ErrorMessage = "Name is required."), MaxLength(30, ErrorMessage = "Name length cannot be more than 30.")]
-        public string MethodName { get; set; }
-
-        [Required(ErrorMessage = "Description is required."), MaxLength(200, ErrorMessage = "Description length cannot be more than 200.")]
-        public string MethodDescription { get; set; }
-
-        [Required]
-        public bool Availability { get; set; }
+        [Required(ErrorMessage = "Image is required."), MaxLength(250, ErrorMessage = "Filename length cannot be more than 250.")]
+        public string MethodImageFilename { get; set; }
 
         public virtual ICollection<Payment> Payments { get; set; }
+        public virtual ICollection<PaymentMethodTranslate> PaymentMethodTranslates { get; set; }
 
         public PaymentMethod()
         {
+            MethodId = Guid.NewGuid().ToString();
             Payments = new List<Payment>();
+            PaymentMethodTranslates = new List<PaymentMethodTranslate>();
         }
     }
 }

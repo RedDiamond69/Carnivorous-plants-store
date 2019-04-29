@@ -10,8 +10,8 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class ApplicationUserProfile
     {
-        [Key, ForeignKey("ApplicationUserID")]
-        public Guid ApplicationUserID { get; set; }
+        [Key, ForeignKey("ApplicationUser")]
+        public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required(ErrorMessage = "Name is required."), MaxLength(100, ErrorMessage = "Name length cannot be more than 100.")]
@@ -23,7 +23,12 @@ namespace OnlineStore.DataProvider.Entities
         [MaxLength(150, ErrorMessage = "Patronymic length cannot be more than 150.")]
         public string Patronymic { get; set; }
 
-        [Required(ErrorMessage = "Image filename is required."), MaxLength(256, ErrorMessage = "Image filename length cannot be more than 256.")]
+        [Required(ErrorMessage = "Image filename is required."), MaxLength(250, ErrorMessage = "Image filename length cannot be more than 250.")]
         public string ImageFilename { get; set; }
+
+        public ApplicationUserProfile()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
     }
 }

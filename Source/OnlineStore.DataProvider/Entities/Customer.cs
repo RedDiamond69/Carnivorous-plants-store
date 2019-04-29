@@ -10,8 +10,8 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class Customer
     {
-        [Key, ForeignKey("ApplicationUserID")]
-        public Guid ApplicationUserID { get; set; }
+        [Key, ForeignKey("ApplicationUser")]
+        public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         public virtual ICollection<DeliveryInformation> DeliveryInformation { get; set; }
@@ -20,6 +20,7 @@ namespace OnlineStore.DataProvider.Entities
 
         public Customer()
         {
+            Id = Guid.NewGuid().ToString();
             DeliveryInformation = new List<DeliveryInformation>();
             Orders = new List<Order>();
         }

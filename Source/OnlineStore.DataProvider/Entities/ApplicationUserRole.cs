@@ -9,6 +9,12 @@ namespace OnlineStore.DataProvider.Entities
 {
     public class ApplicationUserRole : IdentityRole
     {
+        public ApplicationUserRole() : base()
+        {
+        }
 
+        public ApplicationUserRole(string roleName) : base(roleName)
+        {
+        }
     }
 }

@@ -16,7 +16,7 @@
         <div id="header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                    <img src="@Url.Content("~/Content/Images/favicon.png")" width="48" height="48" class="d-inline-block align-top" alt="Logo">
+                    <img src="@Url.Content("~/Content/Images/Website/favicon.png")" width="48" height="48" class="d-inline-block align-top" alt="Logo">
                 </a>
                 <p class="navbar-brand mr-auto mb-0 h1">Venus Fly Trap</p>
                 <div class="d-lg-none d-flex flex-row align-items-center justify-content-center">
@@ -80,8 +80,8 @@
         </div>
     </div>
 
-    <footer class="bg-light align-items-center text-center">
-        <p>@DateTime.Now.Year &copy; - Venusflytrap.com</p>
+    <footer class="bg-light page-footer align-items-center text-center">
+        @DateTime.Now.Year &copy; - Venusflytrap.com
     </footer>
 
     @Scripts.Render("~/bundles/js")
