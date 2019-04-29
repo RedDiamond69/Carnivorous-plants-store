@@ -15,7 +15,7 @@ namespace OnlineStore.DataProvider.Repositories
 
         public Repository(ApplicationDbContext context) => _context = context;
 
-        public TEntity Get(int id) => Context.Set<TEntity>().Find(id);
+        public TEntity Get(string guid) => Context.Set<TEntity>().Find(guid);
 
         public IEnumerable<TEntity> GetAll() => Context.Set<TEntity>().AsNoTracking().ToList();
 
