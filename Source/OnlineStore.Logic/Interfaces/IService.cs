@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Logic.Interfaces
 {
-    public interface IService<TModel> where TModel : class
+    public interface IService<TModel> : IDisposable where TModel : class
     {
         TModel Get(string guid);
         IEnumerable<TModel> GetAll();

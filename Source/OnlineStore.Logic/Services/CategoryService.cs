@@ -30,6 +30,11 @@ namespace OnlineStore.Logic.Services
             throw new NotImplementedException();
         }
 
+        public void Dispose()
+        {
+            _work.Dispose();
+        }
+
         public IEnumerable<CategoryDTO> Find(Expression<Func<CategoryDTO, bool>> predicate)
         {
             throw new NotImplementedException();
