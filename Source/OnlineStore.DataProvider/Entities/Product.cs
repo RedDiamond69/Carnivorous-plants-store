@@ -13,16 +13,21 @@ namespace OnlineStore.DataProvider.Entities
         [Key]
         public string ProductId { get; set; }
 
+        [Index("VendorCodeIndex", IsUnique = true)]
+        [Required(ErrorMessage = "Vendor code is required."), MaxLength(5, ErrorMessage = "Vendor code length cannot be more than 5.")]
+        public string VendorCode { get; set; }
+
+        [Required(ErrorMessage = "Date is required.")]
+        public DateTime ModifiedDate { get; set; }
+
         [Required(ErrorMessage = "Image filename is required."), MaxLength(250, ErrorMessage = "Image filename length cannot be more than 250.")]
         public string ProductImageFilename { get; set; }
 
-        public virtual Storage Storage { get; set; }
-
-        [ForeignKey("Provider")]
+        [Required, ForeignKey("Provider")]
         public string ProviderId { get; set; }
         public virtual Provider Provider { get; set; }
 
-        [ForeignKey("Category")]
+        [Required, ForeignKey("Category")]
         public string CategoryId { get; set; }
         public virtual Category Category{ get; set; }
 
@@ -30,7 +35,6 @@ namespace OnlineStore.DataProvider.Entities
         public string StockId { get; set; }
         public virtual Stock Stock { get; set; }
 
-        public virtual ProductInformation ProductInformation { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
         public virtual ICollection<ProductParameter> ProductParameters { get; set; }
         public virtual ICollection<ProductTranslate> ProductTranslates { get; set; }

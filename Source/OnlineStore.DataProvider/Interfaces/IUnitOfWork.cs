@@ -36,8 +36,6 @@ namespace OnlineStore.DataProvider.Interfaces
         IPaymentMethodTranslateRepository PaymentMethodTranslates { get; }
         IProductRepository Products { get; }
         IProductTranslateRepository ProductTranslates { get; }
-        IProductInformationRepository ProductInformation { get; }
-        IProductInformationTranslateRepository ProductInformationTranslates { get; }
         IProductImageRepository ProductImages { get; }
         IProductParameterRepository ProductParameters { get; }
         IProductParameterTranslateRepository ProductParameterTranslates { get; }
@@ -45,7 +43,6 @@ namespace OnlineStore.DataProvider.Interfaces
         IProviderTranslateRepository ProviderTranslates { get; }
         IStockRepository Stocks { get; }
         IStockTranslateRepository StockTranslates { get; }
-        IStorageRepository Storages { get; }
 
         int Complete();
     }

@@ -25,6 +25,15 @@ namespace OnlineStore.DataProvider.Entities
         [Required(ErrorMessage = "Name is required."), MaxLength(50, ErrorMessage = "Name length cannot be more than 50.")]
         public string ProductName { get; set; }
 
+        [Required(ErrorMessage = "Description is required."), MaxLength(5000, ErrorMessage = "Description length cannot be more than 5000.")]
+        public string ProductDescription { get; set; }
+
+        [Required(ErrorMessage = "Page Description is required."), MaxLength(100, ErrorMessage = "Page Description length cannot be more than 100.")]
+        public string PageDescription { get; set; }
+
+        [Required(ErrorMessage = "Page Keywords is required."), MaxLength(100, ErrorMessage = "Page Keywords length cannot be more than 100.")]
+        public string PageKeywords { get; set; }
+
         public ProductTranslate()
         {
             ProductTranslateId = Guid.NewGuid().ToString();

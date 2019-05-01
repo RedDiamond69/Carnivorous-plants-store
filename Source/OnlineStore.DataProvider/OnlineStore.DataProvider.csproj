@@ -88,8 +88,6 @@
     <Compile Include="Entities\PaymentMethodTranslate.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductImage.cs" />
-    <Compile Include="Entities\ProductInformation.cs" />
-    <Compile Include="Entities\ProductInformationTranslate.cs" />
     <Compile Include="Entities\ProductParameter.cs" />
     <Compile Include="Entities\ProductParameterTranslate.cs" />
     <Compile Include="Entities\ProductTranslate.cs" />
@@ -97,7 +95,6 @@
     <Compile Include="Entities\ProviderTranslate.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\StockTranslate.cs" />
-    <Compile Include="Entities\Storage.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Identity\ApplicationUserRoleManager.cs" />
     <Compile Include="Interfaces\IAdministratorRepository.cs" />
@@ -128,8 +125,6 @@
     <Compile Include="Interfaces\IPaymentMethodTranslateRepository.cs" />
     <Compile Include="Interfaces\IPaymentRepository.cs" />
     <Compile Include="Interfaces\IProductImageRepository.cs" />
-    <Compile Include="Interfaces\IProductInformationRepository.cs" />
-    <Compile Include="Interfaces\IProductInformationTranslateRepository.cs" />
     <Compile Include="Interfaces\IProductParameterRepository.cs" />
     <Compile Include="Interfaces\IProductParameterTranslateRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
@@ -138,7 +133,6 @@
     <Compile Include="Interfaces\IProviderTranslateRepository.cs" />
     <Compile Include="Interfaces\IStockRepository.cs" />
     <Compile Include="Interfaces\IStockTranslateRepository.cs" />
-    <Compile Include="Interfaces\IStorageRepository.cs" />
     <Compile Include="Repositories\AdministratorRepository.cs" />
     <Compile Include="Repositories\AlbumImageRepository.cs" />
     <Compile Include="Repositories\AlbumImageTranslateRepository.cs" />
@@ -167,8 +161,6 @@
     <Compile Include="Repositories\PaymentMethodTranslateRepository.cs" />
     <Compile Include="Repositories\PaymentRepository.cs" />
     <Compile Include="Repositories\ProductImageRepository.cs" />
-    <Compile Include="Repositories\ProductInformationRepository.cs" />
-    <Compile Include="Repositories\ProductInformationTranslateRepository.cs" />
     <Compile Include="Repositories\ProductParameterRepository.cs" />
     <Compile Include="Repositories\ProductParameterTranslateRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
@@ -182,7 +174,6 @@
     <Compile Include="Repositories\StockTranslateRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="Repositories\StockRepository.cs" />
-    <Compile Include="Repositories\StorageRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

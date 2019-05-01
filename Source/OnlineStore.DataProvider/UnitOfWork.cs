@@ -45,8 +45,6 @@ namespace OnlineStore.DataProvider
         private PaymentMethodTranslateRepository _paymentMethodTranslates;
         private ProductRepository _products;
         private ProductTranslateRepository _productTranslates;
-        private ProductInformationRepository _productInformation;
-        private ProductInformationTranslateRepository _productInformationTranslates;
         private ProductImageRepository _productImages;
         private ProductParameterRepository _productParameters;
         private ProductParameterTranslateRepository _productParameterTranslates;
@@ -54,7 +52,6 @@ namespace OnlineStore.DataProvider
         private ProviderTranslateRepository _providerTranslates;
         private StockRepository _stocks;
         private StockTranslateRepository _stockTranslates;
-        private StorageRepository _storages;
 
         #endregion
 
@@ -156,11 +153,6 @@ namespace OnlineStore.DataProvider
             get => _stocks ?? (_stocks = new StockRepository(_context));
         }
 
-        public IStorageRepository Storages
-        {
-            get => _storages ?? (_storages = new StorageRepository(_context));
-        }
-
         public ApplicationUserManager Users
         {
             get => _users ?? (_users = new ApplicationUserManager(new UserStore<ApplicationUser>(_context)));
@@ -179,11 +171,6 @@ namespace OnlineStore.DataProvider
         public IAlbumImageRepository AlbumImages
         {
             get => _albumImages ?? (_albumImages = new AlbumImageRepository(_context));
-        }
-
-        public IProductInformationRepository ProductInformation
-        {
-            get => _productInformation ?? (_productInformation = new ProductInformationRepository(_context));
         }
 
         public IAlbumTranslateRepository AlbumTranslates
@@ -249,11 +236,6 @@ namespace OnlineStore.DataProvider
         public IProductTranslateRepository ProductTranslates
         {
             get => _productTranslates ?? (_productTranslates = new ProductTranslateRepository(_context));
-        }
-
-        public IProductInformationTranslateRepository ProductInformationTranslates
-        {
-            get => _productInformationTranslates ?? (_productInformationTranslates = new ProductInformationTranslateRepository(_context));
         }
 
         public IProductParameterTranslateRepository ProductParameterTranslates
