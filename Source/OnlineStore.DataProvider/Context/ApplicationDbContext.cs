@@ -25,8 +25,6 @@ namespace OnlineStore.DataProvider.Context
         public DbSet<AlbumImageTranslate> AlbumImageTranslates { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTranslate> ProductTranslates { get; set; }
-        public DbSet<ProductInformation> ProductInformation { get; set; }
-        public DbSet<ProductInformationTranslate> ProductInformationTranslates { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryTranslate> CategoryTranslates { get; set; }
         public DbSet<Provider> Providers { get; set; }
@@ -41,7 +39,6 @@ namespace OnlineStore.DataProvider.Context
         public DbSet<ProductParameterTranslate> ProductParameterTranslates { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<StockTranslate> StockTranslates { get; set; }
-        public DbSet<Storage> Storages { get; set; }
         public DbSet<DeliveryInformation> DeliveryInformation { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Manager> Managers { get; set; }
