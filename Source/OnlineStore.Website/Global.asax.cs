@@ -1,3 +1,4 @@
+using OnlineStore.Website.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace OnlineStore.Website
     {
         protected void Application_Start()
         {
+            AutofacConfig.RegisterContainer();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
