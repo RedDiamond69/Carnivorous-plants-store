@@ -1,6 +1,7 @@
 ﻿html,
 body {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -30,8 +31,23 @@ body {
     color: #d0d0d0;
 }
 
-div.container{
-    padding-top: 100px;
+.container {
+    margin-top: 30px;
+}
+
+.btn-xs {
+    font-size: 0.8em;
+}
+
+hr {
+    margin: 0;
+}
+
+.border-dotted {
+    border: 1px dashed #bdbdbd;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 0.5em;
 }
 
 .wrapper {

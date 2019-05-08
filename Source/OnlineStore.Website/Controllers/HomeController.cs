@@ -1,6 +1,9 @@
-﻿using System;
+﻿using OnlineStore.Logic.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,6 +11,13 @@ namespace OnlineStore.Website.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICategoryService _categoryService;
+
+        public HomeController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
         // GET: Home
         public ActionResult Index()
         {

@@ -2,6 +2,8 @@
 using Autofac.Integration.Mvc;
 using OnlineStore.DataProvider;
 using OnlineStore.DataProvider.Interfaces;
+using OnlineStore.Logic.Interfaces;
+using OnlineStore.Logic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,8 @@ namespace OnlineStore.Website.App_Start
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
+            builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerRequest();
 
             var container = builder.Build();
 
