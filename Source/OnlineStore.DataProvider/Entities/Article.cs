@@ -17,7 +17,7 @@ namespace OnlineStore.DataProvider.Entities
         public string ImageFilename { get; set; }
 
         [Required(ErrorMessage = "Date is required.")]
-        public DateTime DateTime { get; set; }
+        public DateTime ModifiedDate { get; set; }
 
         [Required, ForeignKey("Category")]
         public string CategoryId { get; set; }

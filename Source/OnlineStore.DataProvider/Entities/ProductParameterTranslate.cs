@@ -22,10 +22,7 @@ namespace OnlineStore.DataProvider.Entities
         public virtual ProductParameter ProductParameter { get; set; }
 
         [Required]
-        public decimal Price { get; set; }
-
-        [Required]
-        public bool Availability { get; set; }
+        public decimal PriceIncrease { get; set; }
 
         public ProductParameterTranslate()
         {

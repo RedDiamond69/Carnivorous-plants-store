@@ -20,6 +20,9 @@ namespace OnlineStore.DataProvider.Entities
         [Required(ErrorMessage = "Date is required.")]
         public DateTime ModifiedDate { get; set; }
 
+        [Required]
+        public decimal Price { get; set; }
+
         [Required(ErrorMessage = "Image filename is required."), MaxLength(250, ErrorMessage = "Image filename length cannot be more than 250.")]
         public string ProductImageFilename { get; set; }
 

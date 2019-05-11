@@ -18,6 +18,9 @@ namespace OnlineStore.DataProvider.Entities
         [Required(ErrorMessage = "Language name is required."), MaxLength(50, ErrorMessage = "Name length cannot be more than 50.")]
         public string LanguageName { get; set; }
 
+        [Required(ErrorMessage = "Image filename is required."), MaxLength(250, ErrorMessage = "Filename length cannot be more than 250.")]
+        public string ImageFilename { get; set; }
+
         public virtual ICollection<ArticleTranslate> ArticleTranslates { get; set; }
         public virtual ICollection<AlbumTranslate> AlbumTranslates { get; set; }
         public virtual ICollection<AlbumImageTranslate> AlbumImageTranslates { get; set; }
@@ -28,7 +31,6 @@ namespace OnlineStore.DataProvider.Entities
         public virtual ICollection<PaymentMethodTranslate> PaymentMethodTranslates { get; set; }
         public virtual ICollection<ProductTranslate> ProductTranslates { get; set; }
         public virtual ICollection<ProductParameterTranslate> ProductParameterTranslates { get; set; }
-        public virtual ICollection<ProductInformationTranslate> ProductInformationTranslates { get; set; }
         public virtual ICollection<ProviderTranslate> ProviderTranslates { get; set; }
         public virtual ICollection<StockTranslate> StockTranslates { get; set; }
 
@@ -45,7 +47,6 @@ namespace OnlineStore.DataProvider.Entities
             PaymentMethodTranslates = new List<PaymentMethodTranslate>();
             ProductTranslates = new List<ProductTranslate>();
             ProductParameterTranslates = new List<ProductParameterTranslate>();
-            ProductInformationTranslates = new List<ProductInformationTranslate>();
             ProviderTranslates = new List<ProviderTranslate>();
             StockTranslates = new List<StockTranslate>();
         }

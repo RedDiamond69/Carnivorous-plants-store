@@ -21,6 +21,9 @@ namespace OnlineStore.DataProvider.Entities
         public string ProductId { get; set; }
         public virtual Product Product { get; set; }
 
+        [Required]
+        public bool Availability { get; set; }
+
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         public virtual ICollection<ProductParameterTranslate> ProductParameterTranslates { get; set; }
 

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Configuration
 {
-    internal class DbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
+    internal class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
         private enum RoleTypes
         {
@@ -40,12 +40,14 @@ namespace OnlineStore.DataProvider.Configuration
             Language russion = new Language()
             {
                 LanguageCode = "ru",
-                LanguageName = "Русский"
+                LanguageName = "Русский",
+                ImageFilename = "ru.svg"
             };
             Language english = new Language()
             {
                 LanguageCode = "en",
-                LanguageName = "English"
+                LanguageName = "English",
+                ImageFilename = "en.svg"
             };
 
             context.Languages.AddRange(new List<Language>() { russion, english });
@@ -1401,7 +1403,7 @@ namespace OnlineStore.DataProvider.Configuration
                         }
                     },
                     Category = dmCategory,
-                    DateTime = DateTime.UtcNow,
+                    ModifiedDate = DateTime.UtcNow,
                     ImageFilename = "about-dm-article.jpg"
                 },
                 /*new Article()
