@@ -25,7 +25,7 @@ namespace OnlineStore.Website
         {
             string culture = null;
             HttpCookie cookie = HttpContext.Current.Request.Cookies["lang"];
-            culture = (cookie != null) ? cookie.Value : culture = "ru";
+            culture = (cookie != null) ? cookie.Value : "ru";
             var cultures = new List<string>() { "ru", "en" };
             if (!cultures.Contains(culture))
             {
