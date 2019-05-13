@@ -244,12 +244,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Home\Catalog.cshtml" />
-    <Content Include="Views\Home\PaymentAndDelivery.cshtml" />
-    <Content Include="Views\Home\Stock.cshtml" />
-    <Content Include="Views\Home\Gallery.cshtml" />
-    <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\CareAndMaintaince\DionaeaMuscipula.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

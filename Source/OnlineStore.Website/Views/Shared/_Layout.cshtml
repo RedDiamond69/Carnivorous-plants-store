@@ -36,10 +36,10 @@
                             <span class="badge badge-secondary">0</span>
                         </button>
                         <div class="dropdown-menu text-secondary text-center" aria-labelledby="navbarCartDropdownMobile">
-                            <p class="m-0">Cart empty!</p>
+                            <p class="m-0">@Resources.Resource.CartEmpty</p>
                         </div>
                     </div>
-                    @Html.ActionLink("Sign in", "", "", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
+                    @Html.ActionLink(@Resources.Resource.SingIn, "", "", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
                 </div>
                 <button class="navbar-toggler btn-xs" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,50 +48,50 @@
                     <div class="container-fluid flex-column">
                         <form class="form d-flex flex-row align-items-center">
                             <input class="form-control mr-2" type="search" placeholder="Search..." aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                            <button class="btn btn-outline-primary" type="submit">@Resources.Resource.Search</button>
                         </form>
                     </div>
                     <div class="container-fluid">
                         <ul class="navbar-nav d-flex flex-wrap justify-content-between">
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/home.svg")" height="20" width="20" />
-                                <a class="nav-link active font-weight-bold" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link active font-weight-bold" href="@Url.Action("Index", "Home")">@Resources.Resource.Home</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/product.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Catalog", "Home")">Catalog</a>
+                                <a class="nav-link" href="@Url.Action("Catalog", "Home")">@Resources.Resource.Catalog</a>
                             </li>
                             <li class="nav-item dropdown d-flex flex-column justify-content-center align-items-center">
                                 <a class="nav-link d-flex justify-content-center align-items-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="mr-2" src="@Url.Content("~/Content/Images/Website/plant.svg")" height="20" width="20" />
-                                    Care and Maintaince
+                                    @Resources.Resource.CareAndMaintaince
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="@Url.Action("DionaeaMuscipula", "CareAndMaintaince")">Dionaea muscipula</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Drosera</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Sarracenia</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Pinguicula</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Nepenthes</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Utricularia</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Darlingtonia californica</a>
-                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">Cephalotus</a>
+                                    <a class="dropdown-item" href="@Url.Action("DionaeaMuscipula", "CareAndMaintaince")">@Resources.Resource.DionaeaMuscipula</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Drosera</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Nepenthes</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Sarracenia</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Pinguicula</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Cephalotus</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.Utricularia</a>
+                                    <a class="dropdown-item" href="@Url.Action("", "CareAndMaintaince")">@Resources.Resource.DarlingtoniaCalifornica</a>
                                 </div>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/payment-delivery.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("PaymentAndDelivery", "Home")">Payment and Delivery</a>
+                                <a class="nav-link" href="@Url.Action("PaymentAndDelivery", "Home")">@Resources.Resource.PaymentAndDelivery</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/discount.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Stock", "Home")">Stock</a>
+                                <a class="nav-link" href="@Url.Action("Stock", "Home")">@Resources.Resource.Stock</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/gallery.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Gallery", "Home")">Gallery</a>
+                                <a class="nav-link" href="@Url.Action("Gallery", "Home")">@Resources.Resource.Gallery</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/contacts.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Contacts", "Home")">Contacts</a>
+                                <a class="nav-link" href="@Url.Action("Contacts", "Home")">@Resources.Resource.Contacts</a>
                             </li>
                         </ul>
                     </div>
@@ -105,11 +105,12 @@
                             <div class="dropdown">
                                 <button class="btn text-secondary dropdown-toggle" id="navbarLanguageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="@Url.Content("~/Content/Images/Website/language.svg")" height="24" width="24" />
-                                    Language
+                                    @Resources.Resource.Language
                                 </button>
                                 <div class="dropdown-menu text-center" aria-labelledby="navbarLanguageDropdown">
-                                    <a class="dropdown-item text-secondary" href="@Url.Action("", "")">English</a>
-                                    <a class="dropdown-item text-secondary" href="@Url.Action("", "")">Русский</a>
+                                    <!-- TO DO: get language from database. -->
+                                    <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "en"})">English</a>
+                                    <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "ru" })">Русский</a>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +122,10 @@
                                     <span class="badge badge-secondary">0</span>
                                 </button>
                                 <div class="dropdown-menu text-secondary text-center" aria-labelledby="navbarCartDropdown">
-                                    <p class="m-0">Cart empty!</p>
+                                    <p class="m-0">@Resources.Resource.CartEmpty</p>
                                 </div>
                             </div>
-                            @Html.ActionLink("Sign in", "", "", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
+                            @Html.ActionLink(@Resources.Resource.SingIn, "", "", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
                         </div>
                     </div>
                 </div>
@@ -140,15 +141,12 @@
         <div class="d-flex text-secondary container-fluid flex-lg-row flex-column justify-content-between">
             <div class="container-fluid d-flex align-items-center border-dotted">
                 <p>
-                    Venus Flytrap online-shop - <strong>first carnivorous plants</strong> shop in Minsk!
-                    In our store you can purchase <strong>more than <span class="text-danger">200</span> rare varieties of predatory plants from around the world</strong>, 
-                    as well as everything you need to grow: specialized substrates, components of substrates, pots, 
-                    distilled water, preparations and much more!
+                    @Html.Raw(new HtmlString(Resources.Resource.OnlineStoreFooterAbout))
                 </p>
             </div>
             <div class="container-fluid d-flex align-items-center justify-content-center flex-column border-dotted">
                 <p>
-                    Follow us in social media:
+                    @Resources.Resource.FollowUs
                 </p>
                 <div class="container-fluid d-flex align-items-center justify-content-around">
                     <a href="@Url.Action("", "")">
@@ -163,9 +161,7 @@
                 </div>
             </div>
             <div class="container-fluid flex-column border-dotted">
-                <p>
-                    Contact us:
-                </p>
+                <p>@Resources.Resource.ContactUs</p>
                 <div class="container-fluid">
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/map.svg")" height="20" width="20" alt="Location" />
@@ -183,11 +179,11 @@
                     <div class="mt-1 dropup">
                         <button class="btn text-secondary dropdown-toggle" id="footerLanguageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="@Url.Content("~/Content/Images/Website/language.svg")" height="20" width="20" />
-                            Language
+                            @Resources.Resource.Language
                         </button>
                         <div class="dropdown-menu text-center" aria-labelledby="footerLanguageDropdown">
-                            <a class="dropdown-item text-secondary" href="@Url.Action("", "")">English</a>
-                            <a class="dropdown-item text-secondary" href="@Url.Action("", "")">Русский</a>
+                            <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "en"})">English</a>
+                            <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "ru"})">Русский</a>
                         </div>
                     </div>
                 </div>
