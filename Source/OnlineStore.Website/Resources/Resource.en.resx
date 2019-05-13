@@ -117,8 +117,96 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CareAndMaintaince" xml:space="preserve">
+    <value>Care and Maintaince</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="CartEmpty" xml:space="preserve">
+    <value>Cart is empty.</value>
+    <comment>Text for cart, when she empty.</comment>
+  </data>
+  <data name="Catalog" xml:space="preserve">
+    <value>Catalog</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="Cephalotus" xml:space="preserve">
+    <value>Cephalotus</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact us:</value>
+    <comment>Contact us footer part text.</comment>
+  </data>
+  <data name="DarlingtoniaCalifornica" xml:space="preserve">
+    <value>Darlingtonia Californica</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="DionaeaMuscipula" xml:space="preserve">
+    <value>Dionaea Muscipula</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="Drosera" xml:space="preserve">
+    <value>Drosera</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="FollowUs" xml:space="preserve">
+    <value>Follow us in social media:</value>
+    <comment>Follow us footer part text.</comment>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Gallery</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Venusflytrap.com - Carnivorous plants online-store in Minsk!</value>
     <comment>Title for main page.</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+    <comment>Text for language dropdown button.</comment>
+  </data>
+  <data name="Nepenthes" xml:space="preserve">
+    <value>Nepenthes</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="OnlineStoreFooterAbout" xml:space="preserve">
+    <value>Venus Flytrap online-shop - &lt;strong&gt;first carnivorous plants&lt;/strong&gt; shop in Minsk! In our store you can purchase &lt;strong&gt;more than &lt;span class="text-danger"&gt;200&lt;/span&gt; rare varieties of predatory plants from around the world&lt;/strong&gt;, as well as everything you need to grow: specialized substrates, components of substrates, pots, distilled water, preparations and much more!</value>
+    <comment>Online store footer description.</comment>
+  </data>
+  <data name="PaymentAndDelivery" xml:space="preserve">
+    <value>Payment and Delivery</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="Pinguicula" xml:space="preserve">
+    <value>Pinguicula</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="Sarracenia" xml:space="preserve">
+    <value>Sarracenia</value>
+    <comment>Text for nav bar dropdown item item.</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>Text for search button.</comment>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign in</value>
+    <comment>Text for sign in button.</comment>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Stock</value>
+    <comment>Text for nav bar item.</comment>
+  </data>
+  <data name="Utricularia" xml:space="preserve">
+    <value>Utricularia</value>
+    <comment>Text for nav bar dropdown item item.</comment>
   </data>
 </root>

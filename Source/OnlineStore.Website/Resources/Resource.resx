@@ -117,8 +117,96 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CareAndMaintaince" xml:space="preserve">
+    <value>Уход и Содержание</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="CartEmpty" xml:space="preserve">
+    <value>Корзина пуста.</value>
+    <comment>Надпись для корзины, когда она пуста.</comment>
+  </data>
+  <data name="Catalog" xml:space="preserve">
+    <value>Каталог</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="Cephalotus" xml:space="preserve">
+    <value>Цефалотус</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Контакты:</value>
+    <comment>Текст раздела контактов в подвале сайта.</comment>
+  </data>
+  <data name="DarlingtoniaCalifornica" xml:space="preserve">
+    <value>Дарлингтония Калифорнийская</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="DionaeaMuscipula" xml:space="preserve">
+    <value>Венерина Мухоловка</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="Drosera" xml:space="preserve">
+    <value>Росянка</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="FollowUs" xml:space="preserve">
+    <value>Следите за нами в социальных сетях:</value>
+    <comment>Социальные сети в подвале сайта.</comment>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Галерея</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Главная</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Venusflytrap.com - онлайн-магазин хищных растений в Минске!</value>
     <comment>Заголовок главной страницы.</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+    <comment>Тескт списка языков.</comment>
+  </data>
+  <data name="Nepenthes" xml:space="preserve">
+    <value>Непентес</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="OnlineStoreFooterAbout" xml:space="preserve">
+    <value>Venusflytrap.com - &lt;strong&gt;первый интернет - магазин хищных растений &lt;/strong&gt; в Минске! В нашем магазине вы можете приобрести &lt;strong&gt;более &lt;span class="text-danger"&gt;200&lt;/span&gt; редких сортов хищных растений со всего мира&lt;/strong&gt;, а также абсолютно всё, что требуется для выращивания: специализированные субстраты, компоненты субстрата, горшки, дистиллированная вода, препараты и многое другое!</value>
+    <comment>Описание интернет магазина в подвале сайта.</comment>
+  </data>
+  <data name="PaymentAndDelivery" xml:space="preserve">
+    <value>Оплата и Доставка</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="Pinguicula" xml:space="preserve">
+    <value>Жирянка</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="Sarracenia" xml:space="preserve">
+    <value>Саррацения</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Найти</value>
+    <comment>Текст кнопки поиска.</comment>
+  </data>
+  <data name="SingIn" xml:space="preserve">
+    <value>Войти</value>
+    <comment>Текст кнопки авторизации.</comment>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Акции</value>
+    <comment>Текст пункта нав. меню.</comment>
+  </data>
+  <data name="Utricularia" xml:space="preserve">
+    <value>Пузырчатка</value>
+    <comment>Текст пункта выпадающего нав. меню.</comment>
   </data>
 </root>
