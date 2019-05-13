@@ -42,7 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\ArticleBL.cs" />
+    <Compile Include="BusinessObjects\CategoryBL.cs" />
+    <Compile Include="BusinessObjects\ProductBL.cs" />
+    <Compile Include="BusinessObjects\ProductParameterBL.cs" />
+    <Compile Include="BusinessObjects\ProviderBL.cs" />
+    <Compile Include="DTO\ArticleDTO.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\OrderItemDTO.cs" />
+    <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="DTO\ProductImageDTO.cs" />
+    <Compile Include="DTO\ProductParameterDTO.cs" />
+    <Compile Include="DTO\ProviderDTO.cs" />
+    <Compile Include="DTO\StockDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.DataProvider\OnlineStore.DataProvider.csproj">
+      <Project>{75128007-8575-4F76-A3D5-0B45A293D921}</Project>
+      <Name>OnlineStore.DataProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
