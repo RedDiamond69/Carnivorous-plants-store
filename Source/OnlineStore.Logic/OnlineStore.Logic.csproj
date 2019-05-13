@@ -42,13 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\ArticleDTO.cs" />
-    <Compile Include="DTO\CategoryDTO.cs" />
-    <Compile Include="DTO\ProductDTO.cs" />
-    <Compile Include="DTO\ProductImageDTO.cs" />
-    <Compile Include="DTO\ProductParameterDTO.cs" />
-    <Compile Include="DTO\ProviderDTO.cs" />
-    <Compile Include="DTO\StockDTO.cs" />
     <Compile Include="Interfaces\ICategoryService.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,7 +53,7 @@
       <Name>OnlineStore.DataProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineStore.Model\OnlineStore.Model.csproj">
-      <Project>{8DE0D09B-7B91-4045-9CA2-048CFF3D2820}</Project>
+      <Project>{8de0d09b-7b91-4045-9ca2-048cff3d2820}</Project>
       <Name>OnlineStore.Model</Name>
     </ProjectReference>
   </ItemGroup>

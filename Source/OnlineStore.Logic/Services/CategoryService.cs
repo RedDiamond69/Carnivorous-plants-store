@@ -1,5 +1,6 @@
 ﻿using OnlineStore.DataProvider.Interfaces;
-using OnlineStore.Logic.DTO;
+using OnlineStore.Model.DTO;
+using OnlineStore.Model.BusinessObjects;
 using OnlineStore.Logic.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,8 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<CategoryDTO> GetAll()
         {
-            throw new NotImplementedException();
+            var categories = _work.Categories.GetAll().Select(c => new CategoryBL(c).GetDTO());
+            return categories;
         }
 
         public void Remove(CategoryDTO model)
