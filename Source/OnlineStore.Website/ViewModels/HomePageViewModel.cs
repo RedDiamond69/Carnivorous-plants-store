@@ -7,6 +7,8 @@ namespace OnlineStore.Website.ViewModels
 {
     public class HomePageViewModel
     {
+        public IEnumerable<CategoryViewModel> Categories { get; set; }
 
+        public IEnumerable<ProductViewModel> Products { get; set; }
     }
 }
