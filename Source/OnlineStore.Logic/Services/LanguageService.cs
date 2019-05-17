@@ -1,4 +1,5 @@
-﻿using OnlineStore.Logic.Interfaces;
+﻿using OnlineStore.DataProvider.Interfaces;
+using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,13 @@ namespace OnlineStore.Logic.Services
 {
     public class LanguageService : ILanguageService
     {
+        private readonly IUnitOfWork _work;
+
+        public LanguageService(IUnitOfWork unitOfWork)
+        {
+            _work = unitOfWork;
+        }
+
         public void Add(LanguageDTO model)
         {
             throw new NotImplementedException();
@@ -23,7 +31,7 @@ namespace OnlineStore.Logic.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _work.Dispose();
         }
 
         public IEnumerable<LanguageDTO> Find(Expression<Func<LanguageDTO, bool>> predicate)
@@ -38,7 +46,14 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<LanguageDTO> GetAll()
         {
-            throw new NotImplementedException();
+            var languages = _work.Languages.GetAll().Select(l => new LanguageDTO()
+            {
+                LanguageId = l.LanguageId,
+                LanguageCode = l.LanguageCode,
+                LanguageName = l.LanguageName,
+                ImageFilename = l.ImageFilename
+            });
+            return languages;
         }
 
         public void Remove(LanguageDTO model)

@@ -1,4 +1,5 @@
-﻿using OnlineStore.Logic.Interfaces;
+﻿using OnlineStore.DataProvider.Interfaces;
+using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,13 @@ namespace OnlineStore.Logic.Services
 {
     public class ProductService : IProductService
     {
+        private readonly IUnitOfWork _work;
+
+        public ProductService(IUnitOfWork unitOfWork)
+        {
+            _work = unitOfWork;
+        }
+
         public void Add(ProductDTO model)
         {
             throw new NotImplementedException();
@@ -23,7 +31,7 @@ namespace OnlineStore.Logic.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _work.Dispose();
         }
 
         public IEnumerable<ProductDTO> Find(Expression<Func<ProductDTO, bool>> predicate)

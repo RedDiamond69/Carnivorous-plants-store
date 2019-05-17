@@ -10,21 +10,21 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Logic.Services
 {
-    public class ArticleService : IArticleService
+    public class ProviderService : IProviderService
     {
         private readonly IUnitOfWork _work;
 
-        public ArticleService(IUnitOfWork unitOfWork)
+        public ProviderService(IUnitOfWork unitOfWork)
         {
             _work = unitOfWork;
         }
 
-        public void Add(ArticleDTO model)
+        public void Add(ProviderDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void AddRange(IEnumerable<ArticleDTO> models)
+        public void AddRange(IEnumerable<ProviderDTO> models)
         {
             throw new NotImplementedException();
         }
@@ -34,32 +34,32 @@ namespace OnlineStore.Logic.Services
             _work.Dispose();
         }
 
-        public IEnumerable<ArticleDTO> Find(Expression<Func<ArticleDTO, bool>> predicate)
+        public IEnumerable<ProviderDTO> Find(Expression<Func<ProviderDTO, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public ArticleDTO Get(string guid)
+        public ProviderDTO Get(string guid)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ArticleDTO> GetAll()
+        public IEnumerable<ProviderDTO> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(ArticleDTO model)
+        public void Remove(ProviderDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveRange(IEnumerable<ArticleDTO> models)
+        public void RemoveRange(IEnumerable<ProviderDTO> models)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(ArticleDTO model)
+        public void Update(ProviderDTO model)
         {
             throw new NotImplementedException();
         }

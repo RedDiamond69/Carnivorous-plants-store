@@ -1,65 +1,56 @@
-﻿using OnlineStore.DataProvider.Interfaces;
-using OnlineStore.Logic.Interfaces;
+﻿using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OnlineStore.Logic.Services
 {
-    public class ArticleService : IArticleService
+    public class ContactService : IContactService
     {
-        private readonly IUnitOfWork _work;
-
-        public ArticleService(IUnitOfWork unitOfWork)
-        {
-            _work = unitOfWork;
-        }
-
-        public void Add(ArticleDTO model)
+        public void Add(ContactDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void AddRange(IEnumerable<ArticleDTO> models)
+        public void AddRange(IEnumerable<ContactDTO> models)
         {
             throw new NotImplementedException();
         }
 
         public void Dispose()
         {
-            _work.Dispose();
+            throw new NotImplementedException();
         }
 
-        public IEnumerable<ArticleDTO> Find(Expression<Func<ArticleDTO, bool>> predicate)
+        public IEnumerable<ContactDTO> Find(System.Linq.Expressions.Expression<Func<ContactDTO, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public ArticleDTO Get(string guid)
+        public ContactDTO Get(string guid)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ArticleDTO> GetAll()
+        public IEnumerable<ContactDTO> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(ArticleDTO model)
+        public void Remove(ContactDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveRange(IEnumerable<ArticleDTO> models)
+        public void RemoveRange(IEnumerable<ContactDTO> models)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(ArticleDTO model)
+        public void Update(ContactDTO model)
         {
             throw new NotImplementedException();
         }
