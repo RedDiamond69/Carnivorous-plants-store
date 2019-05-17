@@ -22,6 +22,10 @@ namespace OnlineStore.Website.App_Start
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerRequest();
+            builder.RegisterType<LanguageService>().As<ILanguageService>().InstancePerRequest();
+            builder.RegisterType<ProviderService>().As<IProviderService>().InstancePerRequest();
+            builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
+            builder.RegisterType<ArticleService>().As<IArticleService>().InstancePerRequest();
 
             var container = builder.Build();
 
