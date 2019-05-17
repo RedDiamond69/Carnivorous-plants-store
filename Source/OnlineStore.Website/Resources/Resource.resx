@@ -197,7 +197,7 @@
     <value>Найти</value>
     <comment>Текст кнопки поиска.</comment>
   </data>
-  <data name="SingIn" xml:space="preserve">
+  <data name="SignIn" xml:space="preserve">
     <value>Войти</value>
     <comment>Текст кнопки авторизации.</comment>
   </data>

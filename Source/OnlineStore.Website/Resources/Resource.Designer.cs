@@ -243,9 +243,9 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Войти.
         /// </summary>
-        public static string SingIn {
+        public static string SignIn {
             get {
-                return ResourceManager.GetString("SingIn", resourceCulture);
+                return ResourceManager.GetString("SignIn", resourceCulture);
             }
         }
         

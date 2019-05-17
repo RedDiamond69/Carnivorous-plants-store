@@ -26,8 +26,15 @@
                             <img src="@Url.Content("~/Content/Images/Website/language.svg")" height="20" width="20" />
                         </button>
                         <div class="dropdown-menu text-secondary" aria-labelledby="navbarLanguageDropdownMobile">
-                            <a class="dropdown-item text-secondary" href="@Url.Action("", "")">English</a>
-                            <a class="dropdown-item text-secondary" href="@Url.Action("", "")">Русский</a>
+                            @{
+                                foreach (var l in Model.Languages)
+                                {
+                                    <div class="d-flex align-items-center dropdown-item justify-content-center">
+                                        <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
+                                        @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                    </div>
+                                }
+                            }
                         </div>
                     </div>
                     <div class="dropdown">
@@ -39,7 +46,7 @@
                             <p class="m-0">@Resources.Resource.CartEmpty</p>
                         </div>
                     </div>
-                    @Html.ActionLink(@Resources.Resource.SingIn, "", "", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
+                    @Html.ActionLink(@Resources.Resource.SignIn, "", "", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
                 </div>
                 <button class="navbar-toggler btn-xs" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -108,9 +115,15 @@
                                     @Resources.Resource.Language
                                 </button>
                                 <div class="dropdown-menu text-center" aria-labelledby="navbarLanguageDropdown">
-                                    <!-- TO DO: get language from database. -->
-                                    <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "en"})">English</a>
-                                    <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "ru" })">Русский</a>
+                                    @{
+                                        foreach (var l in Model.Languages)
+                                        {
+                                            <div class="d-flex align-items-center dropdown-item justify-content-center">
+                                                <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
+                                                @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                            </div>
+                                        }
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -125,7 +138,7 @@
                                     <p class="m-0">@Resources.Resource.CartEmpty</p>
                                 </div>
                             </div>
-                            @Html.ActionLink(@Resources.Resource.SingIn, "", "", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
+                            @Html.ActionLink(@Resources.Resource.SignIn, "", "", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
                         </div>
                     </div>
                 </div>
@@ -175,6 +188,9 @@
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/clock.svg")" height="20" width="20" alt="Work time" />
                     </p>
+                    <p>
+                        <img src="@Url.Content("~/Content/Images/Website/registration.svg")" height="20" width="20" alt="Registration" />
+                    </p>
                     <hr />
                     <div class="mt-1 dropup">
                         <button class="btn text-secondary dropdown-toggle" id="footerLanguageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -182,8 +198,15 @@
                             @Resources.Resource.Language
                         </button>
                         <div class="dropdown-menu text-center" aria-labelledby="footerLanguageDropdown">
-                            <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "en"})">English</a>
-                            <a class="dropdown-item text-secondary" href="@Url.Action("ChangeCulture", "Home", new { lang = "ru"})">Русский</a>
+                            @{ 
+                                foreach(var l in Model.Languages)
+                                {
+                                    <div class="d-flex align-items-center dropdown-item justify-content-center">
+                                        <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
+                                        @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                    </div>
+                                }
+                            }
                         </div>
                     </div>
                 </div>
