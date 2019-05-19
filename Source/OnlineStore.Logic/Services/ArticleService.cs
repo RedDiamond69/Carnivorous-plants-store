@@ -1,4 +1,5 @@
-﻿using OnlineStore.DataProvider.Interfaces;
+﻿using AutoMapper;
+using OnlineStore.DataProvider.Interfaces;
 using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
 using System;
@@ -13,10 +14,12 @@ namespace OnlineStore.Logic.Services
     public class ArticleService : IArticleService
     {
         private readonly IUnitOfWork _work;
+        private readonly IMapper _mapper;
 
-        public ArticleService(IUnitOfWork unitOfWork)
+        public ArticleService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _work = unitOfWork;
+            _mapper = mapper;
         }
 
         public void Add(ArticleDTO model)
@@ -36,7 +39,8 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<ArticleDTO> Find(Expression<Func<ArticleDTO, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var articles = _work.Articles.GetAll().Select(p => _mapper.Map<ArticleDTO>(p)).Where(predicate.Compile());
+            return articles;
         }
 
         public ArticleDTO Get(string guid)

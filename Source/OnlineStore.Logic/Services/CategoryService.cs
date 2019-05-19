@@ -9,16 +9,19 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace OnlineStore.Logic.Services
 {
     public class CategoryService : ICategoryService
     {
         private readonly IUnitOfWork _work;
+        private readonly IMapper _mapper;
 
-        public CategoryService(IUnitOfWork unitOfWork)
+        public CategoryService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _work = unitOfWork;
+            _mapper = mapper;
         }
 
         public void Add(CategoryDTO model)
@@ -48,7 +51,7 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<CategoryDTO> GetAll()
         {
-            var categories = _work.Categories.GetAll().Select(c => new CategoryBL(c).GetDTO());
+            var categories = _work.Categories.GetAll().Select(c => _mapper.Map<CategoryDTO>(c));
             return categories;
         }
 

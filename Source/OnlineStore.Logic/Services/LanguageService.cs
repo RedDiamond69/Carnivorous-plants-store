@@ -1,4 +1,5 @@
-﻿using OnlineStore.DataProvider.Interfaces;
+﻿using AutoMapper;
+using OnlineStore.DataProvider.Interfaces;
 using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
 using System;
@@ -13,10 +14,12 @@ namespace OnlineStore.Logic.Services
     public class LanguageService : ILanguageService
     {
         private readonly IUnitOfWork _work;
+        private readonly IMapper _mapper;
 
-        public LanguageService(IUnitOfWork unitOfWork)
+        public LanguageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _work = unitOfWork;
+            _mapper = mapper;
         }
 
         public void Add(LanguageDTO model)
@@ -46,13 +49,7 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<LanguageDTO> GetAll()
         {
-            var languages = _work.Languages.GetAll().Select(l => new LanguageDTO()
-            {
-                LanguageId = l.LanguageId,
-                LanguageCode = l.LanguageCode,
-                LanguageName = l.LanguageName,
-                ImageFilename = l.ImageFilename
-            });
+            var languages = _work.Languages.GetAll().Select(l => _mapper.Map<LanguageDTO>(l));
             return languages;
         }
 
