@@ -64,7 +64,14 @@ namespace OnlineStore.Website.Mappings
                     => opt.MapFrom(source
                         => source.ArticleTranslates.Where(t => t.Language.LanguageCode == lang).SingleOrDefault().PageKeywords));
 
-            CreateMap<Provider, ProviderDTO>();
+            CreateMap<Provider, ProviderDTO>()
+                .ForMember(pr => pr.ProviderName, opt
+                    => opt.MapFrom(source
+                        => source.ProviderTranslates.Where(t => t.Language.LanguageCode == lang).SingleOrDefault().ProviderName))
+                .ForMember(pr => pr.ProviderDescription, opt
+                    => opt.MapFrom(source
+                        => source.ProviderTranslates.Where(t => t.Language.LanguageCode == lang).SingleOrDefault().ProviderDescription));
+
             CreateMap<Language, LanguageDTO>();
         }
     }
