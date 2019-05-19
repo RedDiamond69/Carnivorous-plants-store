@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using AutoMapper;
 using OnlineStore.DataProvider;
 using OnlineStore.DataProvider.Interfaces;
 using OnlineStore.Logic.Interfaces;
@@ -7,6 +8,7 @@ using OnlineStore.Logic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,11 +23,12 @@ namespace OnlineStore.Website.App_Start
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
-            builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerRequest();
-            builder.RegisterType<LanguageService>().As<ILanguageService>().InstancePerRequest();
-            builder.RegisterType<ProviderService>().As<IProviderService>().InstancePerRequest();
-            builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
-            builder.RegisterType<ArticleService>().As<IArticleService>().InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(Assembly.Load("OnlineStore.Logic"))
+                .Where(t => t.Name.EndsWith("Service"))
+                .AsImplementedInterfaces().InstancePerRequest();
+
+            builder.RegisterModule(new AutoMapperModule());
 
             var container = builder.Build();
 
