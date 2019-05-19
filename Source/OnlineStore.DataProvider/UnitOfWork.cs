@@ -52,6 +52,8 @@ namespace OnlineStore.DataProvider
         private ProviderTranslateRepository _providerTranslates;
         private StockRepository _stocks;
         private StockTranslateRepository _stockTranslates;
+        private ShopContactRepository _shopContact;
+        private ShopContactTranslateRepository _shopContactTranslates;
 
         #endregion
 
@@ -251,6 +253,14 @@ namespace OnlineStore.DataProvider
         public IStockTranslateRepository StockTranslates
         {
             get => _stockTranslates ?? (_stockTranslates = new StockTranslateRepository(_context));
+        }
+        public IShopContactRepository ShopContact
+        {
+            get => _shopContact ?? (_shopContact = new ShopContactRepository(_context));
+        }
+        public IShopContactTranslateRepository ShopContactTranslates
+        {
+            get => _shopContactTranslates ?? (_shopContactTranslates = new ShopContactTranslateRepository(_context));
         }
 
         #endregion

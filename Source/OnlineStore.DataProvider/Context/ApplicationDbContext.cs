@@ -54,6 +54,8 @@ namespace OnlineStore.DataProvider.Context
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleTranslate> ArticleTranslates { get; set; }
         public DbSet<ApplicationUserProfile> ApplicationUserProfiles { get; set; }
+        public DbSet<ShopContact> ShopContacts { get; set; }
+        public DbSet<ShopContactTranslate> ShopContactTranslates { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

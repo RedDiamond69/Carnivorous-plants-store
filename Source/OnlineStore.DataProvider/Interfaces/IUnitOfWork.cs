@@ -43,6 +43,8 @@ namespace OnlineStore.DataProvider.Interfaces
         IProviderTranslateRepository ProviderTranslates { get; }
         IStockRepository Stocks { get; }
         IStockTranslateRepository StockTranslates { get; }
+        IShopContactRepository ShopContact { get; }
+        IShopContactTranslateRepository ShopContactTranslates { get; }
 
         int Complete();
     }
