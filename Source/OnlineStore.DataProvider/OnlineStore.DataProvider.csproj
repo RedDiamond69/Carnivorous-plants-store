@@ -93,6 +93,8 @@
     <Compile Include="Entities\ProductTranslate.cs" />
     <Compile Include="Entities\Provider.cs" />
     <Compile Include="Entities\ProviderTranslate.cs" />
+    <Compile Include="Entities\ShopContact.cs" />
+    <Compile Include="Entities\ShopContactTranslate.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\StockTranslate.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />

@@ -33,6 +33,7 @@ namespace OnlineStore.DataProvider.Entities
         public virtual ICollection<ProductParameterTranslate> ProductParameterTranslates { get; set; }
         public virtual ICollection<ProviderTranslate> ProviderTranslates { get; set; }
         public virtual ICollection<StockTranslate> StockTranslates { get; set; }
+        public virtual ICollection<ShopContactTranslate> ShopContactTranslates { get; set; }
 
         public Language()
         {
@@ -49,6 +50,7 @@ namespace OnlineStore.DataProvider.Entities
             ProductParameterTranslates = new List<ProductParameterTranslate>();
             ProviderTranslates = new List<ProviderTranslate>();
             StockTranslates = new List<StockTranslate>();
+            ShopContactTranslates = new List<ShopContactTranslate>();
         }
     }
 }
