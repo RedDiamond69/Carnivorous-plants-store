@@ -5,8 +5,10 @@ using System.Web;
 
 namespace OnlineStore.Website.ViewModels
 {
-    public class ContactViewModel
+    public class ShopContactViewModel
     {
+        public string ShopContactId { get; set; }
+
         public string Location { get; set; }
 
         public string MobilePhone { get; set; }
@@ -16,5 +18,7 @@ namespace OnlineStore.Website.ViewModels
         public string WorkTime { get; set; }
 
         public string Registration { get; set; }
+
+        public DateTime ModifiedDate { get; set; }
     }
 }

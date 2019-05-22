@@ -11,6 +11,6 @@ namespace OnlineStore.Website.ViewModels
 
         public List<LanguageViewModel> Languages { get; set; }
 
-        public ContactViewModel Contacts { get; set; }
+        public ShopContactViewModel Contacts { get; set; }
     }
 }
