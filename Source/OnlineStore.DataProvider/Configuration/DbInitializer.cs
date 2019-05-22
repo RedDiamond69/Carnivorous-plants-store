@@ -1696,6 +1696,35 @@ namespace OnlineStore.DataProvider.Configuration
 
             #endregion
 
+            #region ShopContacts
+
+            var contact = new ShopContact()
+            {
+                Email = "venusflytrapshop@gmail.com",
+                MobilePhone = "+375259507009",
+                ModifiedDate = DateTime.UtcNow,
+                WorkTime = "9:00 - 20:00",
+                ShopContactTranslates = new List<ShopContactTranslate>()
+                {
+                    new ShopContactTranslate()
+                    {
+                        Language = russion,
+                        Location = "Республика Беларусь, г. Минск, ул. Леонида Беды 2б",
+                        Registration = "В торговом реестре с 12 июня 2019г. УНП 000000000. Регистрация № 000000000, 12.06.2019, Мингорисполком"
+                    },
+                    new ShopContactTranslate()
+                    {
+                        Language = english,
+                        Location = "Republic of Belarus, Minsk, st. Leonid Beda 2b",
+                        Registration = "In the trade register from June 12, 2019. UNP 000000000. Registration number 000000000, 12.06.2019, Minsk City Executive Committee"
+                    }
+                }
+            };
+
+            context.ShopContacts.Add(contact);
+
+            #endregion
+
             context.SaveChanges();
 
             base.Seed(context);
