@@ -12,16 +12,13 @@ namespace OnlineStore.Website.App_Start
         protected override void Load(ContainerBuilder builder)
         {
             base.Load(builder);
-            builder.RegisterAssemblyTypes(typeof(MvcApplication).Assembly).As<Profile>();
 
-            builder.Register(context => new MapperConfiguration(cfg =>
+            var config = new MapperConfiguration(cfg =>
             {
-                foreach (var profile in context.Resolve<IEnumerable<Profile>>())
-                {
-                    cfg.AddProfile(profile);
-                }
-            })).AsSelf().InstancePerRequest();
+                cfg.AddMaps(typeof(MvcApplication).Assembly);
+            });
 
+            builder.RegisterInstance(config).SingleInstance();
             builder.Register(c => c.Resolve<MapperConfiguration>().CreateMapper(c.Resolve))
                 .As<IMapper>()
                 .InstancePerRequest();
