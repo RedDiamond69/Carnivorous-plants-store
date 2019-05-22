@@ -12,7 +12,6 @@ body {
 }
 
 #header {
-    position: absolute;
     z-index: 1000;
     width: 100%;
 }
@@ -47,7 +46,6 @@ hr {
     border: 1px dashed #bdbdbd;
     padding: 0.5em;
     border-radius: 5px;
-    margin: 0.5em;
 }
 
 .wrapper {

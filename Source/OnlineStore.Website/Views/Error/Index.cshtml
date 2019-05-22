@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Views/Shared/_ErrorLayout.cshtml";
+}
+
+    <div class="container-fluid text-center align-items-center">
+        <div class="container">
+            <img src=@ViewBag.Image alt="error" height="256" width="256"/>
+        </div>
+        <div class="container text-secondary">
+            <h2>@ViewBag.Message</h2>
+        </div>
+    </div>

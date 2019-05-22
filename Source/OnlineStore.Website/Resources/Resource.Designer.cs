@@ -187,6 +187,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Упс... Внутренняя ошибка сервера. Серверу не удалось выполнить ваш запрос. Пожалуйста, повторите запрос позже!.
+        /// </summary>
+        public static string InternalServerErrorMessage {
+            get {
+                return ResourceManager.GetString("InternalServerErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Внутренняя ошибка сервера.
+        /// </summary>
+        public static string InternalServerErrorTitle {
+            get {
+                return ResourceManager.GetString("InternalServerErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Язык.
         /// </summary>
         public static string Language {
@@ -201,6 +219,15 @@ namespace Resources {
         public static string Nepenthes {
             get {
                 return ResourceManager.GetString("Nepenthes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Упс... Данная страница не найдена. Используйте поиск или вернитесь на главную страницу..
+        /// </summary>
+        public static string NotFoundMessage {
+            get {
+                return ResourceManager.GetString("NotFoundMessage", resourceCulture);
             }
         }
         

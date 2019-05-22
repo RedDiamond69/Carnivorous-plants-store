@@ -217,4 +217,16 @@
     <value>Venusflytrap.com - Страница не найдена или не существует</value>
     <comment>Тескт заголовка страницы ошибок.</comment>
   </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>Упс... Данная страница не найдена. Используйте поиск или вернитесь на главную страницу.</value>
+    <comment>Текст для 404 ошибки.</comment>
+  </data>
+  <data name="InternalServerErrorMessage" xml:space="preserve">
+    <value>Упс... Внутренняя ошибка сервера. Серверу не удалось выполнить ваш запрос. Пожалуйста, повторите запрос позже!</value>
+    <comment>Текст сообщения 500 ошибки.</comment>
+  </data>
+  <data name="InternalServerErrorTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Внутренняя ошибка сервера</value>
+    <comment>Текст заголовка страницы 500 ошибки.</comment>
+  </data>
 </root>

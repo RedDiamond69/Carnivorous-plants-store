@@ -217,4 +217,16 @@
     <value>Venusflytrap.com - Page not found or not exist</value>
     <comment>Title for not found error page.</comment>
   </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>Oops... That page couldn't be found. Try search or go to home page.</value>
+    <comment>Text for 404 error.</comment>
+  </data>
+  <data name="InternalServerErrorMessage" xml:space="preserve">
+    <value>Oops... Internal Server Error. The server was unable to complete your request. Please, try your request again!</value>
+    <comment>Message for 500 error.</comment>
+  </data>
+  <data name="InternalServerErrorTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Internal Server Error</value>
+    <comment>Text for 500 error.</comment>
+  </data>
 </root>
