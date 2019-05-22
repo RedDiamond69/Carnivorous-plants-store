@@ -209,4 +209,12 @@
     <value>Пузырчатка</value>
     <comment>Текст пункта выпадающего нав. меню.</comment>
   </data>
+  <data name="GoToHome" xml:space="preserve">
+    <value>На главную</value>
+    <comment>Текст кнопки на странице ошибок.</comment>
+  </data>
+  <data name="NotFoundTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Страница не найдена или не существует</value>
+    <comment>Тескт заголовка страницы ошибок.</comment>
+  </data>
 </root>

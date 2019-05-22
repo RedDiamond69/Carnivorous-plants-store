@@ -160,6 +160,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to На главную.
+        /// </summary>
+        public static string GoToHome {
+            get {
+                return ResourceManager.GetString("GoToHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Главная.
         /// </summary>
         public static string Home {
@@ -192,6 +201,15 @@ namespace Resources {
         public static string Nepenthes {
             get {
                 return ResourceManager.GetString("Nepenthes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Страница не найдена или не существует.
+        /// </summary>
+        public static string NotFoundTitle {
+            get {
+                return ResourceManager.GetString("NotFoundTitle", resourceCulture);
             }
         }
         

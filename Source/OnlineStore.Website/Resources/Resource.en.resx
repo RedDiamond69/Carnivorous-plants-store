@@ -209,4 +209,12 @@
     <value>Utricularia</value>
     <comment>Text for nav bar dropdown item item.</comment>
   </data>
+  <data name="GoToHome" xml:space="preserve">
+    <value>Back to Home</value>
+    <comment>Text for back button on error page.</comment>
+  </data>
+  <data name="NotFoundTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Page not found or not exist</value>
+    <comment>Title for not found error page.</comment>
+  </data>
 </root>
