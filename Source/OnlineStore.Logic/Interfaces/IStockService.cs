@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Logic.Interfaces
 {
-    public interface IContactService : IService<ShopContactDTO>
+    public interface IStockService : IService<StockDTO>
     {
     }
 }

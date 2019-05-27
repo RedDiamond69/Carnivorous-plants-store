@@ -51,7 +51,7 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<CategoryDTO> GetAll()
         {
-            var categories = _work.Categories.GetAll().Select(c => _mapper.Map<CategoryDTO>(c));
+            var categories = _work.Categories.GetAll().Select(c => new CategoryBL(c).GetDTO());
             return categories;
         }
 

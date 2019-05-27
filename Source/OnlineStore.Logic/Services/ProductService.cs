@@ -2,6 +2,7 @@
 using OnlineStore.DataProvider.Entities;
 using OnlineStore.DataProvider.Interfaces;
 using OnlineStore.Logic.Interfaces;
+using OnlineStore.Model.BusinessObjects;
 using OnlineStore.Model.DTO;
 using System;
 using System.Collections.Generic;
@@ -40,23 +41,25 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<ProductDTO> Find(Expression<Func<ProductDTO, bool>> predicate)
         {
-            var products = _work.Products.GetAll().Select(p => _mapper.Map<ProductDTO>(p)).Where(predicate.Compile());
+            var products = _work.Products.GetAll().Select(p => new ProductBL(p).GetDTO()).Where(predicate.Compile());
             return products;
         }
 
         public ProductDTO Get(string guid)
         {
-            throw new NotImplementedException();
+            var product = new ProductBL(_work.Products.Get(guid)).GetDTO();
+            return product;
         }
 
         public IEnumerable<ProductDTO> GetAll()
         {
-            throw new NotImplementedException();
+            var products = _work.Products.GetAll().Select(p => new ProductBL(p).GetDTO());
+            return products;
         }
 
         public void Remove(ProductDTO model)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RemoveRange(IEnumerable<ProductDTO> models)

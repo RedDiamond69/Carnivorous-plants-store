@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using OnlineStore.DataProvider.Entities;
 using OnlineStore.DataProvider.Interfaces;
 using OnlineStore.Logic.Interfaces;
 using OnlineStore.Model.DTO;
+using OnlineStore.Model.BusinessObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +41,7 @@ namespace OnlineStore.Logic.Services
 
         public IEnumerable<ArticleDTO> Find(Expression<Func<ArticleDTO, bool>> predicate)
         {
-            var articles = _work.Articles.GetAll().Select(p => _mapper.Map<ArticleDTO>(p)).Where(predicate.Compile());
+            var articles = _work.Articles.GetAll().Select(a => new ArticleBL(a).GetDTO()).Where(predicate.Compile());
             return articles;
         }
 

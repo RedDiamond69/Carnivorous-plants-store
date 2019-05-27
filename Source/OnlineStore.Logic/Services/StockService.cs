@@ -11,21 +11,21 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Logic.Services
 {
-    public class ProviderService : IProviderService
+    public class StockService : IStockService
     {
         private readonly IUnitOfWork _work;
 
-        public ProviderService(IUnitOfWork unitOfWork)
+        public StockService(IUnitOfWork unitOfWork)
         {
             _work = unitOfWork;
         }
 
-        public void Add(ProviderDTO model)
+        public void Add(StockDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void AddRange(IEnumerable<ProviderDTO> models)
+        public void AddRange(IEnumerable<StockDTO> models)
         {
             throw new NotImplementedException();
         }
@@ -35,33 +35,33 @@ namespace OnlineStore.Logic.Services
             _work.Dispose();
         }
 
-        public IEnumerable<ProviderDTO> Find(Expression<Func<ProviderDTO, bool>> predicate)
+        public IEnumerable<StockDTO> Find(Expression<Func<StockDTO, bool>> predicate)
+        {
+            var stocks = _work.Stocks.GetAll().Select(s => new StockBL(s).GetDTO()).Where(predicate.Compile());
+            return stocks;
+        }
+
+        public StockDTO Get(string guid)
         {
             throw new NotImplementedException();
         }
 
-        public ProviderDTO Get(string guid)
-        {
-            var provider = new ProviderBL(_work.Providers.Get(guid)).GetDTO();
-            return provider;
-        }
-
-        public IEnumerable<ProviderDTO> GetAll()
+        public IEnumerable<StockDTO> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(ProviderDTO model)
+        public void Remove(StockDTO model)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveRange(IEnumerable<ProviderDTO> models)
+        public void RemoveRange(IEnumerable<StockDTO> models)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(ProviderDTO model)
+        public void Update(StockDTO model)
         {
             throw new NotImplementedException();
         }
