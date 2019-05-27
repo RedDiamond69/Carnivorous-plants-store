@@ -44,7 +44,7 @@ body {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .main-carousel-item-h {
-        height: 70vh !important;
+        height: 80vh !important;
     }
 
     .rounded-img-small {
