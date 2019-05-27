@@ -391,13 +391,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\CareAndMaintaince\DionaeaMuscipula.cshtml" />
-    <Content Include="Views\Home\_CategoryDetail.cshtml" />
+    <Content Include="Views\Home\Partial\_CategoryDetail.cshtml" />
     <Content Include="Views\Shared\_ErrorLayout.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
-    <Content Include="Views\Home\_CarouselStock.cshtml" />
-    <Content Include="Views\Home\_CarouselCategory.cshtml" />
-    <Content Include="Views\Home\_CarouselProduct.cshtml" />
-    <Content Include="Views\Home\_CarouselArticle.cshtml" />
+    <Content Include="Views\Home\Partial\_CarouselStock.cshtml" />
+    <Content Include="Views\Home\Partial\_CarouselCategory.cshtml" />
+    <Content Include="Views\Home\Partial\_CarouselProduct.cshtml" />
+    <Content Include="Views\Home\Partial\_CarouselArticle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

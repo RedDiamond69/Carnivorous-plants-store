@@ -16,8 +16,8 @@
         }
     </ol>
     <div class="carousel-inner">
-        @Html.Partial("_CarouselStock", Model.Stocks)
-        @Html.Partial("_CarouselCategory", Model.Categories)
+        @Html.Partial("Partial/_CarouselStock", Model.Stocks)
+        @Html.Partial("Partial/_CarouselCategory", Model.Categories)
     </div>
     
     <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -29,5 +29,5 @@
 </div>
 
 <div class="container d-flex flex-column justify-content-center" >
-    @Html.Partial("_CategoryDetail", Model.Categories)
+    @Html.Partial("Partial/_CategoryDetail", Model.Categories)
 </div>
