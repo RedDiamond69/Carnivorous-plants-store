@@ -8,9 +8,11 @@
         {
             <div class="container-fluid d-flex bg-light my-3 p-3 flex--row flex-lg-nowrap flex-wrap rounded">
                 <div class="container d-flex mb-2 mb-lg-1 align-items-center justify-content-center text-center flex-lg-column">
-                    <img class="rounded-circle mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
-                    <hr class="w-75 mx-2 mx-lg-0" />
-                    <h3 class="mt-lg-3">@category.CategoryName</h3>
+                    <div>
+                        <img class="rounded-circle rounded-img-small mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
+                    </div>
+                    <hr class="w-50 d-none d-sm-flex mx-2 mx-lg-0" />
+                    <h4 class="mx-2 mx-lg-0 mt-lg-3">@category.CategoryName</h4>
                 </div>
                 <div class="container-fluid flex-column">
                     @{
@@ -19,7 +21,7 @@
                     }
                     <div class="text-center border-dotted-1">
                         <div class="position-relative">
-                            <h4>@Resources.Resource.ProductCarouselTitle</h4>
+                            <h5>@Resources.Resource.ProductCarouselTitle</h5>
                             <span class="badge badge-pill badge-position badge-info">@category.ProductsCount</span>
                         </div>
                         <hr class="mb-2 mx-auto w-50" />
@@ -51,7 +53,7 @@
                     </div>
                     <div class="text-center mt-2 border-dotted-1">
                         <div class="position-relative">
-                            <h4>@Resources.Resource.ArticleCarouselTitle</h4>
+                            <h5>@Resources.Resource.ArticleCarouselTitle</h5>
                             <span class="badge badge-pill badge-position badge-info">@category.ArticlesCount</span>
                         </div>
                         <hr class="mb-2 mx-auto w-50" />
@@ -94,7 +96,7 @@
                     }
                     <div class="text-center border-dotted-1">
                         <div class="position-relative">
-                            <h4>@Resources.Resource.ProductCarouselTitle</h4>
+                            <h5>@Resources.Resource.ProductCarouselTitle</h5>
                             <span class="badge badge-pill badge-position badge-info">@category.ProductsCount</span>
                         </div>
                         <hr class="mb-2 mx-auto w-50" />
@@ -126,7 +128,7 @@
                     </div>
                     <div class="text-center mt-2 border-dotted-1">
                         <div class="position-relative">
-                            <h4>@Resources.Resource.ArticleCarouselTitle</h4>
+                            <h5>@Resources.Resource.ArticleCarouselTitle</h5>
                             <span class="badge badge-pill badge-position badge-info">@category.ArticlesCount</span>
                         </div>
                         <hr class="mb-2 mx-auto w-50" />
@@ -158,9 +160,11 @@
                     </div>
                 </div>
                 <div class="container d-flex align-items-center mb-2 mb-lg-1 justify-content-center text-center flex-lg-column">
-                    <img class="rounded-circle mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
-                    <hr class="w-75 mx-2 mx-lg-0" />
-                    <h3 class="mt-lg-3">@category.CategoryName</h3>
+                    <div>
+                        <img class="rounded-circle rounded-img-small mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
+                    </div>
+                    <hr class="w-50 d-none d-sm-flex mx-2 mx-lg-0" />
+                    <h4 class="mx-2 mx-lg-0 mt-lg-3">@category.CategoryName</h4>
                 </div>
             </div>
         }
