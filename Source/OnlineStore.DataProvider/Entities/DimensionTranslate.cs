@@ -21,7 +21,7 @@ namespace OnlineStore.DataProvider.Entities
         public string DimensionId { get; set; }
         public virtual Dimension Dimension { get; set; }
 
-        [Required(ErrorMessage = "Name is required."), MaxLength(10, ErrorMessage = "Name length cannot be more than 10.")]
+        [Required(ErrorMessage = "Name is required."), MaxLength(30, ErrorMessage = "Name length cannot be more than 10.")]
         public string DimensionName { get; set; }
 
         [Required(ErrorMessage = "Description is required."), MaxLength(200, ErrorMessage = "Description length cannot be more than 200.")]

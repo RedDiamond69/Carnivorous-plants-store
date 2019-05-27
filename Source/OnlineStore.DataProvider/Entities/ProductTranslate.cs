@@ -28,6 +28,9 @@ namespace OnlineStore.DataProvider.Entities
         [Required(ErrorMessage = "Description is required."), MaxLength(5000, ErrorMessage = "Description length cannot be more than 5000.")]
         public string ProductDescription { get; set; }
 
+        [Required]
+        public decimal Price { get; set; }
+
         [Required(ErrorMessage = "Page Description is required."), MaxLength(100, ErrorMessage = "Page Description length cannot be more than 100.")]
         public string PageDescription { get; set; }
 

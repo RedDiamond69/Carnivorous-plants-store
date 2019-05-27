@@ -15,6 +15,9 @@ namespace OnlineStore.DataProvider.Entities
         [Required]
         public int Discount { get; set; }
 
+        [Required]
+        public bool IsActive { get; set; }
+
         [Required(ErrorMessage = "Start date is required.")]
         public DateTime StartDate { get; set; }
 
