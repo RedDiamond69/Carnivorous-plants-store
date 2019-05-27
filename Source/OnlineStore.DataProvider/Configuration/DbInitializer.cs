@@ -1039,7 +1039,8 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 Discount = 20,
                 StartDate = DateTime.UtcNow,
-                FinishDate = DateTime.UtcNow.AddDays(7)
+                FinishDate = DateTime.UtcNow.AddDays(7),
+                IsActive = true
             };
 
             context.Stocks.Add(stock);
@@ -1079,7 +1080,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "venus-fly-trap-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var drCategory = new Category()
             {
@@ -1112,7 +1115,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "drosera-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var npCategory = new Category()
             {
@@ -1145,7 +1150,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "nepenthes-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var srCategory = new Category()
             {
@@ -1154,11 +1161,10 @@ namespace OnlineStore.DataProvider.Configuration
                     new CategoryTranslate()
                     {
                         CategoryName = "Sarracenia",
-                        CategoryDescription = "Саррацения — это болотное, корневищное, травянистое растение является многолетником. " +
-                            "Оно входит в число наиболее больших плотоядных растений. Его листочки, находящиеся снизу, чешуйчатые. " +
-                            "Короткочерешковые ловчие листочки, отличающиеся достаточно большим размером, собраны в розетку. " +
-                            "Они возвышаются над самим растением и строением чем-то напоминают урну с довольно широким отверстием сверху " +
-                            "либо трубковидный кувшин.",
+                        CategoryDescription = "Sarracenia is a marsh, rhizomatous, herbaceous plant is a perennial. " +
+                            "It is among the largest carnivorous plants. Its bottom leaves are scaly. Korotkocheriskovye trap leaves, " +
+                            "differing in sufficiently large size, collected in the outlet. They rise above the plant itself and the " +
+                            "structure somewhat resembles an urn with a rather wide opening at the top or a tubular jug.",
                         Language = english,
                         PageDescription = "Category - Sarracenia",
                         PageKeywords = "Sarracenia, Carnivorous plants, carnivorous, plants"
@@ -1166,10 +1172,11 @@ namespace OnlineStore.DataProvider.Configuration
                     new CategoryTranslate()
                     {
                         CategoryName = "Саррацения",
-                        CategoryDescription = "Sarracenia is a marsh, rhizomatous, herbaceous plant is a perennial. " +
-                            "It is among the largest carnivorous plants. Its bottom leaves are scaly. Korotkocheriskovye trap leaves, " +
-                            "differing in sufficiently large size, collected in the outlet. They rise above the plant itself and the " +
-                            "structure somewhat resembles an urn with a rather wide opening at the top or a tubular jug.",
+                        CategoryDescription = "Саррацения — это болотное, корневищное, травянистое растение является многолетником. " +
+                            "Оно входит в число наиболее больших плотоядных растений. Его листочки, находящиеся снизу, чешуйчатые. " +
+                            "Короткочерешковые ловчие листочки, отличающиеся достаточно большим размером, собраны в розетку. " +
+                            "Они возвышаются над самим растением и строением чем-то напоминают урну с довольно широким отверстием сверху " +
+                            "либо трубковидный кувшин.",
                         Language = russion,
                         PageDescription = "Категория - Саррацения",
                         PageKeywords = "Саррацения, Хищные растения, хищные, растения"
@@ -1177,7 +1184,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "sarracenia-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var pnCategory = new Category()
             {
@@ -1208,7 +1217,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "pinguicula-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var utCategory = new Category()
             {
@@ -1239,7 +1250,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "utricularia-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var dcCategory = new Category()
             {
@@ -1270,7 +1283,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "darlingtonia-californica-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var cfCategory = new Category()
             {
@@ -1303,7 +1318,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "cephalotus-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var seedCategory = new Category()
             {
@@ -1328,7 +1345,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "seeds-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
             var relatedCategory = new Category()
             {
@@ -1353,7 +1372,9 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 CategoryImageFilename = "related-category.jpg",
                 ModifiedDate = DateTime.UtcNow,
-                Stock = stock
+                Stock = stock,
+                ProductsCount = 1,
+                ArticlesCount = 1
             };
 
             context.Categories.AddRange(new List<Category>() { dmCategory,
@@ -1668,7 +1689,178 @@ namespace OnlineStore.DataProvider.Configuration
 
             #region Dimensions
 
-            // TODO
+            var s = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "S",
+                        DimensionDescription = "Small size plant.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "S",
+                        DimensionDescription = "Маленькое растение.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var m = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "M",
+                        DimensionDescription = "Medium size plant.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "M",
+                        DimensionDescription = "Среднее растение.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var l = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "L",
+                        DimensionDescription = "Large size plant.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "L",
+                        DimensionDescription = "Большое растение.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var seedSmall = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Small packet",
+                        DimensionDescription = "5 seeds.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Маленький пакет",
+                        DimensionDescription = "5 семян.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var seedMedium = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Medium packet",
+                        DimensionDescription = "10 seeds.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Средний пакет",
+                        DimensionDescription = "10 семян.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var seedLarge = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Large packet",
+                        DimensionDescription = "15 seeds.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Большой пакет",
+                        DimensionDescription = "15 семян.",
+                        Language = russion
+                    }
+                }
+            };
+
+            var substratSmall = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Small packet",
+                        DimensionDescription = "1 liter.",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Маленький пакет",
+                        DimensionDescription = "1 литр",
+                        Language = russion
+                    }
+                }
+            };
+
+            var substratMedium = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Medium packet",
+                        DimensionDescription = "2 liter",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Средний пакет",
+                        DimensionDescription = "2 литра",
+                        Language = russion
+                    }
+                }
+            };
+
+            var substratLarge = new Dimension()
+            {
+                DimensionTranslates = new List<DimensionTranslate>()
+                {
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Large packet",
+                        DimensionDescription = "3 liter",
+                        Language = english
+                    },
+                    new DimensionTranslate()
+                    {
+                        DimensionName = "Большой пакет",
+                        DimensionDescription = "3 литра",
+                        Language = russion
+                    }
+                }
+            };
+
+            context.Dimensions.AddRange(new List<Dimension>() { s, l, m, seedSmall, seedMedium, seedLarge, substratSmall, substratMedium, substratLarge });
 
             #endregion
 
@@ -1686,13 +1878,1051 @@ namespace OnlineStore.DataProvider.Configuration
 
             #region Providers
 
-            // TODO
+            var provider = new Provider()
+            {
+                ImageFilename = "favicon.png",
+                ProviderTranslates = new List<ProviderTranslate>()
+                {
+                    new ProviderTranslate()
+                    {
+                        Language = english,
+                        ProviderName = "Venusflytrap.com",
+                        ProviderDescription = "Venusflytrap.com - best carnivorous plants in Europe!"
+                    },
+                    new ProviderTranslate()
+                    {
+                        Language = russion,
+                        ProviderName = "Venusflytrap.com",
+                        ProviderDescription = "Venusflytrap.com - лучший производитель хищных растений в Европе!"
+                    }
+                }
+            };
+
+            context.Providers.AddRange(new List<Provider>() { provider });
 
             #endregion
 
             #region Products
 
-            // TODO
+            var products = new List<Product>()
+            {
+                new Product()
+                {
+                    Category = dmCategory,
+                    ProductImageFilename = "dm-typical.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "DM000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 1
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 2
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "dm-typical-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "dm-typical-2.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "dm-typical-3.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Dionaea muscipula 'Typical'",
+                            ProductDescription = "The natural form of Dionei, the leaves are light green, the color of the trap varies from light green to red, the cilia are long.",
+                            Price = 7.5M,
+                            PageDescription = "Product - Dionaea muscipula typical",
+                            PageKeywords = "product, dionaea muscipula typical, typical, dionaea"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Венерина мухоловка (дионея) 'Типичная'",
+                            ProductDescription = "Природная форма дионеи, листья светло - зеленые, цвет ловушки от светло-зеленого до красного, реснички длинные.",
+                            Price = 15,
+                            PageDescription = "Товар - Венерина Мухоловка типичная",
+                            PageKeywords = "Товар, венерина мухоловка типичная, мухоловка, дионея, типичная"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = drCategory,
+                    ProductImageFilename = "dr-rotundifolia.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "DR000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 1
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 2
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 3
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 6
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "dr-rotundifolia-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "dr-rotundifolia-2.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "dr-rotundifolia-3.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Drosera Rotundifolia",
+                            ProductDescription = "The drosera is of a temperate climate, the leaves are collected in a rosette, of medium length, at the ends are round with many cilia at the ends of which are sticky droplets. Leaf color from green to red.",
+                            Price = 10M,
+                            PageDescription = "Product - Drosera Rotundifolia",
+                            PageKeywords = "product, Rotundifolia, drosera, drosera rotundifolia"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Росянка Круглолистая",
+                            ProductDescription = "Росянка умеренного климата, листия собраны в розетку, средней длины, на концах имеют круглую форму с множеством ресничек на концах которых липкие капельки. Цвет листьев от зеленого до красного.",
+                            Price = 20,
+                            PageDescription = "Товар - Росянка Круглолистая",
+                            PageKeywords = "товар, Росянка Круглолистая, Росянка, Круглолистая"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = npCategory,
+                    ProductImageFilename = "np-alata.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "NP000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 4
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 8
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "np-alata-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "np-alata-2.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Nepenthes Alata",
+                            ProductDescription = "Nepenthes 'Alata' grows large, impressive size. Very spectacular plant that will be a great decoration in your interior. It has large green leaves turning into a jug-trap, the color of the jug from green to light red.",
+                            Price = 10M,
+                            PageDescription = "Product - Nepenthes Alata",
+                            PageKeywords = "product, Nepenthes Alata, Nepenthes, Alata"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Непентес Алата",
+                            ProductDescription = "Непентес 'Алата' вырастает крупных, внушительных размеров. Очень эффектное растение, которое станет прекрасным украшением в Вашем интерьере. Имеет крупные зеленые листья переходящие в кувшин-ловушку, цвет кувшина от зеленого до светло-красного.",
+                            Price = 20,
+                            PageDescription = "Товар - Непентес Алата",
+                            PageKeywords = "товар, непентес алата, непентес, алата"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = srCategory,
+                    ProductImageFilename = "sr-alata.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "SR000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 5
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 10
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "sr-alata-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "sr-alata-2.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "sr-alata-3.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Sarracenia Alata",
+                            ProductDescription = "Sarracenia are perennial herbaceous plants with leaves twisted into jar-traps growing on the top of the rhizome. The leaves are elongated, narrow at the bottom and slightly widening at the top and a part of the sheet forms a cover. Inside the leaves are digestive fluids, with which the plant digests the prey. The prey is attracted by the sweetish nectar produced by the trap leaves. Unlike other predatory plants, the lid does not slam when the insect gets inside, the victim simply drowns in the accumulated liquid, gradually digesting. Flowers solitary, on a long peduncle, with a diameter of up to 10 cm, depending on the type of their color can be red, purple, purple or yellowish.",
+                            Price = 12.5M,
+                            PageDescription = "Product - Sarracenia Alata",
+                            PageKeywords = "Product, Sarracenia Alata, Sarracenia, Alata"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Саррацения Алата (Alata)",
+                            ProductDescription = "Саррацения – это многолетние травянистые растения с листьями, закрученными в кувшинчики-ловушки, растущими на верхушке корневища. Листья вытянутые, узкие снизу и немного расширяющиеся кверху и часть листа образует крышку. Внутри листьев находиться пищеварительная жидкость, с помощью которой растение переваривает добычу. Добыча привлекается сладковатым нектаром, который вырабатывают листья-ловушки. В отличии от других растений-хищников у саррацении при попадании насекомого внутрь крышка не захлопывается, жертва просто тонет в скопившейся жидкости, постепенно перевариваясь. Цветки одиночные, на длинном цветоносе, диаметром до 10 см, в зависимости от вида их окраска может быть красной, фиолетовой, пурпурной или желтоватой.",
+                            Price = 25,
+                            PageDescription = "Товар - Саррацения Алата (Alata)",
+                            PageKeywords = "Товар, Саррацения Алата, алата, саррацения, Alata"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = pnCategory,
+                    ProductImageFilename = "pn-weser.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "PN000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 3
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 6
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "pn-weser-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "pn-weser-2.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Pinguicula 'Weser'",
+                            ProductDescription = "Pinguícula is a genus of perennial insect-eating plants of the family Bubylata (Lentibulariaceae). Leaves form a rosette. The upper side of the leaf is covered with numerous glands: some of them secrete sugary mucus, which is a trap for small insects; other glands generate enzymes that aid in the digestion of food. The movements of the insects that come across lead to the sheet slowly curling, and the mucus dissolves the proteins of the victim’s body. Flowers solitary, on long peduncles. Possible color: purple, blue, pink, rarely white.",
+                            Price = 7.5M,
+                            PageDescription = "Product - Pinguicula 'Weser'",
+                            PageKeywords = "Produc, Pinguicula Weser, Pinguicula, Weser"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Жирянка Весер (Weser)",
+                            ProductDescription = "Жиря́нка (лат. Pinguícula) — род многолетних насекомоядных растений семейства Пузырчатковые (Lentibulariaceae). Листья образуют прикорневую розетку. Верхняя сторона листа покрыта многочисленными желёзками: одни из них выделяют сахаристую слизь, являющуюся ловушкой для мелких насекомых; другие желёзки генерируют ферменты, способствующие перевариванию пищи. Движения попавшихся насекомых приводят к медленному скручиванию листа, а слизь растворяет белки тела жертвы. Цветки одиночные, на длинных цветоносах. Возможный цвет: фиолетовый, голубой, розовый, редко белый.",
+                            Price = 15,
+                            PageDescription = "Товар - Жирянка Весер (Weser)",
+                            PageKeywords = "Товар, Жирянка Весер (Weser), Жирянка, Весер, Weser"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = utCategory,
+                    ProductImageFilename = "ut-vulgaris.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "UT000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 1
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 2
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "ut-vulgaris-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "ut-vulgaris-2.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Utricularia 'Vulgaris'",
+                            ProductDescription = "In the wild, leaves of utricularia can grow up to one and a half meters long. When grown in pots of course this size, the leaves are difficult to grow, but in any case it is this variety that always grows much larger than the rest. Utricularia flower usually in the warm period of the year beautiful lilac-yellow flowers. Usually bloom long. This pemphigus grows quite quickly. It is best to grow in a pot with a lot of not very small holes on the sides. In these holes the plants will release their roots with bubble traps. In an adult plant, bubbles on the roots are clearly visible. Growing pemphigus should pay special attention to the level of water in the pan. It should be as much as possible so that the roots are always in the water. For planting, you can use a substrate for predatory plants (based on sour peat), and sphagnum with the addition of perlite is also very well suited. Utricularia love bright sunshine. In winter, you need to finish the plant. Aquarium lighting is very good. Utricularia - very unpretentious to the temperature regime. It tolerates heat well, but feels good in a cool place. The main thing is not to freeze. She does not need a rest period. Watering with distilled water.",
+                            Price = 5M,
+                            PageDescription = "Product - Utricularia 'Vulgaris'",
+                            PageKeywords = "Product, Utricularia Vulgaris, Utricularia, Vulgaris"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Пузырчатка",
+                            ProductDescription = "В дикой природе листья пузырчатки могут расти до полутора метров длиной. При выращивании в горшках конечно таких размеров листья сложно вырастить, но в любом случае именно этот сорт всегда вырастает значительно крупнее чем остальные. Цветет Пузырчатка обычно в теплый период года красивыми сиренево-желтыми цветами. Обычно цветение продолжительное. Растет эта пузырчатка довольно быстро. Лучше всего выращивать в горшочке с множеством не очень мелких отверстий по бокам. В эти отверстия растения выпустит свои корни с пузырями-ловушками. У взрослого растения хорошо видны пузыри на корнях. Выращивая пузырчатки нужно уделить особое внимание уровню воды в поддоне. Её должно быть максимально много, чтоб корни всегда находились в воде. Для посадки растения можно использовать субстрат для хищных растений (на основе кислого торфа), а так же очень хорошо подходит сфагнум с добавлением перлита. Пузырчатки любят яркое солнечное освещение. В зимнее время года нужно досвечивать растение. Очень хорошо подойдет аквариумное освещение. Пузырчатка - очень неприхотлива к температурному режиму. Хорошо переносит жару, но в прохладе хорошо себя чувствует. Главное не заморозить. Период покоя ей не нужен. Полив дистиллированной водой.",
+                            Price = 10,
+                            PageDescription = "Товар - Пузырчатка",
+                            PageKeywords = "Товар, пузырчатка"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = dcCategory,
+                    ProductImageFilename = "dc.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "DC000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 5
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 10
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 10
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 20
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "dc-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "dc-2.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Darlingtonia Californica",
+                            ProductDescription = "Darlingtonia is a genus of insectivorous plants of the Sarrasenie family. The only representative of the genus - Darlingtonia Californian, found in the marshes in the north of California and in Oregon. The genus is named after the American doctor and botanist William Darlington. Very rare plant. In our country, and in Europe, to buy this plant is quite difficult. Snare traps emit a sharp odor that attracts insects. They get inside and can no longer get out. Insects are digested in the digestive juices of the plant, which thus receives additional nutrients. Darlingtonia is a perennial carnivorous plant native to Northern California and Southern Oregon USA. In nature, darlingtonia can be found in mountainous areas in the dammed meadows, in the forest shadows or on the banks of cold mountain rivers. The most favorable condition for the life of this unusual plant is the presence of a number of cold running water. Scientists have recognized this predatory plant as unique in its kind. Darlingtonia Californian - the only member of the Sarrasenie family, the Darlingtonia family. It is often called “cobra” because of tubular leaves, which resemble a cobra with a bloated hood, and small leafy appendages of yellow or reddish-green color, like a forked snake tongue, give even more similarity to this animal. Tubular leaves, reaching up to 100 cm in height, are swollen at the top into a jar with slippery inner walls and a small hole at the bottom - this is a trap-labyrinth for insects. Transparent spots-windows cover the whole leaf, thanks to which the victims in the trap lose their orientation to the real way out and become food for the plant. Darlingtonia blooms in spring, releasing beautiful flowers from yellow to purple-brown on single stems. Interestingly, scientists have so far not been able to figure out which insects pollinate darlingtonia flowers.",
+                            Price = 40M,
+                            PageDescription = "Product - Darlingtonia Californica",
+                            PageKeywords = "Product - Darlingtonia Californica"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Дарлингтония Калифорнийская",
+                            ProductDescription = "Дарлингтония — род насекомоядных растений семейства Саррацениевые. Единственный представитель рода — Дарлингтония калифорнийская, встречающаяся на болотах на севере Калифорнии и в Орегоне. Род назван в честь американского врача и ботаника Уильяма Дарлингтона. Очень редкое растение. В нашей стране, да и в Европе, купить это растение довольно сложно. Ловушки-накопители выделяют резкий запах, который привлекает насекомых. Они попадают внутрь и больше не могут выбраться. Насекомые перевариваются в пищеварительных соках растения, которое таким образом получает дополнительные питательные вещества. Дарлингтония – это многолетнее плотоядное растение родом из Северной Калифорнии и Южного Орегона США. В природе дарлингтонию можно встретить в горной местности на запруженных лугах, в лесной тени или на берегах холодных горных рек. Самым благоприятным условием для жизни этого необычного растения является наличие рядом холодной проточной воды. Ученые признали это хищное растение уникальным в своем роде. Дарлингтония Калифорнийская – единственный представитель семейства Саррацениевые, рода Дарлингтония. Часто её называют «коброй» из-за трубчатых листьев, своей формой напоминающих кобру с раздутым капюшоном, а мелкие листовые придатки желтого или красновато-зеленого цвета, похожие на раздвоенный змеиный язык, придают еще больше сходства с этим животным. Трубчатые листья, достигающие до 100 см в высоту, на верхушке раздуты в кувшин со скользкими внутренними стенками и маленьким отверстием снизу - это ловушка-лабиринт для насекомых. Весь лист покрывают прозрачные пятна-окошки, благодаря которым жертвы в ловушке теряют ориентацию на настоящий выход и становятся пищей для растения. Цветет дарлингтония весной, выпуская красивые цветы от желтого до пурпурно-коричневого цвета на одиночных стеблях. Интересно, что ученым так до сих пор не удалось выяснить, какие насекомые опыляют цветы дарлингтонии.",
+                            Price = 80,
+                            PageDescription = "Товар - Дарлингтония Калифорнийская",
+                            PageKeywords = "Товар, Дарлингтония Калифорнийская, Дарлингтония, Калифорнийская"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = cfCategory,
+                    ProductImageFilename = "cf.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "CF000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = s,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = m,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 5
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 10
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = l,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 10
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 20
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "cf-0.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-1.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-2.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-3.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-4.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-5.jpg"
+                        },
+                        new ProductImage()
+                        {
+                            Filename = "cf-6.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Cephalotus Follicularis",
+                            ProductDescription = "Predatory plant Cephalotus is very capricious in the care. He likes high humidity, but does not like waterlogging and drying of the soil. Does not like heat. He likes the difference of day and night temperatures: in the evening +12 + 15°С, in the daytime +20 + 25°С. Suitable for experienced predator.",
+                            Price = 25M,
+                            PageDescription = "Product - Cephalotus Follicularis",
+                            PageKeywords = "Product, Cephalotus Follicularis, Cephalotus, Follicularis"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Цефалотус",
+                            ProductDescription = "Хищное растение Цефалотус очень прихотливое в уходе. Любит повышенную влажность воздуха, но не любит переувлажнение и пересыхание почвы. Не любит жару. Любит перепад дневных и ночных температур: вечером +12 +15°С, днем +20 +25°С. Подойдет для опытных хищниководов.",
+                            Price = 50,
+                            PageDescription = "Товар - Цефалотус",
+                            PageKeywords = "Товар, Цефалотус"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = seedCategory,
+                    ProductImageFilename = "dm-seed.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "SEED0",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = seedSmall,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = seedMedium,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 1
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 2
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = seedLarge,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "dm-seed-1.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Dionaea Muscipula seeds",
+                            ProductDescription = "Seeds are black, glossy, small.",
+                            Price = 2.5M,
+                            PageDescription = "Product - Dionaea Muscipula seeds",
+                            PageKeywords = "Product, Dionaea Muscipula seeds, Dionaea Muscipula, seeds"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Семена венериной мухоловки",
+                            ProductDescription = "Семена черного цвета, глянцевые, мелкие.",
+                            Price = 5,
+                            PageDescription = "Товар - Семена венериной мухоловки",
+                            PageKeywords = "Товар, Семена венериной мухоловки, Семена, венериной мухоловки"
+                        }
+                    }
+                },
+                new Product()
+                {
+                    Category = relatedCategory,
+                    ProductImageFilename = "carnivorous-plant-soil-mix.jpg",
+                    ModifiedDate = DateTime.UtcNow,
+                    Provider = provider,
+                    VendorCode = "RP000",
+                    Stock = null,
+                    StockId = null,
+                    ProductParameters = new List<ProductParameter>()
+                    {
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = substratSmall,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 0
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 0
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = substratMedium,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 1
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 2
+                                }
+                            }
+                        },
+                        new ProductParameter()
+                        {
+                            Availability = true,
+                            Dimension = substratLarge,
+                            ProductParameterTranslates = new List<ProductParameterTranslate>()
+                            {
+                                new ProductParameterTranslate()
+                                {
+                                    Language = english,
+                                    PriceIncrease = 2
+                                },
+                                new ProductParameterTranslate()
+                                {
+                                    Language = russion,
+                                    PriceIncrease = 4
+                                }
+                            }
+                        }
+                    },
+                    ProductImages = new List<ProductImage>()
+                    {
+                        new ProductImage()
+                        {
+                            Filename = "carnivorous-plant-soil-mix.jpg"
+                        }
+                    },
+                    ProductTranslates = new List<ProductTranslate>()
+                    {
+                        new ProductTranslate()
+                        {
+                            Language = english,
+                            ProductName = "Carnivorous plant soil mix",
+                            ProductDescription = "Special substrate for most predatory plants.",
+                            Price = 1M,
+                            PageDescription = "Product - Carnivorous plant soil mix",
+                            PageKeywords = "Product, Carnivorous plant soil mix, Carnivorous plant soil, mix"
+                        },
+                        new ProductTranslate()
+                        {
+                            Language = russion,
+                            ProductName = "Субстрат для хищных растений",
+                            ProductDescription = "Специальный субстрат для большинства хищных растений.",
+                            Price = 2,
+                            PageDescription = "Товар - Субстрат для хищных растений",
+                            PageKeywords = "Товар, Субстрат для хищных растений, Субстрат, хищных растений"
+                        }
+                    }
+                }
+            };
+
+            context.Products.AddRange(products);
 
             #endregion
 
