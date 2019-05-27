@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Model.BusinessObjects
 {
-    internal class ArticleBL
+    public class ArticleBL
     {
         private string _articleId;
         private string _articleTitle;

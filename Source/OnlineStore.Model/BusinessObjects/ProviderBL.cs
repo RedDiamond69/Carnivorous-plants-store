@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Model.BusinessObjects
 {
-    internal class ProviderBL
+    public class ProviderBL
     {
         private string _providerId;
         private string _providerName;

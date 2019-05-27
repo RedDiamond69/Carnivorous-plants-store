@@ -44,12 +44,14 @@
   <ItemGroup>
     <Compile Include="BusinessObjects\ArticleBL.cs" />
     <Compile Include="BusinessObjects\CategoryBL.cs" />
+    <Compile Include="BusinessObjects\ShopContactBL.cs" />
     <Compile Include="BusinessObjects\ProductBL.cs" />
     <Compile Include="BusinessObjects\ProductParameterBL.cs" />
     <Compile Include="BusinessObjects\ProviderBL.cs" />
+    <Compile Include="BusinessObjects\StockBL.cs" />
     <Compile Include="DTO\ArticleDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
-    <Compile Include="DTO\ContactDTO.cs" />
+    <Compile Include="DTO\ShopContactDTO.cs" />
     <Compile Include="DTO\LanguageDTO.cs" />
     <Compile Include="DTO\OrderItemDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />

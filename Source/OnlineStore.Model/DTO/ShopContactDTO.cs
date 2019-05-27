@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Model.DTO
 {
-    public class ContactDTO
+    public class ShopContactDTO
     {
         public string ShopContactId { get; set; }
 

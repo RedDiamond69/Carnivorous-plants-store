@@ -31,12 +31,13 @@ namespace OnlineStore.Model.BusinessObjects
             _productId = product.ProductId;
             _vendorCode = product.VendorCode;
             _modifiedDate = product.ModifiedDate;
-            _price = product.Stock is null ?
-                (product.Category.Stock is null ? product.Price : (1 - product.Category.Stock.Discount / 100) * product.Price) :
-                ((1 - product.Stock.Discount / 100) * product.Price); 
+            var translate = product.ProductTranslates.Where(t => t.Language.LanguageCode == lang).SingleOrDefault();
+            _price = Math.Round(product.Stock is null ?
+                (product.Category.Stock is null ? translate.Price : (1 - (decimal)product.Category.Stock.Discount / 100) * translate.Price) :
+                ((1 - (decimal)product.Stock.Discount / 100) * translate.Price), 2, MidpointRounding.ToEven); 
             _productImageFilename = product.ProductImageFilename;
             _categoryId = product.CategoryId;
-            var translate = product.ProductTranslates.Where(t => t.Language.LanguageCode == lang).SingleOrDefault();
+            
             _stockId = product.StockId;
             _providerId = product.ProviderId;
             _productName = translate.ProductName;
