@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en">
+<html lang="ru, en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE =edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="keywords" content="@ViewBag.PageKeywords" />
+    <meta name="description" content="@ViewBag.PageDescription" />
     <link rel="shortcut icon" href=@ViewBag.Favicon type="image/png" />
     @Styles.Render("~/bundles/styles")
     <title>@ViewBag.Title</title>
@@ -13,7 +15,7 @@
 
 <body>
     <div class="wrapper">
-        <div id="header">
+        <div id="header" class="default">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                     <img src="@Url.Content("~/Content/Images/Website/favicon.png")" width="48" height="48" class="d-lg-inline-block d-none align-top" alt="Logo">
@@ -51,11 +53,11 @@
                 <button class="navbar-toggler btn-xs" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse flex-column ml-1 text-center navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse flex-column btn-xs ml-1 text-center navbar-collapse" id="navbarSupportedContent">
                     <div class="container-fluid flex-column">
                         <form class="form d-flex flex-row align-items-center">
-                            <input class="form-control mr-2" type="search" placeholder="Search..." aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">@Resources.Resource.Search</button>
+                            <input class="form-control btn-xs mr-2" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="btn btn-xs btn-outline-primary" type="submit">@Resources.Resource.Search</button>
                         </form>
                     </div>
                     <div class="container-fluid">
@@ -145,23 +147,21 @@
             </nav>
         </div>
 
-        <div class="container">
-            @RenderBody()
-        </div>
+        @RenderBody()
     </div>
 
     <footer class="bg-light d-flex flex-column page-footer align-items-center text-center">
-        <div class="d-flex text-secondary container-fluid flex-lg-row flex-column justify-content-between">
-            <div class="container-fluid d-flex align-items-center border-dotted">
+        <div class="d-flex text-secondary container-fluid flex-lg-row flex-column justify-content-center">
+            <div class="container-fluid my-2 mx-lg-1 d-flex align-items-center border-dotted">
                 <p>
                     @Html.Raw(new HtmlString(Resources.Resource.OnlineStoreFooterAbout))
                 </p>
             </div>
-            <div class="container-fluid d-flex align-items-center justify-content-center flex-column border-dotted">
+            <div class="container-fluid my-2 mx-lg-1 d-flex align-items-center justify-content-center flex-column border-dotted">
                 <p>
                     @Resources.Resource.FollowUs
                 </p>
-                <div class="container-fluid d-flex align-items-center justify-content-around">
+                <div class="container d-flex align-items-center justify-content-around">
                     <a href="@Url.Action("", "")">
                         <img src="@Url.Content("~/Content/Images/Website/vk.svg")" height="48" width="48" alt="Vkontakte" />
                     </a>
@@ -173,23 +173,28 @@
                     </a>
                 </div>
             </div>
-            <div class="container-fluid flex-column border-dotted">
+            <div class="container-fluid my-2 mx-lg-1 flex-column border-dotted">
                 <p>@Resources.Resource.ContactUs</p>
                 <div class="container-fluid">
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/map.svg")" height="20" width="20" alt="Location" />
+                        @Model.Contacts.Location
                     </p>
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/mobile-phone.svg")" height="20" width="20" alt="Mobile" />
+                        @Model.Contacts.MobilePhone
                     </p>
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/gmail.svg")" height="20" width="20" alt="Email" />
+                        @Model.Contacts.Email
                     </p>
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/clock.svg")" height="20" width="20" alt="Work time" />
+                        @Model.Contacts.WorkTime
                     </p>
                     <p>
                         <img src="@Url.Content("~/Content/Images/Website/registration.svg")" height="20" width="20" alt="Registration" />
+                        @Model.Contacts.Registration
                     </p>
                     <hr />
                     <div class="mt-1 dropup">

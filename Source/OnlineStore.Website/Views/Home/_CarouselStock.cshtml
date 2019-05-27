@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OnlineStore.Website.ViewModels.StockViewModel>
+
+@{
+    bool first = true;
+}
+
+@foreach (var stock in Model)
+{
+    if (first)
+    {
+        <div class="carousel-item main-carousel-item-h active align-items-center text-center" style="background-image: url(@Url.Content($"~/Content/Images/Website/{new Random().Next(1, 2)}.jpg")); background-size: cover;">
+            <img class="img-fluid" style="width: 60vw;" src="@Url.Content($"~/Content/Images/Stocks/{stock.ImageFilename}")" alt="Stock image">
+            <div class="carousel-caption d-flex flex-column">
+                <h5>@stock.StockTitle</h5>
+                <p>@stock.StockDescription</p>
+            </div>
+        </div>
+        first = false;
+    }
+    else
+    {
+        <div class="carousel-item main-carousel-item-h align-items-center text-center" style="background-image: url(@Url.Content($"~/Content/Images/Website/{new Random().Next(1, 2)}.jpg")); background-size: cover;">
+            <img class="img-fluid" style="width: 60vw;" src="@Url.Content($"~/Content/Images/Stocks/{stock.ImageFilename}")" alt="Stock image">
+            <div class="carousel-caption d-flex flex-column">
+                <h5>@stock.StockTitle</h5>
+                <p>@stock.StockDescription</p>
+            </div>
+        </div>
+    }
+}

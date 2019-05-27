@@ -11,7 +11,97 @@ body {
     flex-direction: column;
 }
 
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .main-carousel-item-h {
+        height: 120vh !important;
+    }
+
+    .product-carousel-h {
+        height: 60vh !important;
+    }
+
+    .btn-xs {
+        font-size: 0.8em;
+    }
+
+    .main-carousel-item-h > img {
+        margin-top: 24vh;
+    }
+
+    .main-carousel-item-h > div.rounded {
+        margin-top: 30vh;
+        width: 70vw;
+        font-size: 0.6em;
+        background: rgba(205, 214, 219, 0.7);
+        padding: 0.7em!important;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .main-carousel-item-h {
+        height: 70vh !important;
+    }
+
+    .btn-xs {
+        font-size: 0.8em;
+    }
+
+    .main-carousel-item-h > img {
+        margin-top: 24vh !important;
+    }
+
+    .main-carousel-item-h > div.rounded {
+        margin-top: 12vh;
+        width: 70vw !important;
+        font-size: 0.6em;
+        background: rgba(205, 214, 219, 0.7);
+        padding: 0.7em !important;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .main-carousel-item-h {
+        height: 100vh;
+    }
+
+    .main-carousel-item-h > img {
+        margin-top: 24vh !important;
+    }
+
+    .main-carousel-item-h > div.rounded {
+        margin-top: 20vh;
+        width: 60vw;
+        background: rgba(205, 214, 219, 0.8);
+        padding: 4em;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .main-carousel-item-h {
+        height: 100vh;
+    }
+
+    .main-carousel-item-h > img {
+        margin-top: 20vh;
+    }
+
+    .main-carousel-item-h > div.rounded {
+        margin-top: 25vh;
+        width: 60vw;
+        background: rgba(205, 214, 219, 0.8);
+        padding: 5em;
+    }
+}
+
+.badge-position {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
 #header {
+    position: absolute;
     z-index: 1000;
     width: 100%;
 }
@@ -34,10 +124,6 @@ body {
     margin-top: 30px;
 }
 
-.btn-xs {
-    font-size: 0.8em;
-}
-
 hr {
     margin: 0;
 }
@@ -46,6 +132,12 @@ hr {
     border: 1px dashed #bdbdbd;
     padding: 0.5em;
     border-radius: 5px;
+}
+
+.border-dotted-1 {
+    border: 2px dashed #bdbdbd;
+    padding: 0.5em;
+    border-radius: 10px;
 }
 
 .wrapper {

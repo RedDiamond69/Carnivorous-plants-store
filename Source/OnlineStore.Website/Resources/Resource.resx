@@ -229,4 +229,31 @@
     <value>Venusflytrap.com - Внутренняя ошибка сервера</value>
     <comment>Текст заголовка страницы 500 ошибки.</comment>
   </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>Подробнее</value>
+    <comment>Текст кнопки подробнее.</comment>
+  </data>
+  <data name="ArticleCarouselTitle" xml:space="preserve">
+    <value>Статьи</value>
+    <comment>Заголовок карусели статей.</comment>
+  </data>
+  <data name="MainPageDescription" xml:space="preserve">
+    <value>Venusflytrap - Главная страница сайта. На данной странице вы можете просмотреть категории хищных растений.</value>
+    <comment>Описание главной страницы.</comment>
+  </data>
+  <data name="MainPageKeywords" xml:space="preserve">
+    <value>хищные растения, хищные растения в Минске, Минск, хищные, растения, росянка, мухоловка, венерина мухоловка</value>
+    <comment>Ключевые слова главной страницы.</comment>
+  </data>
+  <data name="ProductCarouselTitle" xml:space="preserve">
+    <value>Товары</value>
+    <comment>Заголовок карусели товаров.</comment>
+  </data>
+  <data name="CurrencyName" xml:space="preserve">
+    <value>бел. руб.</value>
+    <comment>Обозначение валюты.</comment>
+  </data>
+  <data name="ImportantBadge" xml:space="preserve">
+    <value>Важно!</value>
+  </data>
 </root>

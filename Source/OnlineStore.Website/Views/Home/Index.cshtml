@@ -1,10 +1,33 @@
-﻿@{
-    ViewBag.Title = @Resources.Resource.HomeTitle;
+﻿@model OnlineStore.Website.ViewModels.HomePageViewModel
+
+@{
+    ViewBag.Title = Resources.Resource.HomeTitle;
     ViewBag.Favicon = Url.Content("~/Content/Images/Website/favicon.png");
+    ViewBag.PageKeywords = Resources.Resource.MainPageKeywords;
+    ViewBag.PageDescription = Resources.Resource.MainPageDescription;
 }
 
-<div>
-    <h1>
-        Index content.
-    </h1>
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+        @for (var i = 0; i < Model.Stocks.Count + Model.Categories.Count; i++)
+        {
+            <li data-target="#carousel" data-slide-to="@i" class="active bg-light"></li>
+        }
+    </ol>
+    <div class="carousel-inner">
+        @Html.Partial("_CarouselStock", Model.Stocks)
+        @Html.Partial("_CarouselCategory", Model.Categories)
+    </div>
+    
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+
+<div class="container d-flex flex-column justify-content-center" >
+    @Html.Partial("_CategoryDetail", Model.Categories)
 </div>

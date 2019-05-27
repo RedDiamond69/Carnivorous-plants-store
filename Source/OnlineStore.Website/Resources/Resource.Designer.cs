@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Статьи.
+        /// </summary>
+        public static string ArticleCarouselTitle {
+            get {
+                return ResourceManager.GetString("ArticleCarouselTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Уход и Содержание.
         /// </summary>
         public static string CareAndMaintaince {
@@ -111,6 +120,15 @@ namespace Resources {
         public static string ContactUs {
             get {
                 return ResourceManager.GetString("ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to бел. руб..
+        /// </summary>
+        public static string CurrencyName {
+            get {
+                return ResourceManager.GetString("CurrencyName", resourceCulture);
             }
         }
         
@@ -187,6 +205,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Важно!.
+        /// </summary>
+        public static string ImportantBadge {
+            get {
+                return ResourceManager.GetString("ImportantBadge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Упс... Внутренняя ошибка сервера. Серверу не удалось выполнить ваш запрос. Пожалуйста, повторите запрос позже!.
         /// </summary>
         public static string InternalServerErrorMessage {
@@ -210,6 +237,24 @@ namespace Resources {
         public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap - Главная страница сайта. На данной странице вы можете просмотреть категории хищных растений..
+        /// </summary>
+        public static string MainPageDescription {
+            get {
+                return ResourceManager.GetString("MainPageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to хищные растения, хищные растения в Минске, Минск, хищные, растения, росянка, мухоловка, венерина мухоловка.
+        /// </summary>
+        public static string MainPageKeywords {
+            get {
+                return ResourceManager.GetString("MainPageKeywords", resourceCulture);
             }
         }
         
@@ -268,6 +313,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Товары.
+        /// </summary>
+        public static string ProductCarouselTitle {
+            get {
+                return ResourceManager.GetString("ProductCarouselTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Саррацения.
         /// </summary>
         public static string Sarracenia {
@@ -309,6 +363,15 @@ namespace Resources {
         public static string Utricularia {
             get {
                 return ResourceManager.GetString("Utricularia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подробнее.
+        /// </summary>
+        public static string ViewMore {
+            get {
+                return ResourceManager.GetString("ViewMore", resourceCulture);
             }
         }
     }

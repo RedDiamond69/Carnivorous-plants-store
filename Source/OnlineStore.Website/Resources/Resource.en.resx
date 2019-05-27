@@ -229,4 +229,31 @@
     <value>Venusflytrap.com - Internal Server Error</value>
     <comment>Text for 500 error.</comment>
   </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>View more</value>
+    <comment>Text for button.</comment>
+  </data>
+  <data name="ArticleCarouselTitle" xml:space="preserve">
+    <value>Articles</value>
+    <comment>Articles carousel title.</comment>
+  </data>
+  <data name="MainPageDescription" xml:space="preserve">
+    <value>Venusflytrap main page. On this page you can watch carnivorous plants categories.</value>
+    <comment>Main description.</comment>
+  </data>
+  <data name="MainPageKeywords" xml:space="preserve">
+    <value>Carnivorous plants, carnivorous plants in Minsk, Minsk, carnivorous, plants, drosera, venus flytrap, dionaea, dionaea muscipula</value>
+    <comment>Main keywords.</comment>
+  </data>
+  <data name="ProductCarouselTitle" xml:space="preserve">
+    <value>Items</value>
+    <comment>Product carousel title.</comment>
+  </data>
+  <data name="CurrencyName" xml:space="preserve">
+    <value>US $</value>
+    <comment>Currency description.</comment>
+  </data>
+  <data name="ImportantBadge" xml:space="preserve">
+    <value>Important!</value>
+  </data>
 </root>

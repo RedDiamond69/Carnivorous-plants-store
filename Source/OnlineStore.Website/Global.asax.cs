@@ -1,3 +1,4 @@
+using AutoMapper;
 using OnlineStore.Website.App_Start;
 using System;
 using System.Collections.Generic;

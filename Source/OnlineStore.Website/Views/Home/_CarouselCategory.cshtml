@@ -1,0 +1,19 @@
+﻿@model IEnumerable<OnlineStore.Website.ViewModels.CategoryViewModel>
+
+@foreach (var category in Model)
+{
+    <div class="carousel-item main-carousel-item-h align-items-center text-center" style="background-image: url(@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")); background-size: cover;">
+        <div class="d-flex container-fluid rounded flex-column justify-content-center">
+            <div class="d-flex align-items-center justify-content-center">
+                <img class="mr-1 rounded-circle" height="50" width="50" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="...">
+                <h6>@category.CategoryName</h6>
+            </div>
+            <div>
+                <p>@category.CategoryDescription</p>
+            </div>
+        </div>
+        <div class="carousel-caption">
+            @Html.ActionLink(Resources.Resource.ViewMore, "", "", new { }, new { @class="btn btn-xs btn-success" })
+        </div>
+    </div>
+}

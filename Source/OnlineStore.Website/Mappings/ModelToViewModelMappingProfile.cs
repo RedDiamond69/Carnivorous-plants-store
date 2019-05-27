@@ -19,6 +19,7 @@ namespace OnlineStore.Website.Mappings
             CreateMap<ArticleDTO, ArticleViewModel>();
             CreateMap<ProviderDTO, ProductViewModel>();
             CreateMap<LanguageDTO, LanguageViewModel>();
+            CreateMap<StockDTO, StockViewModel>();
         }
     }
 }

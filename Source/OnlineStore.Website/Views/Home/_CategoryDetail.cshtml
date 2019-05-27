@@ -1,0 +1,169 @@
+﻿@model IEnumerable<OnlineStore.Website.ViewModels.CategoryViewModel>
+
+@{
+    int i = 0, j = 0;
+    foreach (var category in Model)
+    {
+        if (i % 2 == 0)
+        {
+            <div class="container-fluid d-flex bg-light my-3 p-3 flex--row flex-lg-nowrap flex-wrap rounded">
+                <div class="container d-flex mb-2 mb-lg-1 align-items-center justify-content-center text-center flex-lg-column">
+                    <img class="rounded-circle mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
+                    <hr class="w-75 mx-2 mx-lg-0" />
+                    <h3 class="mt-lg-3">@category.CategoryName</h3>
+                </div>
+                <div class="container-fluid flex-column">
+                    @{
+                        string id = "carousel" + j++;
+                        string id1 = "carousel" + j++;
+                    }
+                    <div class="text-center border-dotted-1">
+                        <div class="position-relative">
+                            <h4>@Resources.Resource.ProductCarouselTitle</h4>
+                            <span class="badge badge-pill badge-position badge-info">@category.ProductsCount</span>
+                        </div>
+                        <hr class="mb-2 mx-auto w-50" />
+                        <div id=@id class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                @for (var k = 0; k < category.Products.Count; k++)
+                                {
+                                    if (k == 0)
+                                    {
+                                        <li data-target="#@id" data-slide-to="@k" class="active bg-light"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#@id" data-slide-to="@k" class="bg-light"></li>
+                                    }
+                                }
+                            </ol>
+                            <div class="carousel-inner">
+                                @Html.Partial("_CarouselProduct", category.Products)
+                            </div>
+
+                            <a class="carousel-control-prev" href="#@id" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#@id" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2 border-dotted-1">
+                        <div class="position-relative">
+                            <h4>@Resources.Resource.ArticleCarouselTitle</h4>
+                            <span class="badge badge-pill badge-position badge-info">@category.ArticlesCount</span>
+                        </div>
+                        <hr class="mb-2 mx-auto w-50" />
+                        <div id=@id1 class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                @for (var k = 0; k < category.Articles.Count; k++)
+                                {
+                                    if (k == 0)
+                                    {
+                                        <li data-target="#@id1" data-slide-to="@k" class="active bg-light"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#@id1" data-slide-to="@k" class="bg-light"></li>
+                                    }
+                                }
+                            </ol>
+                            <div class="carousel-inner">
+                                @Html.Partial("_CarouselArticle", category.Articles)
+                            </div>
+
+                            <a class="carousel-control-prev" href="#@id1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#@id1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="container-fluid d-flex flex-column-reverse bg-light my-3 p-3 flex-lg-row flex-lg-nowrap flex-wrap rounded">
+                <div class="container-fluid flex-column">
+                    @{
+                        string id = "carousel" + j++;
+                        string id1 = "carousel" + j++;
+                    }
+                    <div class="text-center border-dotted-1">
+                        <div class="position-relative">
+                            <h4>@Resources.Resource.ProductCarouselTitle</h4>
+                            <span class="badge badge-pill badge-position badge-info">@category.ProductsCount</span>
+                        </div>
+                        <hr class="mb-2 mx-auto w-50" />
+                        <div id=@id class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                @for (var k = 0; k < category.Products.Count; k++)
+                                {
+                                    if (k == 0)
+                                    {
+                                        <li data-target="#@id" data-slide-to="@k" class="active bg-light"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#@id" data-slide-to="@k" class="bg-light"></li>
+                                    }
+                                }
+                            </ol>
+                            <div class="carousel-inner">
+                                @Html.Partial("_CarouselProduct", category.Products)
+                            </div>
+
+                            <a class="carousel-control-prev" href="#@id" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#@id" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2 border-dotted-1">
+                        <div class="position-relative">
+                            <h4>@Resources.Resource.ArticleCarouselTitle</h4>
+                            <span class="badge badge-pill badge-position badge-info">@category.ArticlesCount</span>
+                        </div>
+                        <hr class="mb-2 mx-auto w-50" />
+                        <div id=@id1 class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                @for (var k = 0; k < category.Articles.Count; k++)
+                                {
+                                    if (k == 0)
+                                    {
+                                        <li data-target="#@id1" data-slide-to="@k" class="active bg-light"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#@id1" data-slide-to="@k" class="bg-light"></li>
+                                    }
+                                }
+                            </ol>
+                            <div class="carousel-inner">
+                                @Html.Partial("_CarouselArticle", category.Articles)
+                            </div>
+
+                            <a class="carousel-control-prev" href="#@id1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#@id1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex align-items-center mb-2 mb-lg-1 justify-content-center text-center flex-lg-column">
+                    <img class="rounded-circle mb-lg-3" height="150" width="150" src="@Url.Content($"~/Content/Images/Categories/{category.CategoryImageFilename}")" alt="@category.CategoryName" />
+                    <hr class="w-75 mx-2 mx-lg-0" />
+                    <h3 class="mt-lg-3">@category.CategoryName</h3>
+                </div>
+            </div>
+        }
+        i++;
+    }
+}

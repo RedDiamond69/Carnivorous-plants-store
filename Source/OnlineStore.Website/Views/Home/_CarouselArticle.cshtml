@@ -1,0 +1,33 @@
+﻿@model IEnumerable<OnlineStore.Website.ViewModels.ArticleViewModel>
+
+@{
+    bool first = true;
+}
+
+@foreach (var article in Model)
+{
+    if (first)
+    {
+        <div class="carousel-item active rounded product-carousel-h align-items-center text-center" style="background-image: url(@Url.Content($"~/Content/Images/Articles/{article.ImageFilename}")); background-size: cover; height: 30vh;">
+            <div class="carousel-caption text-center">
+                <div class="rounded p-2 text-warning" style="background-color: rgba(0, 0, 0, 0.4)">
+                    @Html.ActionLink(article.ArticleTitle, "", "", new { }, new { @class = "btn-xs font-weight-bold text-warning" })
+                    <span class="badge badge-pill badge-position badge-warning">@Resources.Resource.ImportantBadge</span>
+                </div>
+            </div>
+        </div>
+
+        first = false;
+    }
+    else
+    {
+        <div class="carousel-item rounded product-carousel-h align-items-center text-center" style="background-image: url(@Url.Content($"~/Content/Images/Products/{article.ImageFilename}")); background-size: cover; height: 30vh;">
+            <div class="carousel-caption text-center">
+                <div class="rounded text-warning" style="background-color: rgba(0, 0, 0, 0.4)">
+                    @Html.ActionLink(article.ArticleTitle, "", "", new { }, new { @class = "btn-xs font-weight-bold text-warning" })
+                    <span class="badge badge-pill badge-position badge-warning">@Resources.Resource.ImportantBadge</span>
+                </div>
+            </div>
+        </div>
+    }
+}
