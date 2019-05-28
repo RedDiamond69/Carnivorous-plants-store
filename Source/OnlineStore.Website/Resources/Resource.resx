@@ -256,4 +256,13 @@
   <data name="ImportantBadge" xml:space="preserve">
     <value>Важно!</value>
   </data>
+  <data name="ProductCatalogPageDescription" xml:space="preserve">
+    <value>Venusflytrap - Каталог продуктов сайта. На данной странице вы можете просмотреть категории хищных растений. Искать и фильтровать продукты каталога.</value>
+  </data>
+  <data name="ProductCatalogPageKeywords" xml:space="preserve">
+    <value>хищные растения, хищные растения в Минске, Минск, хищные, растения, росянка, мухоловка, венерина мухоловка, каталог, каталог хищных растений</value>
+  </data>
+  <data name="ProductCatalogTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Каталог продуктов.</value>
+  </data>
 </root>

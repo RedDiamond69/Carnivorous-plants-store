@@ -356,6 +356,7 @@
     <Compile Include="Mappings\DomainToModelMappingProfile.cs" />
     <Compile Include="Mappings\ModelToViewModelMappingProfile.cs" />
     <Compile Include="ViewModels\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\CatalogPageViewModel.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\ShopContactViewModel.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />

@@ -1,7 +1,16 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Resources.Resource.ProductCatalogTitle;
+    ViewBag.Favicon = Url.Content("~/Content/Images/Website/catalog.png");
+    ViewBag.PageKeywords = Resources.Resource.ProductCatalogPageKeywords;
+    ViewBag.PageDescription = Resources.Resource.ProductCatalogPageDescription;
 }
 
-<div class="container">
-
+<div class="container container-mt d-flex flex-column flex-lg-row justify-content-center">
+    <div class="container">
+        Categories
+    </div>
+    <div class="container-fluid">
+        Filters, search and products
+    </div>
 </div>

@@ -322,6 +322,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap - Каталог продуктов сайта. На данной странице вы можете просмотреть категории хищных растений. Искать и фильтровать продукты каталога..
+        /// </summary>
+        public static string ProductCatalogPageDescription {
+            get {
+                return ResourceManager.GetString("ProductCatalogPageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to хищные растения, хищные растения в Минске, Минск, хищные, растения, росянка, мухоловка, венерина мухоловка, каталог, каталог хищных растений.
+        /// </summary>
+        public static string ProductCatalogPageKeywords {
+            get {
+                return ResourceManager.GetString("ProductCatalogPageKeywords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Каталог продуктов..
+        /// </summary>
+        public static string ProductCatalogTitle {
+            get {
+                return ResourceManager.GetString("ProductCatalogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Саррацения.
         /// </summary>
         public static string Sarracenia {

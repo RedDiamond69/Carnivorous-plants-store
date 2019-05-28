@@ -256,4 +256,13 @@
   <data name="ImportantBadge" xml:space="preserve">
     <value>Important!</value>
   </data>
+  <data name="ProductCatalogPageDescription" xml:space="preserve">
+    <value>Venusflytrap products catalog page. On this page you can watch carnivorous plants categories. Search and filter products.</value>
+  </data>
+  <data name="ProductCatalogPageKeywords" xml:space="preserve">
+    <value>Carnivorous plants, carnivorous plants in Minsk, Minsk, carnivorous, plants, drosera, venus flytrap, dionaea, dionaea muscipula, catalog, carnivorous plants catalog</value>
+  </data>
+  <data name="ProductCatalogTitle" xml:space="preserve">
+    <value>Venusflytrap.com - Product catalog.</value>
+  </data>
 </root>
