@@ -17,7 +17,7 @@
     <div class="wrapper">
         <div id="header" class="default">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <a class="navbar-brand" href="@Url.Action("index", "home")">
                     <img src="@Url.Content("~/Content/Images/Website/favicon.png")" width="48" height="48" class="d-lg-inline-block d-none align-top" alt="Logo">
                     <img src="@Url.Content("~/Content/Images/Website/favicon.png")" width="32" height="32" class="d-inline-block d-lg-none align-top" alt="Logo">
                 </a>
@@ -33,7 +33,7 @@
                                 {
                                     <div class="d-flex align-items-center dropdown-item justify-content-center">
                                         <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
-                                        @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                        @Html.ActionLink((string)l.LanguageName, "changeculture", "home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
                                     </div>
                                 }
                             }
@@ -48,7 +48,7 @@
                             <p class="m-0">@Resources.Resource.CartEmpty</p>
                         </div>
                     </div>
-                    @Html.ActionLink(@Resources.Resource.SignIn, "", "", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
+                    @Html.ActionLink(@Resources.Resource.SignIn, "signin", "account", null, new { @class = "btn btn-xs btn-outline-success mr-1" })
                 </div>
                 <button class="navbar-toggler btn-xs" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
                 <div class="collapse flex-column btn-xs ml-1 text-center navbar-collapse" id="navbarSupportedContent">
                     <div class="container-fluid flex-column">
                         <form class="form d-flex flex-row align-items-center">
-                            <input class="form-control btn-xs mr-2" type="search" placeholder="Search..." aria-label="Search">
+                            <input name="search" class="form-control btn-xs mr-2" type="search" placeholder="Search..." aria-label="Search">
                             <button class="btn btn-xs btn-outline-primary" type="submit">@Resources.Resource.Search</button>
                         </form>
                     </div>
@@ -64,31 +64,31 @@
                         <ul class="navbar-nav d-flex flex-wrap justify-content-between">
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/home.svg")" height="20" width="20" />
-                                <a class="nav-link active font-weight-bold" href="@Url.Action("Index", "Home")">@Resources.Resource.Home</a>
+                                <a class="nav-link active font-weight-bold" href="@Url.Action("index", "home")">@Resources.Resource.Home</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/product.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Index", "Product")">@Resources.Resource.Catalog</a>
+                                <a class="nav-link" href="@Url.Action("index", "product")">@Resources.Resource.Catalog</a>
                             </li>
                             <li class="nav-item d-flex justify-content-center align-items-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/plant.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Catalog", "Home")">@Resources.Resource.CareAndMaintaince</a>
+                                <a class="nav-link" href="@Url.Action("index", "careandmaintaince")">@Resources.Resource.CareAndMaintaince</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/payment-delivery.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("PaymentAndDelivery", "Home")">@Resources.Resource.PaymentAndDelivery</a>
+                                <a class="nav-link" href="@Url.Action("index", "paymentanddelivery")">@Resources.Resource.PaymentAndDelivery</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/discount.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Stock", "Home")">@Resources.Resource.Stock</a>
+                                <a class="nav-link" href="@Url.Action("index", "stock")">@Resources.Resource.Stock</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/gallery.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Gallery", "Home")">@Resources.Resource.Gallery</a>
+                                <a class="nav-link" href="@Url.Action("index", "gallery")">@Resources.Resource.Gallery</a>
                             </li>
                             <li class="nav-item d-flex align-items-center justify-content-center">
                                 <img class="mr-1" src="@Url.Content("~/Content/Images/Website/contacts.svg")" height="20" width="20" />
-                                <a class="nav-link" href="@Url.Action("Contacts", "Home")">@Resources.Resource.Contacts</a>
+                                <a class="nav-link" href="@Url.Action("index", "contact")">@Resources.Resource.Contacts</a>
                             </li>
                         </ul>
                     </div>
@@ -110,7 +110,7 @@
                                         {
                                             <div class="d-flex align-items-center dropdown-item justify-content-center">
                                                 <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
-                                                @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                                @Html.ActionLink((string)l.LanguageName, "changeculture", "home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
                                             </div>
                                         }
                                     }
@@ -128,7 +128,7 @@
                                     <p class="m-0">@Resources.Resource.CartEmpty</p>
                                 </div>
                             </div>
-                            @Html.ActionLink(@Resources.Resource.SignIn, "", "", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
+                            @Html.ActionLink(@Resources.Resource.SignIn, "signin", "account", null, new { @class = "btn ml-3 text-nowrap btn-outline-success" })
                         </div>
                     </div>
                 </div>
@@ -150,13 +150,13 @@
                     @Resources.Resource.FollowUs
                 </p>
                 <div class="container d-flex align-items-center justify-content-around">
-                    <a href="@Url.Action("", "")">
+                    <a href="@Url.Action("", "https://vk.com/")">
                         <img src="@Url.Content("~/Content/Images/Website/vk.svg")" height="48" width="48" alt="Vkontakte" />
                     </a>
-                    <a href="@Url.Action("", "")">
+                    <a href="@Url.Action("", "https://instagram.com/")">
                         <img src="@Url.Content("~/Content/Images/Website/instagram.svg")" height="48" width="48" alt="Instargram" />
                     </a>
-                    <a href="@Url.Action("", "")">
+                    <a href="@Url.Action("", "https://youtube.com/")">
                         <img src="@Url.Content("~/Content/Images/Website/youtube.svg")" height="48" width="48" alt="Youtube" />
                     </a>
                 </div>
@@ -196,7 +196,7 @@
                                 {
                                     <div class="d-flex align-items-center dropdown-item justify-content-center">
                                         <img src="@Url.Content($"~/Content/Images/Website/{l.ImageFilename}")" height="20" width="20" />
-                                        @Html.ActionLink((string)l.LanguageName, "ChangeCulture", "Home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
+                                        @Html.ActionLink((string)l.LanguageName, "changeculture", "home", new { lang = (string)l.LanguageCode }, new { @class = "ml-1 dropdown-item text-secondary" })
                                     </div>
                                 }
                             }

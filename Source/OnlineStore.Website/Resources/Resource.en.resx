@@ -265,4 +265,43 @@
   <data name="ProductCatalogTitle" xml:space="preserve">
     <value>Venusflytrap.com - Product catalog.</value>
   </data>
+  <data name="CategoriesListTitle" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="CategoryAll" xml:space="preserve">
+    <value>All products</value>
+  </data>
+  <data name="NameAscending" xml:space="preserve">
+    <value>Name ascending (A - Z)</value>
+  </data>
+  <data name="NameDescending" xml:space="preserve">
+    <value>Name descending (Z - A)</value>
+  </data>
+  <data name="NoSort" xml:space="preserve">
+    <value>Without sorting</value>
+  </data>
+  <data name="PriceAscending" xml:space="preserve">
+    <value>Price ascending</value>
+  </data>
+  <data name="PriceDescending" xml:space="preserve">
+    <value>Price descending</value>
+  </data>
+  <data name="ItemsCount" xml:space="preserve">
+    <value>Items </value>
+  </data>
+  <data name="SortOrder" xml:space="preserve">
+    <value>Sort by:</value>
+  </data>
+  <data name="PageSizeTitle" xml:space="preserve">
+    <value>Show:</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="StockBadge" xml:space="preserve">
+    <value>Stock</value>
+  </data>
 </root>

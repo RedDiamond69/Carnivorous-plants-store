@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Configuration
 {
-    internal class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+    internal class DbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
     {
         private enum RoleTypes
         {

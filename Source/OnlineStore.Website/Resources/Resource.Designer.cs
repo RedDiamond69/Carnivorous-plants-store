@@ -97,6 +97,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Категории.
+        /// </summary>
+        public static string CategoriesListTitle {
+            get {
+                return ResourceManager.GetString("CategoriesListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Все товары.
+        /// </summary>
+        public static string CategoryAll {
+            get {
+                return ResourceManager.GetString("CategoryAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Цефалотус.
         /// </summary>
         public static string Cephalotus {
@@ -259,11 +277,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Наименование (А - Я).
+        /// </summary>
+        public static string NameAscending {
+            get {
+                return ResourceManager.GetString("NameAscending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Наименование (Я - А).
+        /// </summary>
+        public static string NameDescending {
+            get {
+                return ResourceManager.GetString("NameDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Непентес.
         /// </summary>
         public static string Nepenthes {
             get {
                 return ResourceManager.GetString("Nepenthes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Без сортировки.
+        /// </summary>
+        public static string NoSort {
+            get {
+                return ResourceManager.GetString("NoSort", resourceCulture);
             }
         }
         
@@ -286,11 +331,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to из.
+        /// </summary>
+        public static string Of {
+            get {
+                return ResourceManager.GetString("Of", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Venusflytrap.com - &lt;strong&gt;первый интернет - магазин хищных растений &lt;/strong&gt; в Минске! В нашем магазине вы можете приобрести &lt;strong&gt;более &lt;span class=&quot;text-danger&quot;&gt;200&lt;/span&gt; редких сортов хищных растений со всего мира&lt;/strong&gt;, а также абсолютно всё, что требуется для выращивания: специализированные субстраты, компоненты субстрата, горшки, дистиллированная вода, препараты и многое другое!.
         /// </summary>
         public static string OnlineStoreFooterAbout {
             get {
                 return ResourceManager.GetString("OnlineStoreFooterAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Страница.
+        /// </summary>
+        public static string Page {
+            get {
+                return ResourceManager.GetString("Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Показать:.
+        /// </summary>
+        public static string PageSizeTitle {
+            get {
+                return ResourceManager.GetString("PageSizeTitle", resourceCulture);
             }
         }
         
@@ -309,6 +381,24 @@ namespace Resources {
         public static string Pinguicula {
             get {
                 return ResourceManager.GetString("Pinguicula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Цена (по возрастанию).
+        /// </summary>
+        public static string PriceAscending {
+            get {
+                return ResourceManager.GetString("PriceAscending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Цена (по убыванию).
+        /// </summary>
+        public static string PriceDescending {
+            get {
+                return ResourceManager.GetString("PriceDescending", resourceCulture);
             }
         }
         
@@ -376,11 +466,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сортировать по:.
+        /// </summary>
+        public static string SortOrder {
+            get {
+                return ResourceManager.GetString("SortOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Акции.
         /// </summary>
         public static string Stock {
             get {
                 return ResourceManager.GetString("Stock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Акция!.
+        /// </summary>
+        public static string StockBadge {
+            get {
+                return ResourceManager.GetString("StockBadge", resourceCulture);
             }
         }
         

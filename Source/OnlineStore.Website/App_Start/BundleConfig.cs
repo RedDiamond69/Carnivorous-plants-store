@@ -18,7 +18,8 @@ namespace OnlineStore.Website
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/Style.css"));
+                      "~/Content/Style.css",
+                      "~/Content/PagedList.css"));
         }
     }
 }

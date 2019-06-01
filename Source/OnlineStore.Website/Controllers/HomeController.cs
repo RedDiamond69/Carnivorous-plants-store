@@ -46,11 +46,11 @@ namespace OnlineStore.Website.Controllers
                         var pvm = _mapper.Map<ProductViewModel>(p);
                         pvm.Provider = _mapper.Map<ProviderViewModel>(_providerService.Get(p.ProviderId));
                         return pvm;
-                    }).ToList();
+                    }).OrderBy(p => p.ProductName).ToList();
                 cvm.Articles = _articleService.Find(a
-                    => a.CategoryId == c.CategoryId).Take(3).Select(a => _mapper.Map<ArticleViewModel>(a)).ToList();
+                    => a.CategoryId == c.CategoryId).Take(3).Select(a => _mapper.Map<ArticleViewModel>(a)).OrderBy(a => a.ArticleText).ToList();
                 return cvm;
-            }).ToList();
+            }).OrderBy(c => c.CategoryName).ToList();
             var contacts = _contactService.GetAll().Select(c => _mapper.Map<ShopContactViewModel>(c)).FirstOrDefault();
             var languages = _languageService.GetAll().Select(l => _mapper.Map<LanguageViewModel>(l)).ToList();
             var stocks = _stockService.Find(s => s.IsActive).Select(s => _mapper.Map<StockViewModel>(s)).Take(3).ToList();

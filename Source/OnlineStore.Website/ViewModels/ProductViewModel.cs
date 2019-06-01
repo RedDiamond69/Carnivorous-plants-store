@@ -9,6 +9,8 @@ namespace OnlineStore.Website.ViewModels
     {
         public string ProductId { get; set; }
 
+        public string CategoryId { get; set; }
+
         public string VendorCode { get; set; }
 
         public string ProductName { get; set; }
@@ -18,6 +20,8 @@ namespace OnlineStore.Website.ViewModels
         public string ProductDescription { get; set; }
 
         public decimal Price { get; set; }
+
+        public string StockId { get; set; }
 
         public string PageDescription { get; set; }
 

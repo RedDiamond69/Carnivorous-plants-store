@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ namespace OnlineStore.Website.ViewModels
     {
         public List<CategoryViewModel> Categories { get; set; }
 
-        public List<ProductViewModel> Products { get; set; }
+        public IPagedList<ProductViewModel> Products { get; set; }
 
         public List<LanguageViewModel> Languages { get; set; }
 

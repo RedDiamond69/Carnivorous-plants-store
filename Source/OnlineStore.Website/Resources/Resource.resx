@@ -265,4 +265,40 @@
   <data name="ProductCatalogTitle" xml:space="preserve">
     <value>Venusflytrap.com - Каталог продуктов.</value>
   </data>
+  <data name="CategoriesListTitle" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="CategoryAll" xml:space="preserve">
+    <value>Все товары</value>
+  </data>
+  <data name="NameAscending" xml:space="preserve">
+    <value>Наименование (А - Я)</value>
+  </data>
+  <data name="NameDescending" xml:space="preserve">
+    <value>Наименование (Я - А)</value>
+  </data>
+  <data name="NoSort" xml:space="preserve">
+    <value>Без сортировки</value>
+  </data>
+  <data name="PriceAscending" xml:space="preserve">
+    <value>Цена (по возрастанию)</value>
+  </data>
+  <data name="PriceDescending" xml:space="preserve">
+    <value>Цена (по убыванию)</value>
+  </data>
+  <data name="SortOrder" xml:space="preserve">
+    <value>Сортировать по:</value>
+  </data>
+  <data name="PageSizeTitle" xml:space="preserve">
+    <value>Показать:</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="StockBadge" xml:space="preserve">
+    <value>Акция!</value>
+  </data>
 </root>

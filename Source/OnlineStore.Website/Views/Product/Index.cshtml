@@ -1,4 +1,8 @@
-﻿@{
+﻿@using PagedList.Mvc;
+
+@model OnlineStore.Website.ViewModels.CatalogPageViewModel
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.Resource.ProductCatalogTitle;
     ViewBag.Favicon = Url.Content("~/Content/Images/Website/catalog.png");
@@ -6,11 +10,183 @@
     ViewBag.PageDescription = Resources.Resource.ProductCatalogPageDescription;
 }
 
-<div class="container container-mt d-flex flex-column flex-lg-row justify-content-center">
-    <div class="container">
-        Categories
+<div class="container container-mt d-flex flex-column mb-3 flex-lg-row">
+    <div class="d-flex mb-2 flex-column">
+        <div class="p-2 bg-light rounded">
+            <nav class="navbar navbar-expand-lg d-flex justify-content-center navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#categoryList" aria-controls="categoryList" aria-expanded="false" aria-label="Toggle category list">
+                    @Resources.Resource.CategoriesListTitle
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="categoryList">
+                    <div class="list-group">
+                        @{
+                            var first = true;
+                            foreach (var category in Model.Categories)
+                            {
+                                if (first)
+                                {
+                                    <a href="@Url.Action("category", "product", new { id = "", sortOrder = ViewBag.CurrentSortOrder, pageSize = ViewBag.PageSize })" class="d-flex align-items-center justify-content-between list-group-item list-group-item-action">
+                                        @Resources.Resource.CategoryAll
+                                        <span class="badge ml-2 badge-warning badge-pill">@ViewBag.AllProductsCount</span>
+                                    </a>
+                                    <a href="@Url.Action("category", "product", new { id = category.CategoryId, sortOrder = ViewBag.CurrentSortOrder, pageSize = ViewBag.PageSize })" class="d-flex align-items-center justify-content-between list-group-item list-group-item-action">
+                                        @category.CategoryName
+                                        <span class="badge ml-2 badge-warning badge-pill">@category.ProductsCount</span>
+                                    </a>
+                                    first = false;
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("category", "product", new { id = category.CategoryId, sortOrder = ViewBag.CurrentSortOrder, pageSize = ViewBag.PageSize })" class="d-flex align-items-center justify-content-between list-group-item list-group-item-action">
+                                        @category.CategoryName
+                                        <span class="badge ml-2 badge-warning badge-pill">@category.ProductsCount</span>
+                                    </a>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-    <div class="container-fluid">
-        Filters, search and products
+    <div class="d-flex flex-grow-1 ml-lg-3 ml-0 flex-column">
+        <div class="d-flex p-2 mb-2 bg-light rounded">
+            <form class="form w-100 flex-column flex-lg-row d-flex" action="@Url.Action("category", "product")" method="get">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <input name="search" value="@ViewBag.CurrentSearchString" class="form-control mr-2" type="search" placeholder="Search...">
+                    <button class="btn btn-outline-primary" type="submit">@Resources.Resource.Search</button>
+                </div>
+                <div class="d-flex ml-lg-2 flex-lg-row flex-column align-items-center">
+                    <div class="d-flex flex-row flex-fill align-items-center">
+                        <label for="sortOrder" class="mb-0">@Resources.Resource.SortOrder</label>
+                        <select name="sortOrder" id="sortOrder" class="form-control mx-1">
+                            @if (ViewBag.CurrentSortOrder == "")
+                            {
+                                <option value="" selected>@Resources.Resource.NoSort</option>
+                            }
+                            else
+                            {
+                                <option value="">@Resources.Resource.NoSort</option>
+                            }
+                            @if (ViewBag.CurrentSortOrder == "nameAsc")
+                            {
+                                <option value="nameAsc" selected>@Resources.Resource.NameAscending</option>
+                            }
+                            else
+                            {
+                                <option value="nameAsc">@Resources.Resource.NameAscending</option>
+                            }
+                            @if (ViewBag.CurrentSortOrder == "nameDesc")
+                            {
+                                <option value="nameDesc" selected>@Resources.Resource.NameDescending</option>
+                            }
+                            else
+                            {
+                                <option value="nameDesc">@Resources.Resource.NameDescending</option>
+                            }
+                            @if (ViewBag.CurrentSortOrder == "priceAsc")
+                            {
+                                <option value="priceAsc" selected>@Resources.Resource.PriceAscending</option>
+                            }
+                            else
+                            {
+                                <option value="priceAsc">@Resources.Resource.PriceAscending</option>
+                            }
+                            @if (ViewBag.CurrentSortOrder == "priceDesc")
+                            {
+                                <option value="priceDesc" selected>@Resources.Resource.PriceDescending</option>
+                            }
+                            else
+                            {
+                                <option value="priceDesc">@Resources.Resource.PriceDescending</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="d-flex flex-row justify-content-around align-items-center">
+                        <label for="pageSize" class="mb-0">@Resources.Resource.PageSizeTitle</label>
+                        <select name="pageSize" id="pageSize" class="form-control ml-1 mr-auto" style="width: 70px">
+                            @if (ViewBag.PageSize == 10)
+                            {
+                                <option value="10" selected>10</option>
+                            }
+                            else
+                            {
+                                <option value="10">10</option>
+                            }
+                            @if (ViewBag.PageSize == 20)
+                            {
+                                <option value="20" selected>20</option>
+                            }
+                            else
+                            {
+                                <option value="20">20</option>
+                            }
+                            @if (ViewBag.PageSize == 30)
+                            {
+                                <option value="30" selected>30</option>
+                            }
+                            else
+                            {
+                                <option value="30">30</option>
+                            }
+                            @if (ViewBag.PageSize == 50)
+                            {
+                                <option value="50" selected>50</option>
+                            }
+                            else
+                            {
+                                <option value="50">50</option>
+                            }
+                        </select>
+                    </div>
+
+                    <button id="sortConfirm" hidden type="submit"></button>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid d-flex flex-column flex-lg-row justify-content-around align-items-center flex-wrap mb-2 bg-light rounded">
+            @foreach (var product in Model.Products)
+            {
+                <div id="@product.ProductId" class="d-flex product-item my-1 m-lg-1 bg-white rounded p-1 flex-column">
+                    @{ 
+                        var stockFlag = product.StockId == null ?
+                            Model.Categories.Where(c => c.CategoryId == product.CategoryId).Single().StockId == null ? false : true
+                            : true;
+                    }
+                    <div class="product-img rounded position-relative" style="background-image: url(@Url.Content($"~/Content/Images/Products/{product.ProductImageFilename}")); background-size: cover;">
+                        @if (stockFlag)
+                        {
+                            <span class="badge badge-position badge-pill badge-danger">@Resources.Resource.StockBadge</span>
+                        }
+                    </div>
+                    <div class="text-center d-flex flex-column h-50 p-2 mt-1">
+                        <div>
+                            <h6>
+                                @product.ProductName
+                                <span class="badge badge-pill badge-warning">@product.Price @Resources.Resource.CurrencyName</span>
+                            </h6>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="btn btn-xs btn-primary" href="@Url.Action()">View detail</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="container-fluid d-flex btn-xs flex-row justify-content-between align-items-center mt-auto mb-2 bg-light rounded">
+            <div class="d-flex">
+                @Html.PagedListPager(Model.Products, page => Url.Action("category", "product", new
+                {
+                    page,
+                    id = ViewBag.CategoryId,
+                    search = ViewBag.CurrentSearchString,
+                    sortOrder = ViewBag.CurrentSortOrder
+                }))
+            </div>
+            <div class="d-flex">
+                @Resources.Resource.Page @(Model.Products.PageCount < Model.Products.PageNumber ? 0 : Model.Products.PageNumber) @Resources.Resource.Of @Model.Products.PageCount
+            </div>
+        </div>
     </div>
 </div>
