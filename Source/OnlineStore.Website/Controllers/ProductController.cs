@@ -103,5 +103,13 @@ namespace OnlineStore.Website.Controllers
                 Contacts = contacts
             });
         }
+
+        [HttpGet]
+        public ActionResult Details(string id = "")
+        {
+            var contacts = _contactService.GetAll().Select(c => _mapper.Map<ShopContactViewModel>(c)).FirstOrDefault();
+            var languages = _languageService.GetAll().Select(l => _mapper.Map<LanguageViewModel>(l)).ToList();
+            return View(new ProductDetailViewModel() { Contacts = contacts, Languages = languages });
+        }
     }
 }

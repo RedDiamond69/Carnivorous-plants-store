@@ -30,5 +30,7 @@ namespace OnlineStore.Website.ViewModels
         public DateTime ModifiedDate { get; set; }
 
         public ProviderViewModel Provider { get; set; }
+
+        public List<ProductImageViewModel> ProductImages { get; set; }
     }
 }
