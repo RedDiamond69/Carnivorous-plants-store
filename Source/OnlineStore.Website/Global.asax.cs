@@ -16,7 +16,6 @@ namespace OnlineStore.Website
     {
         protected void Application_Start()
         {
-            AutofacConfig.RegisterContainer();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

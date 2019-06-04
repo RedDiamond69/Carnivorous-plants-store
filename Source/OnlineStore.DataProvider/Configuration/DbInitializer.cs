@@ -935,7 +935,7 @@ namespace OnlineStore.DataProvider.Configuration
             {
                 new ApplicationUser()
                 {
-                    Email = "venusflytrapshop@gmail.com",
+                    Email = "admin@gmail.com",
                     EmailConfirmed = true,
                     PhoneNumber = "+375259507009",
                     PhoneNumberConfirmed = true,
@@ -969,7 +969,7 @@ namespace OnlineStore.DataProvider.Configuration
                 },
                 new ApplicationUser()
                 {
-                    Email = "venusflytrapshop@gmail.com",
+                    Email = "manager@gmail.com",
                     EmailConfirmed = true,
                     PhoneNumber = "+375259507009",
                     PhoneNumberConfirmed = true,
