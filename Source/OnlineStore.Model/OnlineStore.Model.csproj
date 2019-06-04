@@ -49,6 +49,7 @@
     <Compile Include="BusinessObjects\ProductParameterBL.cs" />
     <Compile Include="BusinessObjects\ProviderBL.cs" />
     <Compile Include="BusinessObjects\StockBL.cs" />
+    <Compile Include="DTO\ApplicationUserDTO.cs" />
     <Compile Include="DTO\ArticleDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\ShopContactDTO.cs" />
