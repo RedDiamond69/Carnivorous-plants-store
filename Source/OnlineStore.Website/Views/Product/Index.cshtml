@@ -54,7 +54,7 @@
         <div class="d-flex p-2 mb-2 bg-light rounded">
             <form class="form w-100 flex-column flex-lg-row d-flex" action="@Url.Action("category", "product")" method="get">
                 <div class="d-flex align-items-center flex-grow-1">
-                    <input name="search" value="@ViewBag.CurrentSearchString" class="form-control mr-2" type="search" placeholder="Search...">
+                    <input name="search" value="@ViewBag.CurrentSearchString" class="form-control mr-2" type="search" placeholder="@Resources.Resource.SearchPlaceholder">
                     <button class="btn btn-outline-primary" type="submit">@Resources.Resource.Search</button>
                 </div>
                 <div class="d-flex ml-lg-2 flex-lg-row flex-column align-items-center">

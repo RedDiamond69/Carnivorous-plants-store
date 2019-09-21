@@ -994,7 +994,7 @@ namespace OnlineStore.DataProvider.Configuration
                     {
                         case "Admin":
                             {
-                                userManager.Create(u, "dk.U72a,9qWnI0eR.pL4,bg3");
+                                userManager.Create(u, "Qwerty123");
                                 userManager.AddToRole(u.Id, RoleTypes.Administrator.ToString());
                                 break;
                             }

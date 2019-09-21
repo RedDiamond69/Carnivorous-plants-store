@@ -5,6 +5,7 @@ using OnlineStore.DataProvider.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using OnlineStore.DataProvider.Entities;
 using System;
+using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider
 {
@@ -267,7 +268,7 @@ namespace OnlineStore.DataProvider
 
         #region Methods
 
-        public int Complete() => _context.SaveChanges();
+        public async Task<int> Complete() => await _context.SaveChangesAsync();
 
         #endregion
 

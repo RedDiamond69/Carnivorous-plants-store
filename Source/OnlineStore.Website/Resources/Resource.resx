@@ -301,4 +301,151 @@
   <data name="StockBadge" xml:space="preserve">
     <value>Акция!</value>
   </data>
+  <data name="Account" xml:space="preserve">
+    <value>Аккаунт</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>Введите корректный адрес электронной почты!</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Введите адрес электронной почты!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Введите пароль!</value>
+  </data>
+  <data name="PasswordSizeError" xml:space="preserve">
+    <value>Длина пароля должна быть в диапазоне от 8 до 64 символов!</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Запомнить меня</value>
+  </data>
+  <data name="SignInPageDescription" xml:space="preserve">
+    <value>Venusflytrap.com - Вход в аккаунт</value>
+  </data>
+  <data name="SignInPageKeywords" xml:space="preserve">
+    <value>Venusflytrap.com войти, войти, вход</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Подтвердите пароль</value>
+  </data>
+  <data name="ConfirmPasswordInvalid" xml:space="preserve">
+    <value>Пароль не совпадает!</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Подтвердите введенный пароль!</value>
+  </data>
+  <data name="DontHaveAccount" xml:space="preserve">
+    <value>Нет аккаунта?</value>
+  </data>
+  <data name="LanguageRequired" xml:space="preserve">
+    <value>Выберите язык!</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Номер моб. телефона</value>
+  </data>
+  <data name="PhoneNumberInvalid" xml:space="preserve">
+    <value>Номер моб. телефона введен некорректно!</value>
+  </data>
+  <data name="PhoneNumberRequired" xml:space="preserve">
+    <value>Необходим номер моб. телефона!</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="SignUpPageDescription" xml:space="preserve">
+    <value>Venusflytrap.com - Регистрация</value>
+  </data>
+  <data name="SignUpPageKeywords" xml:space="preserve">
+    <value>Venusflytrap.com зарегистрироваться, зарегистрироваться, регистрация</value>
+  </data>
+  <data name="CheckYourEmail" xml:space="preserve">
+    <value>Пожалуйста, проверьте электронную почту и подтвердите аккаунт!</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>Подтвердить аккаунт</value>
+  </data>
+  <data name="ConfirmEmailError" xml:space="preserve">
+    <value>Извините, что-то пошло не так...</value>
+  </data>
+  <data name="ConfirmEmailSucceded" xml:space="preserve">
+    <value>Аккаунт подтвержден!</value>
+  </data>
+  <data name="ConfirmEmailSuccededBody" xml:space="preserve">
+    <value>Пожалуйста, перейдите на страницу</value>
+  </data>
+  <data name="EmailConfirmationBody" xml:space="preserve">
+    <value>Для продолжение регистрации, пожалуйста, нажмите на кнопку ниже, чтобы подтвердить аккаунт:</value>
+  </data>
+  <data name="EmailConfirmationSubject" xml:space="preserve">
+    <value>Venusflytrap.com - Подтверждение аккаунта.</value>
+  </data>
+  <data name="EmailOrPasswordInvalid" xml:space="preserve">
+    <value>Неверный логин или пароль!</value>
+  </data>
+  <data name="EmailPlaceholder" xml:space="preserve">
+    <value>Введите email</value>
+  </data>
+  <data name="FilenamePlaceholder" xml:space="preserve">
+    <value>Выберите файл...</value>
+  </data>
+  <data name="ImageFilename" xml:space="preserve">
+    <value>Фото</value>
+  </data>
+  <data name="ImageFilenameSizeError" xml:space="preserve">
+    <value>Длина имени файла должна быть от 1-250 символов!</value>
+  </data>
+  <data name="IsNotImage" xml:space="preserve">
+    <value>Выбранный файл не является изображением!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="NamePlaceholder" xml:space="preserve">
+    <value>Введите имя</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Введите имя!</value>
+  </data>
+  <data name="NameSizeError" xml:space="preserve">
+    <value>Длина имени должна быть от 1-100 символов!</value>
+  </data>
+  <data name="PasswordHelp" xml:space="preserve">
+    <value>Длина пароля должна быть от 8 - 64 символов, содержать буквы англ. алфавита, цифры и специальные символы и не должен содержать пробелов или эмодзи.</value>
+  </data>
+  <data name="PasswordPlaceholder" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="PatronymicPlaceholder" xml:space="preserve">
+    <value>Введите отчество</value>
+  </data>
+  <data name="PatronymicSizeError" xml:space="preserve">
+    <value>Длина отчества должна быть от 1-150 символов!</value>
+  </data>
+  <data name="PleaseTry" xml:space="preserve">
+    <value>Пожалуйста, попробуйте еще раз</value>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>Поиск по имени и цене...</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="SurnamePlaceholder" xml:space="preserve">
+    <value>Введите фамилию</value>
+  </data>
+  <data name="SurnameRequired" xml:space="preserve">
+    <value>Введите фамилию!</value>
+  </data>
+  <data name="SurnameSizeError" xml:space="preserve">
+    <value>Длина фамилии должна быть от 1-150 символов! </value>
+  </data>
+  <data name="UserExist" xml:space="preserve">
+    <value>Пользователь с таким email уже существует!</value>
+  </data>
 </root>

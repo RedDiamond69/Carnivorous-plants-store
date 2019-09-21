@@ -1,5 +1,6 @@
 ﻿using OnlineStore.DataProvider.Identity;
 using System;
+using System.Threading.Tasks;
 
 namespace OnlineStore.DataProvider.Interfaces
 {
@@ -46,6 +47,6 @@ namespace OnlineStore.DataProvider.Interfaces
         IShopContactRepository ShopContact { get; }
         IShopContactTranslateRepository ShopContactTranslates { get; }
 
-        int Complete();
+        Task<int> Complete();
     }
 }

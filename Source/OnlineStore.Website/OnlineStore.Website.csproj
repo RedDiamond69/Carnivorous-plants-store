@@ -16,15 +16,15 @@
     <AssemblyName>OnlineStore.Website</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,6 +35,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -343,6 +356,9 @@
     <Content Include="Areas\Account\Views\User\SignUp.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Account\Views\User\ConfirmEmail.cshtml" />
+    <Content Include="Areas\Account\Views\User\Error.cshtml" />
+    <Content Include="Areas\Account\Views\User\ConfirmSucceded.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -374,17 +390,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Account\AccountAreaRegistration.cs" />
     <Compile Include="Areas\Account\Controllers\UserController.cs" />
+    <Compile Include="Areas\Account\ViewModels\SignInViewModel.cs" />
+    <Compile Include="Areas\Account\ViewModels\SignUpViewModel.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manager\ManagerAreaRegistration.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Extensions\HttpPostedFileBaseExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mappings\DomainToModelMappingProfile.cs" />
+    <Compile Include="Mappings\EntityToModelMappingProfile.cs" />
     <Compile Include="Mappings\ModelToViewModelMappingProfile.cs" />
+    <Compile Include="Mappings\ViewModelToModelMappingProfile.cs" />
     <Compile Include="ViewModels\ArticleViewModel.cs" />
     <Compile Include="ViewModels\CatalogPageViewModel.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
@@ -441,7 +461,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Account\ViewModels\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Manager\Controllers\" />
     <Folder Include="Areas\Manager\Models\" />
@@ -496,7 +515,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63284</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63284/</IISUrl>
+          <IISUrl>https://localhost:44378/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

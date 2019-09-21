@@ -1,6 +1,102 @@
-﻿@{
-    ViewBag.Title = "SignUp";
+﻿@model OnlineStore.Website.Areas.Account.ViewModels.SignUpViewModel
+
+@{
     Layout = "~/Areas/Account/Views/Shared/_Layout.cshtml";
+    ViewBag.PageKeywords = Resources.Resource.SignUpPageKeywords;
+    ViewBag.PageDescription = Resources.Resource.SignUpPageDescription;
+    ViewBag.Favicon = Url.Content("~/Content/Images/Website/signup.png");
+    ViewBag.Title = Resources.Resource.SignUpPageDescription;
 }
 
-<h2>SignUp</h2>
+<div class="container sign-in-form-mt mb-5 p-0 d-flex justify-content-center w-100">
+    <div class="d-flex flex-column rounded w-100 m-3 sign-in-form-w bg-light p-2">
+        <div class="d-flex text-center mb-2 justify-content-center align-items-center">
+            <img height="22" width="22" class="mr-2" src="@Url.Content("~/Content/Images/Website/signup.png")" alt="" />
+            <h5 class="m-0">@Resources.Resource.SignUp</h5>
+        </div>
+        <hr />
+        <div class="d-flex p-0 flex-column mt-2 w-100">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @using (Html.BeginForm("signup", "user", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "w-100 flex-lg-row d-flex flex-column", enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form d-flex m-1 border-dotted-1 w-100 flex-column">
+                    <div class="form-group w-100 d-flex flex-column">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label mb-2" })
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control flex-grow-1", value = Model.Email, placeholder = Resources.Resource.EmailPlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = Resources.Resource.PasswordPlaceholder } })
+                        <small id="passwordHelpBlock" class="form-text text-muted">@Resources.Resource.PasswordHelp</small>
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", placeholder = Resources.Resource.ConfirmPassword } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", value = Model.PhoneNumber, placeholder = Resources.Resource.PhoneNumber } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @{
+                            var index = 0;
+                            foreach (var lang in Model.Languages)
+                            {
+                                if (lang.LanguageCode == System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)
+                                {
+                                    break;
+                                }
+                                index++;
+                            }
+                        }
+                        @Html.LabelFor(model => model.LanguageId, htmlAttributes: new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.LanguageId, new SelectList(Model.Languages, "LanguageId", "LanguageName", index), new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form border-dotted-1 m-1 d-flex w-100 flex-column">
+                    <div class="form-group w-100 d-flex flex-column">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", value = Model.Name, placeholder = Resources.Resource.NamePlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control", placeholder = Resources.Resource.SurnamePlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Patronymic, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Patronymic, new { htmlAttributes = new { @class = "form-control", placeholder = Resources.Resource.PatronymicPlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Patronymic, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ImageFilename, htmlAttributes: new { @class = "control-label" })
+                        <div class="custom-file">
+                            <input type="file" accept="image/*" name="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">@Resources.Resource.FilenamePlaceholder</label>
+                        </div>
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.ImageFilename, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group mt-auto ml-auto d-flex flex-row align-items-center">
+                        <input type="submit" value="@Resources.Resource.SignUp" class="btn btn-success" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

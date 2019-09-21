@@ -50,8 +50,11 @@
     <Compile Include="BusinessObjects\ProviderBL.cs" />
     <Compile Include="BusinessObjects\StockBL.cs" />
     <Compile Include="DTO\ApplicationUserDTO.cs" />
+    <Compile Include="DTO\ApplicationUserProfileDTO.cs" />
     <Compile Include="DTO\ArticleDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DeliveryInformationDTO.cs" />
     <Compile Include="DTO\ShopContactDTO.cs" />
     <Compile Include="DTO\LanguageDTO.cs" />
     <Compile Include="DTO\OrderItemDTO.cs" />

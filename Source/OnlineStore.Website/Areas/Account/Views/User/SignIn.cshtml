@@ -1,7 +1,52 @@
-﻿
+﻿@model OnlineStore.Website.Areas.Account.ViewModels.SignInViewModel
+
 @{
-    ViewBag.Title = "SignIn";
     Layout = "~/Areas/Account/Views/Shared/_Layout.cshtml";
+    ViewBag.PageKeywords = Resources.Resource.SignInPageKeywords;
+    ViewBag.PageDescription = Resources.Resource.SignInPageDescription;
+    ViewBag.Favicon = Url.Content("~/Content/Images/Website/signin.png");
+    ViewBag.Title = Resources.Resource.SignInPageDescription;
 }
 
-<h2>SignIn</h2>
+<div class="container sign-in-form-mt p-0 d-flex justify-content-center">
+    <div class="d-flex flex-column rounded sign-in-form-w m-3 bg-light p-3">
+        <div class="d-flex text-center mb-2 justify-content-center align-items-center">
+            <img height="22" width="22" class="mr-2" src="@Url.Content("~/Content/Images/Website/signin.png")" alt="" />
+            <h3 class="m-0">@Resources.Resource.SignIn</h3>
+        </div>
+        <hr />
+        <div class="d-flex flex-column mt-2 w-100">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @using (Html.BeginForm("signin", "user", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "w-100" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form d-flex w-100 flex-column">
+                    <div class="form-group w-100 d-flex flex-column">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label mb-2" })
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control flex-grow-1", value = Model.Email, placeholder = Resources.Resource.EmailPlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = Resources.Resource.PasswordPlaceholder } })
+                        <small class="form-text text-muted">@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })</small>
+                    </div>
+
+                    <div class="form-group custom-control custom-checkbox">
+                        @Html.CheckBoxFor(model => model.RememberMe, new { @class = "custom-control-input" })
+                        @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "custom-control-label" })
+                    </div>
+
+                    <div class="form-group d-flex flex-row align-items-center">
+                        <input type="submit" value="@Resources.Resource.SignIn" class="btn btn-success" />
+                        <div class="text-secondary btn-xs">
+                            <p class="my-0 mx-4 text-center">@Resources.Resource.DontHaveAccount <a href="@Url.Action("signup", "user", new { returnUrl = ViewBag.ReturnUrl })">@Resources.Resource.SignUp</a></p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

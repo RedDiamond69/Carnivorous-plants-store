@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Аккаунт.
+        /// </summary>
+        public static string Account {
+            get {
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Статьи.
         /// </summary>
         public static string ArticleCarouselTitle {
@@ -124,6 +133,78 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, проверьте электронную почту и подтвердите аккаунт!.
+        /// </summary>
+        public static string CheckYourEmail {
+            get {
+                return ResourceManager.GetString("CheckYourEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подтвердить аккаунт.
+        /// </summary>
+        public static string ConfirmEmail {
+            get {
+                return ResourceManager.GetString("ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Извините, что-то пошло не так....
+        /// </summary>
+        public static string ConfirmEmailError {
+            get {
+                return ResourceManager.GetString("ConfirmEmailError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Аккаунт подтвержден!.
+        /// </summary>
+        public static string ConfirmEmailSucceded {
+            get {
+                return ResourceManager.GetString("ConfirmEmailSucceded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, перейдите на страницу.
+        /// </summary>
+        public static string ConfirmEmailSuccededBody {
+            get {
+                return ResourceManager.GetString("ConfirmEmailSuccededBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подтвердите пароль.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пароль не совпадает!.
+        /// </summary>
+        public static string ConfirmPasswordInvalid {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подтвердите введенный пароль!.
+        /// </summary>
+        public static string ConfirmPasswordRequired {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Контакты.
         /// </summary>
         public static string Contacts {
@@ -169,11 +250,83 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нет аккаунта?.
+        /// </summary>
+        public static string DontHaveAccount {
+            get {
+                return ResourceManager.GetString("DontHaveAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Росянка.
         /// </summary>
         public static string Drosera {
             get {
                 return ResourceManager.GetString("Drosera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Для продолжение регистрации, пожалуйста, нажмите на кнопку ниже, чтобы подтвердить аккаунт:.
+        /// </summary>
+        public static string EmailConfirmationBody {
+            get {
+                return ResourceManager.GetString("EmailConfirmationBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Подтверждение аккаунта..
+        /// </summary>
+        public static string EmailConfirmationSubject {
+            get {
+                return ResourceManager.GetString("EmailConfirmationSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите корректный адрес электронной почты!.
+        /// </summary>
+        public static string EmailInvalid {
+            get {
+                return ResourceManager.GetString("EmailInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неверный логин или пароль!.
+        /// </summary>
+        public static string EmailOrPasswordInvalid {
+            get {
+                return ResourceManager.GetString("EmailOrPasswordInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите email.
+        /// </summary>
+        public static string EmailPlaceholder {
+            get {
+                return ResourceManager.GetString("EmailPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите адрес электронной почты!.
+        /// </summary>
+        public static string EmailRequired {
+            get {
+                return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выберите файл....
+        /// </summary>
+        public static string FilenamePlaceholder {
+            get {
+                return ResourceManager.GetString("FilenamePlaceholder", resourceCulture);
             }
         }
         
@@ -223,6 +376,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Фото.
+        /// </summary>
+        public static string ImageFilename {
+            get {
+                return ResourceManager.GetString("ImageFilename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина имени файла должна быть от 1-250 символов!.
+        /// </summary>
+        public static string ImageFilenameSizeError {
+            get {
+                return ResourceManager.GetString("ImageFilenameSizeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Важно!.
         /// </summary>
         public static string ImportantBadge {
@@ -250,11 +421,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выбранный файл не является изображением!.
+        /// </summary>
+        public static string IsNotImage {
+            get {
+                return ResourceManager.GetString("IsNotImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Язык.
         /// </summary>
         public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выберите язык!.
+        /// </summary>
+        public static string LanguageRequired {
+            get {
+                return ResourceManager.GetString("LanguageRequired", resourceCulture);
             }
         }
         
@@ -277,6 +466,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Имя.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Наименование (А - Я).
         /// </summary>
         public static string NameAscending {
@@ -291,6 +489,33 @@ namespace Resources {
         public static string NameDescending {
             get {
                 return ResourceManager.GetString("NameDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите имя.
+        /// </summary>
+        public static string NamePlaceholder {
+            get {
+                return ResourceManager.GetString("NamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите имя!.
+        /// </summary>
+        public static string NameRequired {
+            get {
+                return ResourceManager.GetString("NameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина имени должна быть от 1-100 символов!.
+        /// </summary>
+        public static string NameSizeError {
+            get {
+                return ResourceManager.GetString("NameSizeError", resourceCulture);
             }
         }
         
@@ -367,6 +592,78 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Пароль.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина пароля должна быть от 8 - 64 символов, содержать буквы англ. алфавита, цифры и специальные символы и не должен содержать пробелов или эмодзи..
+        /// </summary>
+        public static string PasswordHelp {
+            get {
+                return ResourceManager.GetString("PasswordHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите пароль.
+        /// </summary>
+        public static string PasswordPlaceholder {
+            get {
+                return ResourceManager.GetString("PasswordPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите пароль!.
+        /// </summary>
+        public static string PasswordRequired {
+            get {
+                return ResourceManager.GetString("PasswordRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина пароля должна быть в диапазоне от 8 до 64 символов!.
+        /// </summary>
+        public static string PasswordSizeError {
+            get {
+                return ResourceManager.GetString("PasswordSizeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отчество.
+        /// </summary>
+        public static string Patronymic {
+            get {
+                return ResourceManager.GetString("Patronymic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите отчество.
+        /// </summary>
+        public static string PatronymicPlaceholder {
+            get {
+                return ResourceManager.GetString("PatronymicPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина отчества должна быть от 1-150 символов!.
+        /// </summary>
+        public static string PatronymicSizeError {
+            get {
+                return ResourceManager.GetString("PatronymicSizeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Оплата и Доставка.
         /// </summary>
         public static string PaymentAndDelivery {
@@ -376,11 +673,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Номер моб. телефона.
+        /// </summary>
+        public static string PhoneNumber {
+            get {
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер моб. телефона введен некорректно!.
+        /// </summary>
+        public static string PhoneNumberInvalid {
+            get {
+                return ResourceManager.GetString("PhoneNumberInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Необходим номер моб. телефона!.
+        /// </summary>
+        public static string PhoneNumberRequired {
+            get {
+                return ResourceManager.GetString("PhoneNumberRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Жирянка.
         /// </summary>
         public static string Pinguicula {
             get {
                 return ResourceManager.GetString("Pinguicula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, попробуйте еще раз.
+        /// </summary>
+        public static string PleaseTry {
+            get {
+                return ResourceManager.GetString("PleaseTry", resourceCulture);
             }
         }
         
@@ -439,6 +772,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Запомнить меня.
+        /// </summary>
+        public static string RememberMe {
+            get {
+                return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Саррацения.
         /// </summary>
         public static string Sarracenia {
@@ -457,11 +799,65 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Поиск по имени и цене....
+        /// </summary>
+        public static string SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Войти.
         /// </summary>
         public static string SignIn {
             get {
                 return ResourceManager.GetString("SignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Вход в аккаунт.
+        /// </summary>
+        public static string SignInPageDescription {
+            get {
+                return ResourceManager.GetString("SignInPageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com войти, войти, вход.
+        /// </summary>
+        public static string SignInPageKeywords {
+            get {
+                return ResourceManager.GetString("SignInPageKeywords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Зарегистрироваться.
+        /// </summary>
+        public static string SignUp {
+            get {
+                return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com - Регистрация.
+        /// </summary>
+        public static string SignUpPageDescription {
+            get {
+                return ResourceManager.GetString("SignUpPageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venusflytrap.com зарегистрироваться, зарегистрироваться, регистрация.
+        /// </summary>
+        public static string SignUpPageKeywords {
+            get {
+                return ResourceManager.GetString("SignUpPageKeywords", resourceCulture);
             }
         }
         
@@ -489,6 +885,51 @@ namespace Resources {
         public static string StockBadge {
             get {
                 return ResourceManager.GetString("StockBadge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фамилия.
+        /// </summary>
+        public static string Surname {
+            get {
+                return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите фамилию.
+        /// </summary>
+        public static string SurnamePlaceholder {
+            get {
+                return ResourceManager.GetString("SurnamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите фамилию!.
+        /// </summary>
+        public static string SurnameRequired {
+            get {
+                return ResourceManager.GetString("SurnameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длина фамилии должна быть от 1-150 символов! .
+        /// </summary>
+        public static string SurnameSizeError {
+            get {
+                return ResourceManager.GetString("SurnameSizeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь с таким email уже существует!.
+        /// </summary>
+        public static string UserExist {
+            get {
+                return ResourceManager.GetString("UserExist", resourceCulture);
             }
         }
         

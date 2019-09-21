@@ -8,7 +8,7 @@ namespace OnlineStore.Model.DTO
 {
     public class ApplicationUserDTO
     {
-        public string ApplicationUserId { get; set; }
+        public string Id { get; set; }
 
         public string LanguageId { get; set; }
 
@@ -16,7 +16,7 @@ namespace OnlineStore.Model.DTO
 
         public bool EmailConfirmed { get; set; }
 
-        public string PasswordHash { get; set; }
+        public string Password { get; set; }
 
         public string SecurityStamp { get; set; }
 
@@ -26,15 +26,16 @@ namespace OnlineStore.Model.DTO
 
         public bool TwoFactorEnabled { get; set; }
 
-        public DateTime LockoutEndDateUtc { get; set; }
+        public DateTime? LockoutEndDateUtc { get; set; }
 
         public bool LockoutEnabled { get; set; }
 
         public int AccessFailedCount { get; set; }
 
-        public string UserName { get; set; }
-        public string Name { get; set; }
-        public string Address { get; set; }
         public string Role { get; set; }
+
+        public string UserName { get; set; }
+
+        public ApplicationUserProfileDTO ApplicationUserProfile { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace OnlineStore.Website.Areas.Admin.Controllers
     [Authorize(Roles = "Administrator")]
     public class HomeController : Controller
     {
-        // GET: Admin/Home
+        [HttpGet]
         public ActionResult Index()
         {
             return View();

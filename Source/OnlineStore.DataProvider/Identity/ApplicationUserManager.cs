@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
+using Microsoft.Owin.Security.DataProtection;
 using OnlineStore.DataProvider.Context;
 using OnlineStore.DataProvider.Entities;
 using OnlineStore.DataProvider.Interfaces;
@@ -15,6 +18,30 @@ namespace OnlineStore.DataProvider.Identity
     {
         public ApplicationUserManager(IUserStore<ApplicationUser> store) : base(store)
         {
+            EmailService = new EmailService();
+            PasswordValidator = new PasswordValidator()
+            {
+                RequireDigit = true,
+                RequiredLength = 8,
+                RequireLowercase = true,
+                RequireUppercase = true
+            };
+            UserValidator = new UserValidator<ApplicationUser>(this)
+            {
+                AllowOnlyAlphanumericUserNames = true,
+                RequireUniqueEmail = true
+            };
+            var dataProtectionProvider = new IdentityFactoryOptions<ApplicationUserManager>()
+            {
+                DataProtectionProvider = new DpapiDataProtectionProvider("OnlineStore.Website")
+            }.DataProtectionProvider;
+            if (dataProtectionProvider != null)
+            {
+                UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"))
+                {
+                    TokenLifespan = TimeSpan.FromHours(7)
+                };
+            }
         }
     }
 }

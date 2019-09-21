@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Areas/Account/Views/Shared/_Layout.cshtml";
+    ViewBag.PageKeywords = Resources.Resource.ConfirmEmailError;
+    ViewBag.PageDescription = Resources.Resource.ConfirmEmailError;
+    ViewBag.Favicon = Url.Content("~/Content/Images/Website/error.png");
+    ViewBag.Title = Resources.Resource.ConfirmEmailError;
+}
+
+<div class="container sign-in-form-mt p-2">
+    <h2>@Resources.Resource.ConfirmEmailError</h2>
+    <p>@Resources.Resource.PleaseTry <a href="@Url.Action("signin", "user")">@Resources.Resource.SignIn</a></p>
+</div>

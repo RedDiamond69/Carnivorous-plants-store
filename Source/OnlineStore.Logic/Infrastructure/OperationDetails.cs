@@ -8,15 +8,13 @@ namespace OnlineStore.Logic.Infrastructure
 {
     public class OperationDetails
     {
-        public bool Succedeed { get; private set; }
-        public string Message { get; private set; }
-        public string Property { get; private set; }
+        public bool Succedeed { get; set; }
+        public string Message { get; set; }
+        public string Property { get; set; }
 
-        public OperationDetails(bool succedeed, string message, string prop)
+        public OperationDetails(bool succedeed)
         {
             Succedeed = succedeed;
-            Message = message;
-            Property = prop;
         }
     }
 }

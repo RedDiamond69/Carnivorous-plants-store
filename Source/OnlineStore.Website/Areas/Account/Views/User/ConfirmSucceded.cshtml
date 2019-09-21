@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Areas/Account/Views/Shared/_Layout.cshtml";
+    ViewBag.PageKeywords = Resources.Resource.ConfirmEmailSucceded;
+    ViewBag.PageDescription = Resources.Resource.ConfirmEmailSucceded;
+    ViewBag.Favicon = Url.Content("~/Content/Images/Website/emailConfirm.png");
+    ViewBag.Title = Resources.Resource.ConfirmEmailSucceded;
+}
+
+<div class="container sign-in-form-mt p-2">
+    <h2>@Resources.Resource.ConfirmEmailSucceded</h2>
+    <p>@Resources.Resource.ConfirmEmailSuccededBody <a href="@Url.Action("signin", "user")">@Resources.Resource.SignIn</a></p>
+</div>

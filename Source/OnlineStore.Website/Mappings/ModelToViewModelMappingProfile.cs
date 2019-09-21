@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using OnlineStore.Model.DTO;
+using OnlineStore.Website.Areas.Account.ViewModels;
 using OnlineStore.Website.ViewModels;
 using System;
 using System.Collections.Generic;

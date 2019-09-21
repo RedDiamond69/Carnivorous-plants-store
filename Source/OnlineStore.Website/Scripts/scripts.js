@@ -42,3 +42,10 @@ $(document).ready(function () {
         $('#sortConfirm').click();
     });
 });
+
+$(document).ready(function () {
+    $('#customFile').on('change', function () {
+        let fileName = $('#customFile')[0].files[0].name;
+        $(this).next('.custom-file-label').html(fileName);
+    });
+});
